@@ -22,5 +22,5 @@
     It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu
 -->
 <template>
-    <UNavigationMenu orientation="horizontal" :items="items" class="w-full justify-center bg-pink-500" />
+    <UNavigationMenu orientation="horizontal" :items="items" class="w-full justify-center bg-pink-500 sticky top-0 z-50 shadow-2xl" />
 </template>
