@@ -1,6 +1,12 @@
 <template>
     <div class="flex flex-row min-w-full items-center justify-between">
-        <h1>Happy Monthsary!</h1>
-        <div class=" border-2 border-amber-200 w-24 h-24"></div>
+        <div class="flex flex-col">
+            <h1 class="text-[8rem] font-bold">Happy Monthsary!</h1>
+            <p>I hope you’re doing well my love! Let me ask you a few questions on how we celebrate our monthsary.</p>
+        </div>
+        <img 
+            src="/assets/svg/dummy_cat.svg"
+            class=" w-3xl"    
+        />
     </div>
 </template>

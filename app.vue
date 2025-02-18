@@ -1,6 +1,8 @@
 <template>
   <div class="min-w-full flex flex-col justify-center">
     <AppHeader/>
-    <NuxtPage/>
+    <div class=" px-14">
+      <NuxtPage/>
+    </div>
   </div>
 </template>
