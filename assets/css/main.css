@@ -3,3 +3,7 @@
 input, button, textarea, select {
     font: inherit;
 }
+
+div {
+    font-family: 'Roboto', sans-serif;
+}
