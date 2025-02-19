@@ -26,13 +26,16 @@
             />
         </section>
             
-        <section class="flex flex-col items-center h-[1024px] min-w-full">
-            <h2 class="text-[5rem] font-bold text-pink-500">
-                Memories
-            </h2>
-            <p>
-                Here lies our precious memories that we did together, from the beginning until now. 
-            </p>
+        <section class="flex flex-col items-center h-[1024px] min-w-full gap-10">
+            <div>
+                <h2 class="text-[5rem] font-bold text-pink-500 text-center">
+                    Memories
+                </h2>
+                <p>
+                    Here lies our precious memories that we did together, from the beginning until now. 
+                </p>
+            </div>
+            <AppCarousel />
         </section>
 
         <section class="flex flex-row items-center justify-around min-w-full">
