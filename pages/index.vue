@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col min-w-full justify-center items-center">
-    <section class="flex flex-row justify-between h-[1024px] min-w-full">
+    <section class="flex flex-row justify-between min-w-full h-[720px]">
       <div class="flex flex-col items-start">
         <h1 class="text-[8rem] font-bold text-start">
           Happy
@@ -18,11 +18,12 @@
           :block="false"
         />
       </div>
-
       <img src="/assets/svg/dummy_cat.svg" class="w-3xl h-[640px]" />
     </section>
 
-    <section class="flex flex-col min-w-full items-center h-[1024px] gap-10">
+    <USeparator />
+
+    <section class="flex flex-col min-w-full items-center gap-10 pb-20 pt-5">
       <div>
         <h2 class="text-[5rem] font-bold text-pink-500 text-center">
           Memories
@@ -32,11 +33,16 @@
           beginning until now.
         </p>
       </div>
-
-      <AppCarousel />
+      <div class="w-[1000px]">
+        <AppCarousel />
+      </div>
     </section>
 
-    <section class="flex flex-row items-center justify-around min-w-full">
+    <USeparator />
+
+    <section
+      class="flex flex-row items-center justify-around min-w-full h-[720px] pt-32"
+    >
       <div class="flex flex-col items-start w-[480px]">
         <h3 class="text-[5rem] font-bold text-pink-500">Gallery</h3>
         <p class="pb-6">
