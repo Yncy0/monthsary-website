@@ -1,29 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import tailwindcss from "@tailwindcss/vite"
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
 
   vite: {
-    plugins: [
-      tailwindcss(),
-    ]
+    plugins: [tailwindcss()],
   },
 
-  modules: [
-    '@vueuse/nuxt',
-    '@nuxt/ui',
-    '@nuxt/fonts',
-    
-  ],
+  modules: ["@vueuse/nuxt", "@nuxt/ui", "@nuxt/fonts"],
 
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
 
   ui: {
     theme: {
-      colors: ['primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error']
-    }
-  }
-})
+      colors: [
+        "primary",
+        "secondary",
+        "tertiary",
+        "info",
+        "success",
+        "warning",
+        "error",
+      ],
+    },
+  },
+});
