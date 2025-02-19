@@ -1,6 +1,6 @@
-<!--Navigation Items list, scale the navigation here for futures references.
-    For more infor: visit https://ui3.nuxt.dev/getting-started
--->
+<!-- Navigation Items list, scale the navigation here for futures references.
+For more infor: visit https://ui3.nuxt.dev/getting-started -->
+
 <script setup lang="ts">
     const items = ref([
         [
@@ -25,8 +25,7 @@
 </script>
 
 <!--Here lies the design
-    It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu
--->
+It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
 <template>
     <UNavigationMenu 
         :items="items" 
