@@ -1,10 +1,13 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-input, button, textarea, select {
-    font: inherit;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 div {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
