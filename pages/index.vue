@@ -1,3 +1,9 @@
+<script setup>
+import { scroll } from "motion";
+
+scroll((p) => console.log(p));
+</script>
+
 <template>
   <div class="flex flex-col min-w-full justify-center items-center">
     <section class="flex flex-row justify-between min-w-full h-[720px]">
