@@ -21,6 +21,6 @@ const items = [
     :items="items"
     :ui="{ item: 'basis-1/3' }"
   >
-    <MemoryCard :img="item" description="Lorem Ipsum" />
+    <MemoryCard :img-src="item" description="Lorem Ipsum" />
   </UCarousel>
 </template>
