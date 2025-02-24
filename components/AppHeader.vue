@@ -32,7 +32,7 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
       :items="items"
       orientation="horizontal"
       variant="link"
-      class="w-full justify-center p-3 gap-4 bg-white dark:bg-gray-900"
+      class="w-full justify-center p-2 gap-4 bg-white dark:bg-gray-900"
     />
     <USeparator />
   </div>
