@@ -33,8 +33,6 @@
           beginning until now.
         </p>
       </div>
-      <!--TEMPORARY FOR TESTING-->
-      <MemoryCard header-image="/assets/images/birb.jpg" description="Hello" />
       <div class="w-[1000px]">
         <AppCarousel />
       </div>

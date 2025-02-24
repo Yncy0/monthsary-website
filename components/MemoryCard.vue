@@ -1,6 +1,5 @@
 <script setup>
 const props = defineProps({
-  headerImage: String,
   description: String,
 });
 </script>
@@ -8,11 +7,11 @@ const props = defineProps({
 <template>
   <UCard>
     <template #header>
-      <img :src="{ headerImage }" alt="images for card" />
+      <img src="/assets/images/birb.jpg" />
     </template>
 
     <div>
-      <p>{{ description }}</p>
+      <p>{{ props.description }}</p>
     </div>
 
     <template #footer> </template>
