@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <UCard>
+  <UCard class="m-1">
     <template #header>
       <img :src="props.img" width="320" height="320" class="rounded-lg" />
     </template>
