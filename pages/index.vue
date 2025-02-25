@@ -6,11 +6,11 @@
       >
         <div class="flex flex-col items-start">
           <h1
-            class="text-[8rem] font-bold text-start drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)]"
+            class="text-[8rem] font-bold text-start dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)] drop-shadow-[0px_0px_39px_rgba(255,0,123,1)]"
           >
             Happy
             <span
-              class="text-pink-500 drop-shadow-[0px_0px_39px_rgba(255,0,123,0.2)]"
+              class="text-pink-500 dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.5)] drop-shadow-[0px_0px_39px_rgba(255,0,123,0.3)]"
             >
               Monthsary!
             </span>
@@ -36,11 +36,13 @@
         class="container flex flex-col min-w-full items-center gap-10 pb-20 pt-5"
       >
         <div>
-          <h2
-            class="text-[5rem] font-bold text-pink-500 text-center drop-shadow-[0px_0px_39px_rgba(255,0,123,10.0)]"
-          >
-            Memories
-          </h2>
+          <span class="dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,1)]">
+            <h2
+              class="text-[5rem] font-bold text-pink-500 text-center dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,1)] drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)]"
+            >
+              Memories
+            </h2>
+          </span>
           <p>
             Here lies our precious memories that we did together, from the
             beginning until now.
@@ -57,11 +59,13 @@
         class="container flex flex-row items-center justify-around min-w-full h-[720px] pt-32"
       >
         <div class="flex flex-col items-start w-[480px]">
-          <h3
-            class="text-[5rem] font-bold text-pink-500 drop-shadow-[0px_0px_39px_rgba(255,0,123,10.0)]"
-          >
-            Gallery
-          </h3>
+          <span class="dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,1)]">
+            <h3
+              class="text-[5rem] font-bold text-pink-500 dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,1)] drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)]"
+            >
+              Gallery
+            </h3>
+          </span>
           <p class="pb-6">
             A collection of photos we took together. It contains serious, funny,
             silly, goofy, sweet, romantic photos with each other.
