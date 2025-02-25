@@ -5,9 +5,15 @@
         class="container flex flex-row justify-between min-w-full h-[720px]"
       >
         <div class="flex flex-col items-start">
-          <h1 class="text-[8rem] font-bold text-start">
+          <h1
+            class="text-[8rem] font-bold text-start drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)]"
+          >
             Happy
-            <span class="text-pink-500"> Monthsary! </span>
+            <span
+              class="text-pink-500 drop-shadow-[0px_0px_39px_rgba(255,0,123,0.2)]"
+            >
+              Monthsary!
+            </span>
           </h1>
           <p class="pb-6">
             I hope you are doing well my love! Let me ask you a few questions on
@@ -30,7 +36,9 @@
         class="container flex flex-col min-w-full items-center gap-10 pb-20 pt-5"
       >
         <div>
-          <h2 class="text-[5rem] font-bold text-pink-500 text-center">
+          <h2
+            class="text-[5rem] font-bold text-pink-500 text-center drop-shadow-[0px_0px_39px_rgba(255,0,123,10.0)]"
+          >
             Memories
           </h2>
           <p>
@@ -49,7 +57,11 @@
         class="container flex flex-row items-center justify-around min-w-full h-[720px] pt-32"
       >
         <div class="flex flex-col items-start w-[480px]">
-          <h3 class="text-[5rem] font-bold text-pink-500">Gallery</h3>
+          <h3
+            class="text-[5rem] font-bold text-pink-500 drop-shadow-[0px_0px_39px_rgba(255,0,123,10.0)]"
+          >
+            Gallery
+          </h3>
           <p class="pb-6">
             A collection of photos we took together. It contains serious, funny,
             silly, goofy, sweet, romantic photos with each other.
