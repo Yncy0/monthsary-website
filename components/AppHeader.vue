@@ -35,7 +35,10 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
         variant="link"
         class="gap-2 bg-white dark:bg-gray-900"
       />
-      <USwitch />
+      <UButton
+        icon="i-lucide-moon"
+        class="bg-transparent dark:text-white text-black hover:bg-transparent"
+      />
     </div>
     <USeparator />
   </div>
