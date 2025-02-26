@@ -6,7 +6,7 @@
       >
         <div class="flex flex-col items-start">
           <h1
-            class="text-[8rem] font-bold text-start dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)] drop-shadow-[0px_0px_39px_rgba(255,0,123,1)]"
+            class="text-[8rem] font-bold text-start dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)] drop-shadow-[0px_0px_39px_rgba(255,0,123,0.4)]"
           >
             Happy
             <span
