@@ -27,7 +27,7 @@
         </div>
         <div class="slime-catto w-[645px]">
           <img
-            src="/assets/images/Catto Copy.png"
+            src="/assets/images/gif/Catto(1) Copy.gif"
             class="dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.5)] drop-shadow-[0px_0px_39px_rgba(0,255,30,0.9)]"
           />
         </div>
