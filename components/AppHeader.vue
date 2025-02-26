@@ -27,13 +27,13 @@ const items = ref([
 <!--Here lies the design
 It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
 <template>
-  <div class="sticky top-0 z-10">
+  <div class="sticky top-0 z-10 bg-white dark:bg-gray-900">
     <div class="flex flex-row items-center p-2 gap-4 w-full justify-center">
       <UNavigationMenu
         :items="items"
         orientation="horizontal"
         variant="link"
-        class="gap-2 bg-white dark:bg-gray-900"
+        class="gap-2"
       />
       <UButton
         icon="i-lucide-moon"

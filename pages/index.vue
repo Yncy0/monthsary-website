@@ -2,7 +2,7 @@
   <Transition :css="false">
     <div class="flex flex-col min-w-full justify-center items-center">
       <section
-        class="container flex flex-row justify-between min-w-full h-[720px]"
+        class="container flex flex-row justify-between min-w-full h-[720px] pb-9"
       >
         <div class="flex flex-col items-start">
           <h1
@@ -27,7 +27,7 @@
             :block="false"
           />
         </div>
-        <img src="/assets/svg/dummy_cat.svg" class="w-3xl h-[640px]" />
+        <img src="/assets/images/Catto Copy.png" width="720" />
       </section>
 
       <USeparator />
