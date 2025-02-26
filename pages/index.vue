@@ -23,7 +23,7 @@
             label="Let's Get Started"
             size="xl"
             trailing-icon="i-lucide-arrow-right"
-            class="p-4 shadow-2xl"
+            class="p-4 shadow-2xl text-white bg-pink-500"
             :block="false"
           />
         </div>
@@ -78,7 +78,7 @@
             label="View Gallery"
             size="xl"
             icon="i-mdi-image-multiple"
-            class="p-4 shadow-2xl"
+            class="p-4 shadow-2xl text-white bg-pink-500"
             :block="false"
           />
         </div>
