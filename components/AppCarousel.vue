@@ -2,12 +2,30 @@
 
 <script setup lang="ts">
 const items = [
-  "https://picsum.photos/640/640?random=1",
-  "https://picsum.photos/640/640?random=2",
-  "https://picsum.photos/640/640?random=3",
-  "https://picsum.photos/640/640?random=4",
-  "https://picsum.photos/640/640?random=5",
-  "https://picsum.photos/640/640?random=6",
+  {
+    img: "https://picsum.photos/640/640?random=1",
+    description: "This is image 1",
+  },
+  {
+    img: "https://picsum.photos/640/640?random=2",
+    description: "This is image 2",
+  },
+  {
+    img: "https://picsum.photos/640/640?random=3",
+    description: "This is image 3",
+  },
+  {
+    img: "https://picsum.photos/640/640?random=4",
+    description: "This is image 4",
+  },
+  {
+    img: "https://picsum.photos/640/640?random=5",
+    description: "This is image 5",
+  },
+  {
+    img: "https://picsum.photos/640/640?random=6",
+    description: "This is image 6",
+  },
 ];
 </script>
 
@@ -21,6 +39,6 @@ const items = [
     :items="items"
     :ui="{ item: 'basis-1/3' }"
   >
-    <MemoryCard :img-src="item" description="Lorem Ipsum" />
+    <MemoryCard :img-src="item.img" :description="item.description" />
   </UCarousel>
 </template>
