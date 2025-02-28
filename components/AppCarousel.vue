@@ -3,23 +3,23 @@
 <script setup lang="ts">
 const items = [
   {
-    img: "https://picsum.photos/640/640?random=1",
+    img: "/img/photobooth.jpg",
     description: "This is image 1",
   },
   {
-    img: "https://picsum.photos/640/640?random=2",
+    img: "/img/ice_skate.jpg",
     description: "This is image 2",
   },
   {
-    img: "https://picsum.photos/640/640?random=3",
+    img: "/img/skyranch.jpeg",
     description: "This is image 3",
   },
   {
-    img: "https://picsum.photos/640/640?random=4",
+    img: "/img/clay_date.jpg",
     description: "This is image 4",
   },
   {
-    img: "https://picsum.photos/640/640?random=5",
+    img: "/img/coffee_date.jpg",
     description: "This is image 5",
   },
   {

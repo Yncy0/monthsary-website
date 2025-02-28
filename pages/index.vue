@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <Transition :css="false">
     <div class="flex flex-col min-w-full justify-center items-center">
@@ -56,7 +58,7 @@
 
       <USeparator />
 
-      <section
+      <!-- <section
         class="flex flex-row items-center justify-around min-w-full h-[720px] pt-32"
       >
         <div class="flex flex-col items-start w-[480px]">
@@ -89,7 +91,7 @@
             class="w-[400px] rotate-12 top-28 relative"
           />
         </div>
-      </section>
+      </section> -->
     </div>
   </Transition>
 </template>

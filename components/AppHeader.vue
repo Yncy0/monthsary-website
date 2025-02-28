@@ -12,15 +12,21 @@ const items = ref([
   [
     {
       label: "Memories",
-      to: "/memories",
+      // to: "/memories",
     },
   ],
   [
     {
-      label: "Albums",
-      to: "/albums",
+      label: "Roadmap",
+      // to: "/roadmap"
     },
   ],
+  // [
+  //   {
+  //     label: "Albums",
+  //     to: "/albums",
+  //   },
+  // ],
 ]);
 </script>
 

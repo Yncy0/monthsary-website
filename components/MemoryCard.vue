@@ -8,7 +8,10 @@ const props = defineProps({
 <template>
   <UCard class="m-1">
     <template #header>
-      <img :src="props.imgSrc" width="320" height="320" class="rounded-lg" />
+      <img
+        :src="props.imgSrc"
+        class="rounded-lg w-[320px] h-[320px] object-cover"
+      />
     </template>
 
     <div>
