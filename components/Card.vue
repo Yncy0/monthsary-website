@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <UCard class="w-3xl">
+  <UCard class="w-2xl">
     <template #header>
       <h1>{{ props.header }}</h1>
     </template>

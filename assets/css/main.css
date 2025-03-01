@@ -11,3 +11,7 @@ select {
 div {
   font-family: "Roboto", sans-serif;
 }
+
+img {
+  object-fit: cover;
+}

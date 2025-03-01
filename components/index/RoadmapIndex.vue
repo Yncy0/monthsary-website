@@ -8,34 +8,34 @@
       </h3>
     </span>
     <p>Roadmap for our goals as a couple</p>
-    <div class="p-20 w-full flex flex-col gap-96">
+    <div class="p-20 w-full flex flex-col gap-72">
       <div class="flex flex-row justify-between">
-        <img src="/assets/images/gif/Catto(1) Copy.gif" class="w-[240px]" />
+        <img src="/img/photobooth1.jpeg" class="w-[560px] h-[480px]" />
         <Card header="Header 1" body="Lorem Ipsum" />
       </div>
 
       <div class="flex flex-row-reverse justify-between">
-        <img src="/assets/images/gif/Catto(1) Copy.gif" class="w-[240px]" />
+        <img src="/img/ice_cream.jpg" class="w-[560px] h-[480px]" />
         <Card header="Header 1" body="Lorem Ipsum" />
       </div>
 
       <div class="flex flex-row justify-between">
-        <img src="/assets/images/gif/Catto(1) Copy.gif" class="w-[240px]" />
+        <img src="/img/ice_skate.jpg" class="w-[560px] h-[480px]" />
         <Card header="Header 1" body="Lorem Ipsum" />
       </div>
 
       <div class="flex flex-row-reverse justify-between">
-        <img src="/assets/images/gif/Catto(1) Copy.gif" class="w-[240px]" />
+        <img src="/img/skyranch.jpeg" class="w-[560px] h-[480px]" />
         <Card header="Header 1" body="Lorem Ipsum" />
       </div>
 
       <div class="flex flex-row justify-between">
-        <img src="/assets/images/gif/Catto(1) Copy.gif" class="w-[240px]" />
+        <img src="/img/coffee_date.jpg" class="w-[560px] h-[480px]" />
         <Card header="Header 1" body="Lorem Ipsum" />
       </div>
 
       <div class="flex flex-row-reverse justify-between">
-        <img src="/assets/images/gif/Catto(1) Copy.gif" class="w-[240px]" />
+        <img src="/img/clay_date1.jpg" class="w-[560px] h-[480px]" />
         <Card header="Header 1" body="Lorem Ipsum" />
       </div>
     </div>

@@ -22,6 +22,10 @@ const items = [
     img: "/img/coffee_date.jpg",
     description: "This is image 5",
   },
+  {
+    img: "/img/ice_cream.jpg",
+    description: "This is image 6 ",
+  },
 ];
 </script>
 
