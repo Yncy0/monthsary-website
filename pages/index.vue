@@ -1,6 +1,7 @@
 <script setup>
 import HeroIndex from "~/components/index/HeroIndex.vue";
 import MemoriesIndex from "~/components/index/MemoriesIndex.vue";
+import RoadmapIndex from "~/components/index/RoadmapIndex.vue";
 </script>
 
 <template>
@@ -11,6 +12,8 @@ import MemoriesIndex from "~/components/index/MemoriesIndex.vue";
 
       <MemoriesIndex />
       <USeparator />
+
+      <RoadmapIndex />
     </div>
   </Transition>
 </template>
