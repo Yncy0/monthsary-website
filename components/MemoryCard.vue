@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <UCard class="m-1">
+  <UCard class="m-1 h-[560px]">
     <template #header>
       <div class="flex flex-col gap-4">
         <img
