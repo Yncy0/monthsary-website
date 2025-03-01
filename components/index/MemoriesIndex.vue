@@ -1,5 +1,8 @@
 <template>
-  <section class="flex flex-col min-w-full items-center gap-10 pb-20 pt-5">
+  <section
+    id="memories"
+    class="flex flex-col min-w-full items-center gap-10 pb-20 pt-5"
+  >
     <div>
       <span class="dark:drop-shadow-glow-pink-1000">
         <h2

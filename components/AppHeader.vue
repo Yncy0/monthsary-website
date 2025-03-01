@@ -7,27 +7,36 @@ const items = ref([
     {
       label: "Home",
       to: "/",
+      ref: "#home",
+      onselect: () => scrollTo("home"),
     },
   ],
   [
     {
       label: "Memories",
       // to: "/memories",
+      href: "#memories",
+      onselect: () => scrollTo("memories"),
     },
   ],
   [
     {
       label: "Roadmap",
       // to: "/roadmap"
+      href: "#roadmap",
+      onselect: () => scrollTo("roadmap"),
     },
   ],
-  // [
-  //   {
-  //     label: "Albums",
-  //     to: "/albums",
-  //   },
-  // ],
 ]);
+
+function scrollTo(s: any) {
+  nextTick(() => {
+    const element = document.querySelector(s);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}
 </script>
 
 <!--Here lies the design

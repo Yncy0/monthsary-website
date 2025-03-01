@@ -1,5 +1,8 @@
 <template>
-  <section class="flex flex-row justify-between min-w-full h-[720px] p-9">
+  <section
+    id="index"
+    class="flex flex-row justify-between min-w-full h-[720px] p-9"
+  >
     <div class="flex flex-col items-start">
       <h1
         class="text-[8rem] font-bold text-start dark:drop-shadow-glow-pink-900 drop-shadow-glow-pink-400"

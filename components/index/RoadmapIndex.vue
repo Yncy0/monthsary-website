@@ -3,7 +3,10 @@ import RoadmapStack from "../RoadmapStack.vue";
 </script>
 
 <template>
-  <section class="flex flex-col items-center justify-center py-10 min-w-full">
+  <section
+    id="roadmap"
+    class="flex flex-col items-center justify-center py-10 min-w-full"
+  >
     <span class="dark:drop-shadow-glow-pink-1000">
       <h3
         class="text-[5rem] font-bold text-pink-500 dark:drop-shadow-glow-pink-900 drop-shadow-glow-pink-300"
