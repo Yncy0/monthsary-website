@@ -12,16 +12,15 @@
         </span>
       </h1>
       <p class="pb-6">
-        I hope you are doing well my love! Let me ask you a few questions on how
-        we celebrate our monthsary.
+        I hope you are doing well my love! May our relationship lasts forever.
       </p>
-      <UButton
+      <!-- <UButton
         label="Let's Get Started"
         size="xl"
         trailing-icon="i-lucide-arrow-right"
         class="p-4 shadow-2xl text-white bg-pink-500"
         :block="false"
-      />
+      /> -->
     </div>
     <div class="slime-catto w-[645px]">
       <img
