@@ -22,10 +22,6 @@ const items = [
     img: "/img/coffee_date.jpg",
     description: "This is image 5",
   },
-  {
-    img: "https://picsum.photos/640/640?random=6",
-    description: "This is image 6",
-  },
 ];
 </script>
 
