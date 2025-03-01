@@ -8,23 +8,20 @@ const items = ref([
       label: "Home",
       to: "/",
       ref: "#home",
-      onselect: () => scrollTo("home"),
     },
   ],
   [
     {
       label: "Memories",
       // to: "/memories",
-      href: "#memories",
-      onselect: () => scrollTo("memories"),
+      ref: "#memories",
     },
   ],
   [
     {
       label: "Roadmap",
       // to: "/roadmap"
-      href: "#roadmap",
-      onselect: () => scrollTo("roadmap"),
+      ref: "#roadmap",
     },
   ],
 ]);
@@ -34,6 +31,8 @@ function scrollTo(s: any) {
     const element = document.querySelector(s);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("No element has been found");
     }
   });
 }
@@ -44,11 +43,26 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
 <template>
   <div class="sticky top-0 z-10 bg-white dark:bg-gray-900">
     <div class="flex flex-row items-center p-2 gap-4 w-full justify-center">
-      <UNavigationMenu
+      <!-- <UNavigationMenu
         :items="items"
         orientation="horizontal"
         variant="link"
         class="gap-2"
+      /> -->
+      <UButton
+        label="Home"
+        @click="scrollTo('#home')"
+        class="bg-transparent text-white hover:bg-transparent"
+      />
+      <UButton
+        label="Memories"
+        @click="scrollTo('#memories')"
+        class="bg-transparent text-white hover:bg-transparent"
+      />
+      <UButton
+        label="Roadmap"
+        @click="scrollTo('#roadmap')"
+        class="bg-transparent text-white hover:bg-transparent"
       />
       <UButton
         icon="i-lucide-moon"
