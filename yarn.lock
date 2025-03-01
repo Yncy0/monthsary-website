@@ -305,6 +305,11 @@
   dependencies:
     mime "^3.0.0"
 
+"@cloudflare/workers-types@^4.20250204.0":
+  version "4.20250224.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-4.20250224.0.tgz#9e66975c6ce5d063a7916de74929ea868a6a1d72"
+  integrity sha512-j6ZwQ5G2moQRaEtGI2u5TBQhVXv/XwOS5jfBAheZHcpCM07zm8j0i8jZHHLq/6VA8e6VRjKohOyj5j6tZ1KHLQ==
+
 "@csstools/selector-resolve-nested@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@csstools/selector-resolve-nested/-/selector-resolve-nested-3.0.0.tgz#704a9b637975680e025e069a4c58b3beb3e2752a"
@@ -756,6 +761,15 @@
     "@nuxt/schema" "^3.15.0"
     execa "^7.2.0"
 
+"@nuxt/devtools-kit@^2.0.0":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/devtools-kit/-/devtools-kit-2.1.1.tgz#19c212645246bce18aa858e2e762027232302ba4"
+  integrity sha512-N3+qI41d4vdwZ8LdpxppWQ5GS3oDtRp7yTbW91osj7helkPLdLvsXUNVI2pJ2OZG0zdY8UNE1TbJe3DbgZL7wQ==
+  dependencies:
+    "@nuxt/kit" "^3.15.4"
+    "@nuxt/schema" "^3.15.4"
+    execa "^9.5.2"
+
 "@nuxt/devtools-kit@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@nuxt/devtools-kit/-/devtools-kit-2.1.0.tgz#34826af8c88de9ff918473b5f22262855c2a0e21"
@@ -1026,6 +1040,31 @@
     vite-node "^3.0.4"
     vite-plugin-checker "^0.8.0"
     vue-bundle-renderer "^2.1.1"
+
+"@nuxthub/core@0.8.17":
+  version "0.8.17"
+  resolved "https://registry.yarnpkg.com/@nuxthub/core/-/core-0.8.17.tgz#6c1c99d6870dcbf68a49bc38bb70b9ecdcd6d634"
+  integrity sha512-0plAZ+oE/ty6z90sJ0feozSlcfJENaD9/+mlF4GIXx8bKic10X/w2EzoK1Ky+x4+0mWxi6qL2ZrchoMEJy+ywA==
+  dependencies:
+    "@cloudflare/workers-types" "^4.20250204.0"
+    "@nuxt/devtools-kit" "^2.0.0"
+    "@nuxt/kit" "^3.15.4"
+    "@uploadthing/mime-types" "^0.3.4"
+    citty "^0.1.6"
+    confbox "^0.1.8"
+    defu "^6.1.4"
+    destr "^2.0.3"
+    h3 "^1.15.0"
+    mime "^4.0.6"
+    nitro-cloudflare-dev "^0.2.1"
+    ofetch "^1.4.1"
+    pathe "^2.0.2"
+    pkg-types "^1.3.1"
+    std-env "^3.8.0"
+    ufo "^1.5.4"
+    uncrypto "^0.1.3"
+    unstorage "^1.14.4"
+    zod "^3.24.1"
 
 "@nuxtjs/color-mode@^3.5.2":
   version "3.5.2"
@@ -1877,6 +1916,11 @@
     "@unhead/shared" "1.11.19"
     hookable "^5.5.3"
     unhead "1.11.19"
+
+"@uploadthing/mime-types@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@uploadthing/mime-types/-/mime-types-0.3.4.tgz#2644ec4f3e8db781dc843fc30caaca8188356464"
+  integrity sha512-EB0o0a4y++UJFMLqS8LDVhSQgXUllG6t5fwl5cbmOM0Uay8YY5Nc/JjFwzJ8wccdIKz4oYwQW7EOSfUyaMPbfw==
 
 "@vercel/nft@^0.27.5":
   version "0.27.10"
@@ -5474,7 +5518,7 @@ mime@^3.0.0:
   resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
   integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
-mime@^4.0.4:
+mime@^4.0.4, mime@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/mime/-/mime-4.0.6.tgz#ca83bec0bcf2a02353d0e02da99be05603d04839"
   integrity sha512-4rGt7rvQHBbaSOF9POGkk1ocRP16Md1x36Xma8sz8h8/vfCUI2OtEIeCqe4Ofes853x4xDoPiFLIT47J5fI/7A==
@@ -5650,6 +5694,15 @@ negotiator@0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
+
+nitro-cloudflare-dev@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/nitro-cloudflare-dev/-/nitro-cloudflare-dev-0.2.1.tgz#26f0a6129d446acb32bffe9cc5c6842202fd2807"
+  integrity sha512-zHAN21dp+As0ldkAr5tWTop/I721j7MssZG6qb7a7EMorFwdRIhyTUwltr2L6v4qT4209S4eb2S9rszP1fxS7A==
+  dependencies:
+    consola "^3.2.3"
+    mlly "^1.7.2"
+    pkg-types "^1.2.1"
 
 nitropack@^2.10.4:
   version "2.10.4"
@@ -8541,7 +8594,7 @@ zod-to-ts@^1.2.0:
   resolved "https://registry.yarnpkg.com/zod-to-ts/-/zod-to-ts-1.2.0.tgz#873a2fd8242d7b649237be97e0c64d7954ae0c51"
   integrity sha512-x30XE43V+InwGpvTySRNz9kB7qFU8DlyEy7BsSTCHPH1R0QasMmHWZDCzYm6bVXtj/9NNJAZF3jW8rzFvH5OFA==
 
-zod@^3.24.2:
+zod@^3.24.1, zod@^3.24.2:
   version "3.24.2"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.24.2.tgz#8efa74126287c675e92f46871cfc8d15c34372b3"
   integrity sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==
