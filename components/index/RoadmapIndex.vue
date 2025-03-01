@@ -57,6 +57,48 @@ import RoadmapStack from "../RoadmapStack.vue";
         header="Clay Date"
         body="One of the cutest moments in our relationship goals. From cutesy clays to something SPICY! OoooOOooo... decisions decision..."
       />
+
+      <RoadmapStack
+        :isReversed="true"
+        imgSource="/gif/quest cat.gif"
+        header="Beach Date"
+        body="???"
+      />
+
+      <RoadmapStack
+        :isReversed="false"
+        imgSource="/gif/quest cat.gif"
+        header="Baguio Date"
+        body="???"
+      />
+
+      <RoadmapStack
+        :isReversed="true"
+        imgSource="/gif/quest cat.gif"
+        header="Oversea"
+        body="???"
+      />
+
+      <RoadmapStack
+        :isReversed="false"
+        imgSource="/gif/quest cat.gif"
+        header="Here comes the MONEY!!!"
+        body="???"
+      />
+
+      <RoadmapStack
+        :isReversed="true"
+        imgSource="/gif/quest cat.gif"
+        header="Home"
+        body="???"
+      />
+
+      <RoadmapStack
+        :isReversed="false"
+        imgSource="/gif/quest cat.gif"
+        header="Wedding"
+        body="???"
+      />
     </div>
   </section>
 </template>
