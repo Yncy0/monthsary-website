@@ -1,8 +1,8 @@
 <template>
   <section class="flex flex-col items-center justify-center py-10 min-w-full">
-    <span class="dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,1.0)]">
+    <span class="dark:drop-shadow-glow-pink-1000">
       <h3
-        class="text-[5rem] font-bold text-pink-500 dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)] drop-shadow-[0px_0px_39px_rgba(255,0,123,0.3)]"
+        class="text-[5rem] font-bold text-pink-500 dark:drop-shadow-glow-pink-900 drop-shadow-glow-pink-300"
       >
         Roadmap
       </h3>

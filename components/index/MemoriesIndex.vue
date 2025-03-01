@@ -1,9 +1,9 @@
 <template>
   <section class="flex flex-col min-w-full items-center gap-10 pb-20 pt-5">
     <div>
-      <span class="dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,1)]">
+      <span class="dark:drop-shadow-glow-pink-1000">
         <h2
-          class="text-[5rem] font-bold text-pink-500 text-center dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,1)] drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)]"
+          class="text-[5rem] font-bold text-pink-500 text-center dark:drop-shadow-glow-pink-1000 drop-shadow-glow-pink-900"
         >
           Memories
         </h2>

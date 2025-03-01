@@ -2,11 +2,11 @@
   <section class="flex flex-row justify-between min-w-full h-[720px] p-9">
     <div class="flex flex-col items-start">
       <h1
-        class="text-[8rem] font-bold text-start dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.9)] drop-shadow-[0px_0px_39px_rgba(255,0,123,0.4)]"
+        class="text-[8rem] font-bold text-start dark:drop-shadow-glow-pink-900 drop-shadow-glow-pink-400"
       >
         Happy
         <span
-          class="text-pink-500 dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.5)] drop-shadow-[0px_0px_39px_rgba(255,0,123,0.3)]"
+          class="text-pink-500 dark:drop-shadow-glow-pink-500 drop-shadow-glow-pink-300"
         >
           Monthsary!
         </span>
@@ -26,7 +26,7 @@
     <div class="slime-catto w-[645px]">
       <img
         src="/assets/images/gif/Catto(1) Copy.gif"
-        class="dark:drop-shadow-[0px_0px_39px_rgba(255,0,123,0.5)] drop-shadow-[0px_0px_39px_rgba(0,255,30,0.9)]"
+        class="dark:drop-shadow-glow-pink-500 drop-shadow-glow-pink-900"
       />
     </div>
   </section>
