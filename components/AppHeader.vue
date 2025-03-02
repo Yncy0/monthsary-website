@@ -2,6 +2,8 @@
 For more infor: visit https://ui3.nuxt.dev/getting-started -->
 
 <script setup lang="ts">
+const isDark = ref(true);
+
 const items = ref([
   [
     {
@@ -35,6 +37,11 @@ function scrollTo(s: any) {
       console.error("No element has been found");
     }
   });
+
+  function toggleTheme() {
+    !isDark;
+    console.log(isDark);
+  }
 }
 </script>
 
@@ -64,10 +71,10 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
         @click="scrollTo('#roadmap')"
         class="bg-transparent text-white hover:bg-transparent"
       />
-      <UButton
+      <!-- <UButton
         icon="i-lucide-moon"
         class="bg-transparent dark:text-white text-black hover:bg-transparent"
-      />
+      /> -->
     </div>
     <USeparator />
   </div>
