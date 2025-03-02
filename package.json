@@ -26,6 +26,7 @@
     "@vueuse/core": "^12.7.0",
     "@vueuse/nuxt": "^12.7.0",
     "typescript": "^5.7.3",
-    "vue-tsc": "^2.2.4"
+    "vue-tsc": "^2.2.4",
+    "wrangler": "^3.111.0"
   }
 }

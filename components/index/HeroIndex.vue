@@ -7,7 +7,7 @@
       <h1
         class="text-[8rem] font-bold text-start dark:drop-shadow-glow-pink-900 drop-shadow-glow-pink-400"
       >
-        Happy
+        Happy 2nd
         <span
           class="text-pink-500 dark:drop-shadow-glow-pink-500 drop-shadow-glow-pink-300"
         >
