@@ -2,8 +2,6 @@
 For more infor: visit https://ui3.nuxt.dev/getting-started -->
 
 <script setup lang="ts">
-const isDark = ref(true);
-
 const items = ref([
   [
     {
@@ -15,19 +13,18 @@ const items = ref([
   [
     {
       label: "Memories",
-      // to: "/memories",
       ref: "#memories",
     },
   ],
   [
     {
       label: "Roadmap",
-      // to: "/roadmap"
       ref: "#roadmap",
     },
   ],
 ]);
 
+//TODO: Refactor on a seperate file
 function scrollTo(s: any) {
   nextTick(() => {
     const element = document.querySelector(s);
@@ -37,12 +34,11 @@ function scrollTo(s: any) {
       console.error("No element has been found");
     }
   });
-
-  function toggleTheme() {
-    !isDark;
-    console.log(isDark);
-  }
 }
+
+//useToggle() is a VueUse functionality, visit: https://vueuse.org/shared/useToggle/#usetoggle
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 </script>
 
 <!--Here lies the design
@@ -59,22 +55,23 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
       <UButton
         label="Home"
         @click="scrollTo('#home')"
-        class="bg-transparent text-white hover:bg-transparent"
+        class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
       />
       <UButton
         label="Memories"
         @click="scrollTo('#memories')"
-        class="bg-transparent text-white hover:bg-transparent"
+        class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
       />
       <UButton
         label="Roadmap"
         @click="scrollTo('#roadmap')"
-        class="bg-transparent text-white hover:bg-transparent"
+        class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
       />
-      <!-- <UButton
+      <UButton
         icon="i-lucide-moon"
+        @click="toggleDark()"
         class="bg-transparent dark:text-white text-black hover:bg-transparent"
-      /> -->
+      />
     </div>
     <USeparator />
   </div>
