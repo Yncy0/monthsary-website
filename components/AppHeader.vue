@@ -67,11 +67,21 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
         @click="scrollTo('#roadmap')"
         class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
       />
-      <UButton
-        icon="i-lucide-moon"
-        @click="toggleDark()"
-        class="bg-transparent dark:text-white text-black hover:bg-transparent"
-      />
+      <!--FIXME: Button loads the first time when toggling-->
+      <div v-if="isDark">
+        <UButton
+          icon="i-lucide-moon"
+          @click="toggleDark()"
+          class="bg-transparent dark:text-white text-black hover:bg-transparent"
+        />
+      </div>
+      <div v-else>
+        <UButton
+          icon="i-lucide-sun"
+          @click="toggleDark()"
+          class="bg-transparent dark:text-white text-black hover:bg-transparent"
+        />
+      </div>
     </div>
     <USeparator />
   </div>
