@@ -1,5 +1,7 @@
 <script setup>
 import RoadmapStack from "../RoadmapStack.vue";
+
+//TODO: Create an array to loop it in the <template>
 </script>
 
 <template>
@@ -58,47 +60,21 @@ import RoadmapStack from "../RoadmapStack.vue";
         body="One of the cutest moments in our relationship goals. From cutesy clays to something SPICY! OoooOOooo... decisions decision..."
       />
 
-      <RoadmapStack
-        :isReversed="true"
-        imgSource="/img/gif/quest cat.gif"
-        header="Beach Date"
-        body="???"
-      />
+      <RoadmapStack :isReversed="true" header="Beach Date" body="???" />
+
+      <RoadmapStack :isReversed="false" header="Baguio Date" body="???" />
+
+      <RoadmapStack :isReversed="true" header="Oversea" body="???" />
 
       <RoadmapStack
         :isReversed="false"
-        imgSource="/img/gif/quest cat.gif"
-        header="Baguio Date"
-        body="???"
-      />
-
-      <RoadmapStack
-        :isReversed="true"
-        imgSource="/img/gif/quest cat.gif"
-        header="Oversea"
-        body="???"
-      />
-
-      <RoadmapStack
-        :isReversed="false"
-        imgSource="/img/gif/quest cat.gif"
         header="Here comes the MONEY!!!"
         body="???"
       />
 
-      <RoadmapStack
-        :isReversed="true"
-        imgSource="/img/gif/quest cat.gif"
-        header="Home"
-        body="???"
-      />
+      <RoadmapStack :isReversed="true" header="Home" body="???" />
 
-      <RoadmapStack
-        :isReversed="false"
-        imgSource="/img/gif/quest cat.gif"
-        header="Wedding"
-        body="???"
-      />
+      <RoadmapStack :isReversed="false" header="Wedding" body="???" />
     </div>
   </section>
 </template>

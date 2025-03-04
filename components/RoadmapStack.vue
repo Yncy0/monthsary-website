@@ -11,8 +11,15 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
 
 <template>
   <div class="flex gap-36" :style="{ flexDirection: flexDir }">
-    <img :src="props.imgSource" class="w-[680px] h-[560px] rounded-lg" />
-    <!-- <Card :header="props.header" :body="props.body" /> -->
+    <div v-if="props.imgSource">
+      <img :src="props.imgSource" class="w-[680px] h-[560px] rounded-lg" />
+    </div>
+    <div v-else>
+      <img
+        src="/assets/images/gif/quest cat.gif"
+        class="w-[680px] h-[560px] rounded-lg"
+      />
+    </div>
     <div class="flex flex-col justify-center">
       <span class="dark: drop-shadow-glow-pink-1000">
         <h1
