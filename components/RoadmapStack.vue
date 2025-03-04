@@ -23,8 +23,8 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
       />
     </div>
     <div class="flex flex-col justify-center">
-      <H1Glow :text="header" />
-      <p>{{ props.body }}</p>
+      <H1Glow :text="header" text-size="3rem" text-align="start" />
+      <p class="text-start">{{ props.body }}</p>
     </div>
   </div>
 </template>
