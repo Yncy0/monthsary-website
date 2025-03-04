@@ -1,4 +1,6 @@
 <script setup>
+import H1Glow from "./headings/H1Glow.vue";
+
 const props = defineProps({
   isReversed: Boolean,
   imgSource: String,
@@ -21,13 +23,7 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
       />
     </div>
     <div class="flex flex-col justify-center">
-      <span class="dark:drop-shadow-glow-pink-1000">
-        <h1
-          class="text-pink-500 text-[3rem] font-bold dark:drop-shadow-glow-pink-1000"
-        >
-          {{ props.header }}
-        </h1>
-      </span>
+      <H1Glow :text="header" />
       <p>{{ props.body }}</p>
     </div>
   </div>
