@@ -11,7 +11,7 @@ import RoadmapStack from "../RoadmapStack.vue";
   >
     <span class="dark:drop-shadow-glow-pink-1000">
       <h3
-        class="text-[5rem] font-bold text-pink-500 dark:drop-shadow-glow-pink-900 drop-shadow-glow-pink-300"
+        class="text-[5rem] font-bold text-pink-500 dark:drop-shadow-glow-pink-900"
       >
         Roadmap
       </h3>

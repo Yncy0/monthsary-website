@@ -6,7 +6,7 @@
     <div>
       <span class="dark:drop-shadow-glow-pink-1000">
         <h2
-          class="text-[5rem] font-bold text-pink-500 text-center dark:drop-shadow-glow-pink-1000 drop-shadow-glow-pink-900"
+          class="text-[5rem] font-bold text-pink-500 text-center dark:drop-shadow-glow-pink-1000"
         >
           Memories
         </h2>
