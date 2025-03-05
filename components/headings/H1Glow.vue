@@ -3,7 +3,7 @@ import HGlow from "./HGlow.vue";
 
 const props = defineProps({
   text: String,
-  textSize: Number,
+  textSize: String,
   textAlign: String,
 });
 </script>

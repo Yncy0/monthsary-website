@@ -16,7 +16,7 @@ import H2Glow from "../headings/H2Glow.vue";
       </p>
     </div>
     <div class="w-[1000px]">
-      <AppCarousel />
+      <MemoryCarousel />
     </div>
   </section>
 </template>

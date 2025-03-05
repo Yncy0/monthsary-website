@@ -18,11 +18,6 @@ export default defineNuxtConfig({
     "@nuxthub/core",
   ],
 
-  typescript: {
-    typeCheck: true,
-    strict: false,
-  },
-
   css: ["~/assets/css/main.css"],
 
   ui: {
