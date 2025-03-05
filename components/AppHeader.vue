@@ -2,6 +2,7 @@
 For more infor: visit https://ui3.nuxt.dev/getting-started -->
 
 <script setup lang="ts">
+//TODO: Might use it later once routes has been established
 const items = ref([
   [
     {
@@ -24,6 +25,10 @@ const items = ref([
   ],
 ]);
 
+//useToggle() is a VueUse functionality, visit: https://vueuse.org/shared/useToggle/#usetoggle
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+
 //TODO: Refactor on a seperate file
 function scrollTo(s: any) {
   nextTick(() => {
@@ -35,10 +40,6 @@ function scrollTo(s: any) {
     }
   });
 }
-
-//useToggle() is a VueUse functionality, visit: https://vueuse.org/shared/useToggle/#usetoggle
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
 </script>
 
 <!--Here lies the design
@@ -68,20 +69,11 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
         class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
       />
       <!--FIXME: Button loads the first time when toggling-->
-      <div v-if="isDark">
-        <UButton
-          icon="i-lucide-moon"
-          @click="toggleDark()"
-          class="bg-transparent dark:text-white text-black hover:bg-transparent"
-        />
-      </div>
-      <div v-else>
-        <UButton
-          icon="i-lucide-sun"
-          @click="toggleDark()"
-          class="bg-transparent dark:text-white text-black hover:bg-transparent"
-        />
-      </div>
+      <UButton
+        :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
+        @click="toggleDark()"
+        class="bg-transparent dark:text-white text-black hover:bg-transparent"
+      />
     </div>
     <USeparator />
   </div>
