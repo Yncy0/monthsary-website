@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
   <HGlow>
     <h1
-      class="text-[5rem] text-center font-bold text-pink-500 dark:drop-shadow-glow-pink-1000"
+      class="text-[5rem] text-center font-bold text-pink-500 dark:drop-shadow-glow-pink-500"
       :style="{ fontSize: props.textSize, textAlign: props.textAlign }"
     >
       {{ props.text }}

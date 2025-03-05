@@ -12,10 +12,11 @@ import H3Glow from "../headings/H3Glow.vue";
   >
     <H3Glow text="Roadmap" />
     <p>Roadmap for our goals as a couple</p>
-    <div class="p-20 w-full flex flex-col gap-72">
+    <div class="p-20 w-full flex flex-col gap-10">
       <RoadmapStack
         :isReversed="true"
         imgSource="/img/photobooth1.jpeg"
+        status="Done"
         header="Photobooth Date"
         body="Photobooth image that started from SM MOA, the total number photobooth stall that we visited are: 4. 2 in SM MOA, 1 in SM San Fernando Pampanga, 1 in Robinson Place Malolos City. "
       />
@@ -23,6 +24,7 @@ import H3Glow from "../headings/H3Glow.vue";
       <RoadmapStack
         :isReversed="false"
         imgSource="/img/ice_cream.jpg"
+        status="Done"
         header="Ice Cream Date"
         body="Always eating DQ with different flavors. You often didn't finished eating it!"
       />
@@ -30,6 +32,7 @@ import H3Glow from "../headings/H3Glow.vue";
       <RoadmapStack
         :isReversed="true"
         imgSource="/img/ice_skate.jpg"
+        status="Done"
         header="Ice Skating Date"
         body="From 30 minutes of duration in the beginning, to max hours cap in the second visit. Such a worth it activity, I hope more of this to come!"
       />
@@ -37,6 +40,7 @@ import H3Glow from "../headings/H3Glow.vue";
       <RoadmapStack
         :isReversed="false"
         imgSource="/img/skyranch.jpeg"
+        status="Done"
         header="Skyranch San Fernando Pampanga"
         body="Such a cute moment for our 1st monthsary celebration! Never forget the flowers you gave me."
       />
@@ -44,6 +48,7 @@ import H3Glow from "../headings/H3Glow.vue";
       <RoadmapStack
         :isReversed="true"
         imgSource="/img/coffee_date.jpg"
+        status="Done"
         header="Coffee Date"
         body="You always invite me to drink coffee whenever you misses me, thanks Coffee Buddy!"
       />
@@ -51,25 +56,52 @@ import H3Glow from "../headings/H3Glow.vue";
       <RoadmapStack
         :isReversed="false"
         imgSource="/img/clay_date1.jpg"
+        status="Done"
         header="Clay Date"
         body="One of the cutest moments in our relationship goals. From cutesy clays to something SPICY! OoooOOooo... decisions decision..."
       />
 
-      <RoadmapStack :isReversed="true" header="Beach Date" body="???" />
-
-      <RoadmapStack :isReversed="false" header="Baguio Date" body="???" />
-
-      <RoadmapStack :isReversed="true" header="Oversea" body="???" />
+      <RoadmapStack
+        :isReversed="true"
+        status="Incomplete"
+        header="Beach Date"
+        body="???"
+      />
 
       <RoadmapStack
         :isReversed="false"
+        status="Incomplete"
+        header="Baguio Date"
+        body="???"
+      />
+
+      <RoadmapStack
+        :isReversed="true"
+        status="Incomplete"
+        header="Oversea"
+        body="???"
+      />
+
+      <RoadmapStack
+        :isReversed="false"
+        status="Incomplete"
         header="Here comes the MONEY!!!"
         body="???"
       />
 
-      <RoadmapStack :isReversed="true" header="Home" body="???" />
+      <RoadmapStack
+        :isReversed="true"
+        status="Incomplete"
+        header="Home"
+        body="???"
+      />
 
-      <RoadmapStack :isReversed="false" header="Wedding" body="???" />
+      <RoadmapStack
+        :isReversed="false"
+        status="Incomplete"
+        header="Wedding"
+        body="???"
+      />
     </div>
   </section>
 </template>
