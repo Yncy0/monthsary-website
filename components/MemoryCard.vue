@@ -14,9 +14,9 @@ const props = defineProps({
           :src="props.imgSrc"
           class="rounded-lg w-[320px] h-[320px] object-cover"
         />
-        <h1 class="text-pink-500 text-2xl font-bold">
+        <h3 class="text-pink-500 text-2xl font-bold">
           {{ props.header }}
-        </h1>
+        </h3>
       </div>
     </template>
 
