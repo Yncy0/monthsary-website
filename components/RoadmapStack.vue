@@ -1,5 +1,5 @@
 <script setup>
-import H1Glow from "./headings/H1Glow.vue";
+import H3Glow from "./headings/H3Glow.vue";
 
 const props = defineProps({
   isReversed: Boolean,
@@ -29,7 +29,7 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
       </div>
       <div class="flex flex-col justify-center">
         <UBadge variant="outline" class="w-20 flex">{{ props.status }}</UBadge>
-        <H1Glow :text="header" text-size="3rem" text-align="start" />
+        <H3Glow :text="header" text-size="3rem" text-align="start" />
         <p class="text-start">{{ props.body }}</p>
       </div>
     </div>
