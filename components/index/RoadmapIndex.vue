@@ -1,7 +1,6 @@
 <script setup>
 import RoadmapStack from "../RoadmapStack.vue";
-import H2Glow from "../headings/H2Glow.vue";
-import H3Glow from "../headings/H3Glow.vue";
+import HeadingGlow from "../headings/HeadingGlow.vue";
 
 //TODO: Create an array to loop it in the <template>
 </script>
@@ -11,7 +10,7 @@ import H3Glow from "../headings/H3Glow.vue";
     id="roadmap"
     class="flex flex-col items-center justify-center py-10 min-w-full"
   >
-    <H2Glow text="Roadmap" />
+    <HeadingGlow :level="2" text="Roadmap" />
     <p>Roadmap for our goals as a couple</p>
     <div class="p-20 w-full flex flex-col gap-10">
       <RoadmapStack
