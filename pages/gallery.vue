@@ -1,3 +1,3 @@
 <template>
-  <h1>Albums</h1>
+  <h1>Gallery</h1>
 </template>

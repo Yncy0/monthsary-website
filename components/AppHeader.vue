@@ -4,25 +4,34 @@ For more infor: visit https://ui3.nuxt.dev/getting-started -->
 <script setup lang="ts">
 //TODO: Might use it later once routes has been established
 const items = ref([
-  [
-    {
-      label: "Home",
-      to: "/",
-      ref: "#home",
-    },
-  ],
-  [
-    {
-      label: "Memories",
-      ref: "#memories",
-    },
-  ],
-  [
-    {
-      label: "Roadmap",
-      ref: "#roadmap",
-    },
-  ],
+  {
+    label: "Home",
+    to: "/",
+    children: [
+      {
+        label: "Memories",
+        icon: "i-lucide-brain",
+        slot: "components",
+      },
+      {
+        label: "Roadmap",
+        icon: "i-lucide-map",
+        slot: "components",
+      },
+    ],
+  },
+
+  {
+    label: "Memories",
+  },
+
+  {
+    label: "Gallery",
+  },
+
+  {
+    label: "Roadmap",
+  },
 ]);
 
 //useToggle() is a VueUse functionality, visit: https://vueuse.org/shared/useToggle/#usetoggle
@@ -45,29 +54,27 @@ function scrollTo(s: any) {
 <!--Here lies the design
 It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
 <template>
-  <div class="sticky top-0 z-10 bg-white dark:bg-gray-900">
+  <header class="sticky top-0 z-10 bg-white dark:bg-gray-900">
     <div class="flex flex-row items-center p-2 gap-4 w-full justify-center">
-      <!-- <UNavigationMenu
+      <UNavigationMenu
         :items="items"
         orientation="horizontal"
         variant="link"
         class="gap-2"
-      /> -->
-      <UButton
-        label="Home"
-        @click="scrollTo('#home')"
-        class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
-      />
-      <UButton
-        label="Memories"
-        @click="scrollTo('#memories')"
-        class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
-      />
-      <UButton
-        label="Roadmap"
-        @click="scrollTo('#roadmap')"
-        class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
-      />
+      >
+        <!-- <template #components-content="{ item }">
+          <ul>
+            <li v-for="child in item.children" :key="child.label">
+              <UButton
+                label="Memories"
+                @click="scrollTo('#memories')"
+                class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
+              />
+            </li>
+          </ul>
+        </template> -->
+      </UNavigationMenu>
+
       <ClientOnly>
         <UButton
           :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
@@ -78,5 +85,5 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
       </ClientOnly>
     </div>
     <USeparator />
-  </div>
+  </header>
 </template>
