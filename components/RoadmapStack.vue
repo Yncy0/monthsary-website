@@ -17,14 +17,14 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
     class="flex grow basis-0 flex-row justify-between gap-40"
     :style="{ flexDirection: flexDir }"
   >
-    <div class="flex-1 flex">
+    <div class="flex-1 flex items-center size-[520px]">
       <div v-if="props.imgSource">
-        <img :src="props.imgSource" class="w-[360px] h-[360px] rounded-lg" />
+        <img :src="props.imgSource" class="size-[360px] rounded-lg" />
       </div>
       <div v-else class="flex-1">
         <img
           src="/assets/images/gif/quest cat.gif"
-          class="w-[360px ] h-[360px] rounded-lg"
+          class="size-[360px] rounded-lg"
         />
       </div>
     </div>
