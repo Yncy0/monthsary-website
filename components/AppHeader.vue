@@ -9,8 +9,8 @@ const items = ref([
     to: "/",
     children: [
       {
-        label: "Home",
-        icon: "i-lucide-house",
+        label: "Go back",
+        icon: "i-lucide-arrow-up",
         slot: "components",
         onSelect: () => scrollTo("#hero"),
       },
