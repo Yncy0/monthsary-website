@@ -73,20 +73,7 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
         variant="link"
         content-orientation="vertical"
         class="gap-2"
-      >
-        <!-- <template #components-content="{ item }">
-          <ul>
-            <li v-for="child in item.children" :key="child.label">
-              <UButton
-                label="Memories"
-                @click="scrollTo('#memories')"
-                class="bg-transparent dark:text-white text-gray-900 hover:bg-transparent"
-              />
-            </li>
-          </ul>
-        </template> -->
-      </UNavigationMenu>
-
+      />
       <ClientOnly>
         <UButton
           :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
