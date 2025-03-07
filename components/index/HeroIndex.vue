@@ -1,6 +1,6 @@
 <template>
   <section
-    id="home"
+    id="hero"
     class="flex flex-row justify-between min-w-full h-[720px] p-9"
   >
     <div class="flex flex-col items-start">

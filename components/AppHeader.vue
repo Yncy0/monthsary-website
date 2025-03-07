@@ -7,16 +7,25 @@ const items = ref([
   {
     label: "Home",
     to: "/",
+
     children: [
+      {
+        label: "Home",
+        icon: "i-lucide-house",
+        slot: "components",
+        onSelect: () => scrollTo("#hero"),
+      },
       {
         label: "Memories",
         icon: "i-lucide-brain",
         slot: "components",
+        onSelect: () => scrollTo("#memories"),
       },
       {
         label: "Roadmap",
         icon: "i-lucide-map",
         slot: "components",
+        onSelect: () => scrollTo("#roadmap"),
       },
     ],
   },
@@ -60,6 +69,7 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
         :items="items"
         orientation="horizontal"
         variant="link"
+        content-orientation="vertical"
         class="gap-2"
       >
         <!-- <template #components-content="{ item }">
