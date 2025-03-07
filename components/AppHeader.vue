@@ -7,7 +7,6 @@ const items = ref([
   {
     label: "Home",
     to: "/",
-
     children: [
       {
         label: "Home",
@@ -32,14 +31,17 @@ const items = ref([
 
   {
     label: "Memories",
+    to: "memories",
   },
 
   {
     label: "Gallery",
+    to: "gallery",
   },
 
   {
     label: "Roadmap",
+    to: "roadmap",
   },
 ]);
 
