@@ -11,8 +11,8 @@ import HeadingGlow from "../headings/HeadingGlow.vue";
     class="flex flex-col items-center justify-center py-10 min-w-full"
   >
     <HeadingGlow :level="2" text="Roadmap" />
-    <p>Roadmap for our goals as a couple</p>
-    <div class="p-20 w-full flex flex-col gap-10">
+    <p>Lists of accomplished goals</p>
+    <div class="p-20 w-full flex flex-col">
       <RoadmapStack
         :isReversed="true"
         imgSource="/img/photobooth1.jpeg"
@@ -41,7 +41,7 @@ import HeadingGlow from "../headings/HeadingGlow.vue";
         :isReversed="false"
         imgSource="/img/skyranch.jpeg"
         status="Done"
-        header="Skyranch San Fernando Pampanga"
+        header="Skyranch Pampanga"
         body="Such a cute moment for our 1st monthsary celebration! Never forget the flowers you gave me."
       />
 
@@ -59,48 +59,6 @@ import HeadingGlow from "../headings/HeadingGlow.vue";
         status="Done"
         header="Clay Date"
         body="One of the cutest moments in our relationship goals. From cutesy clays to something SPICY! OoooOOooo... decisions decision..."
-      />
-
-      <RoadmapStack
-        :isReversed="true"
-        status="Incomplete"
-        header="Beach Date"
-        body="???"
-      />
-
-      <RoadmapStack
-        :isReversed="false"
-        status="Incomplete"
-        header="Baguio Date"
-        body="???"
-      />
-
-      <RoadmapStack
-        :isReversed="true"
-        status="Incomplete"
-        header="Oversea"
-        body="???"
-      />
-
-      <RoadmapStack
-        :isReversed="false"
-        status="Incomplete"
-        header="Here comes the MONEY!!!"
-        body="???"
-      />
-
-      <RoadmapStack
-        :isReversed="true"
-        status="Incomplete"
-        header="Home"
-        body="???"
-      />
-
-      <RoadmapStack
-        :isReversed="false"
-        status="Incomplete"
-        header="Wedding"
-        body="???"
       />
     </div>
   </section>
