@@ -35,11 +35,6 @@ const items = ref([
   },
 
   {
-    label: "Gallery",
-    to: "gallery",
-  },
-
-  {
     label: "Roadmap",
     to: "roadmap",
   },
