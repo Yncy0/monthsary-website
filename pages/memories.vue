@@ -1,3 +1,7 @@
+<script setup>
+import HeroMemories from "~/components/memories/HeroMemories.vue";
+</script>
+
 <template>
-  <h1>Memories</h1>
+  <HeroMemories />
 </template>
