@@ -40,10 +40,10 @@ onMounted(() => {
   scene.add(cube);
 
   //Lighting of the 3D Canvas
-  const pointLight = new THREE.PointLight(0xffffff);
+  const pointLight = new THREE.PointLight(0xffffff, 50, 1000);
   pointLight.position.set(0.3, 2, 1);
 
-  const ambientLight = new THREE.AmbientLight(0xfffff);
+  const ambientLight = new THREE.AmbientLight(0xfffff, 20);
   scene.add(pointLight, ambientLight);
 
   // const lightHelper = new THREE.PointLightHelper(pointLight);
