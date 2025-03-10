@@ -19,6 +19,7 @@ onMounted(() => {
   const canvas = document.querySelector("#cube");
   const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
+    alpha: true,
   });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(750, 500);
