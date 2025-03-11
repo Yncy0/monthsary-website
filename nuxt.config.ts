@@ -19,6 +19,10 @@ export default defineNuxtConfig({
     // "@nuxtjs/tailwindcss",
   ],
 
+  nitro: {
+    preset: "cloudflare-pages",
+  },
+
   css: ["~/assets/css/main.css"],
 
   ui: {
