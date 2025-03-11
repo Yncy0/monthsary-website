@@ -5,7 +5,7 @@ import Cube from "../3d/Cube.vue";
 <template>
   <section
     id="hero"
-    class="flex flex-row justify-between min-w-full h-[720px] p-9 z-10"
+    class="flex flex-row justify-between min-w-full h-[720px] p-9"
   >
     <div class="flex flex-col items-start">
       <h1
