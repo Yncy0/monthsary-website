@@ -22,10 +22,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'yarn'
+          cache: "yarn"
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn add
 
       - name: Ensure NuxtHub module is installed
         run: npx nuxthub@latest ensure
