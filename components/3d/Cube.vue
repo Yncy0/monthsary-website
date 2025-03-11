@@ -31,7 +31,6 @@ onMounted(() => {
   const geometryCube = new THREE.BoxGeometry(1, 1, 1);
   const geometryCube2 = new THREE.BoxGeometry(1, 1, 1);
   const geometryCube3 = new THREE.BoxGeometry(1, 1, 1);
-  const geometryCone = new THREE.ConeGeometry(1, 2, 15);
   const geometryCube4 = new THREE.BoxGeometry(1, 1, 1);
   const geometryCube5 = new THREE.BoxGeometry(1, 1, 1);
 
