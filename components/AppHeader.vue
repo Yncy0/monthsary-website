@@ -6,37 +6,17 @@ For more infor: visit https://ui3.nuxt.dev/getting-started -->
 const items = ref([
   {
     label: "Home",
-    to: "/",
-    children: [
-      {
-        label: "Go back",
-        icon: "i-lucide-arrow-up",
-        slot: "components",
-        onSelect: () => scrollTo("#hero"),
-      },
-      {
-        label: "Memories",
-        icon: "i-lucide-brain",
-        slot: "components",
-        onSelect: () => scrollTo("#memories"),
-      },
-      {
-        label: "Roadmap",
-        icon: "i-lucide-map",
-        slot: "components",
-        onSelect: () => scrollTo("#roadmap"),
-      },
-    ],
+    onSelect: () => scrollTo("#hero"),
   },
 
   {
     label: "Memories",
-    to: "memories",
+    onSelect: () => scrollTo("#memories"),
   },
 
   {
     label: "Roadmap",
-    to: "roadmap",
+    onSelect: () => scrollTo("#roadmap"),
   },
 ]);
 
@@ -60,8 +40,10 @@ function scrollTo(s: any) {
 <!--Here lies the design
 It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
 <template>
-  <header class="sticky top-0 z-10 bg-white dark:bg-gray-900">
-    <div class="flex flex-row items-center p-2 gap-4 w-full justify-center">
+  <header class="sticky top-0 z-10">
+    <div
+      class="flex flex-row items-center p-2 gap-4 w-full justify-center bg-white dark:bg-gray-900"
+    >
       <UNavigationMenu
         :items="items"
         orientation="horizontal"
