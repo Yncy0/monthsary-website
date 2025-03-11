@@ -2,6 +2,7 @@
 <!--SPAGHETTI SCRIPT-->
 <script setup>
 import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 //Make it run on Client only by putting onMounted()
 onMounted(() => {
@@ -85,6 +86,8 @@ onMounted(() => {
   const lightHelper = new THREE.PointLightHelper(pointLight);
   scene.add(lightHelper);
 
+  const controls = new OrbitControls(camera, renderer.domElement);
+
   //Animations of the shape
   function animate() {
     requestAnimationFrame(animate);
@@ -103,6 +106,8 @@ onMounted(() => {
 
     cube5.rotation.x += 0.01;
     cube5.rotation.y += 0.01;
+
+    controls.update();
 
     renderer.render(scene, camera);
   }
