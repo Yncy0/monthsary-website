@@ -23,12 +23,12 @@ onMounted(() => {
     alpha: true,
   });
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(600, 500);
+  renderer.setSize(650, 500);
 
   const loader = new GLTFLoader();
 
   loader.load(
-    "/model/scene.gltf",
+    "/bananacat/scene.gltf",
 
     function (gltf) {
       gltf.scene.scale.setScalar(4);
