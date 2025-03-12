@@ -1,5 +1,6 @@
 <script setup>
 import Cube from "../3d/Cube.vue";
+import Model from "../3d/Model.vue";
 </script>
 
 <template>
@@ -30,6 +31,9 @@ import Cube from "../3d/Cube.vue";
       /> -->
     </div>
 
-    <Cube />
+    <!-- <Cube /> -->
+    <ClientOnly>
+      <Model />
+    </ClientOnly>
   </section>
 </template>
