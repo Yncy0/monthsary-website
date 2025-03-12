@@ -31,9 +31,9 @@ import Model from "../3d/Model.vue";
       /> -->
     </div>
 
-    <!-- <Cube /> -->
-    <ClientOnly>
+    <Cube />
+    <!-- <ClientOnly>
       <Model />
-    </ClientOnly>
+    </ClientOnly> -->
   </section>
 </template>
