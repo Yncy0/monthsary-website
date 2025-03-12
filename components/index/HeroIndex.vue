@@ -1,11 +1,12 @@
 <script setup>
 import Cube from "../3d/Cube.vue";
+import Model from "../3d/Model.vue";
 </script>
 
 <template>
   <section
     id="hero"
-    class="flex flex-row justify-between min-w-full h-[720px] p-9 z-10"
+    class="flex flex-row justify-between min-w-full h-[720px] p-9"
   >
     <div class="flex flex-col items-start">
       <h1
@@ -30,6 +31,9 @@ import Cube from "../3d/Cube.vue";
       /> -->
     </div>
 
-    <Cube />
+    <!-- <Cube /> -->
+    <ClientOnly>
+      <Model />
+    </ClientOnly>
   </section>
 </template>

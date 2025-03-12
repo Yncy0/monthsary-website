@@ -1,0 +1,11 @@
+Model Information:
+* title:	bananaCat
+* source:	https://sketchfab.com/3d-models/bananacat-7f05042ff8854593947c94bd51b90b8a
+* author:	damn2605 (https://sketchfab.com/damn2605)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "bananaCat" (https://sketchfab.com/3d-models/bananacat-7f05042ff8854593947c94bd51b90b8a) by damn2605 (https://sketchfab.com/damn2605) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
