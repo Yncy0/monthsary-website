@@ -17,12 +17,13 @@ onMounted(() => {
   scene.add(camera);
 
   const canvas = document.querySelector("#bg");
+
   const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     alpha: true,
   });
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(750, 500);
+  renderer.setSize(600, 500);
 
   const loader = new GLTFLoader();
 
@@ -30,7 +31,19 @@ onMounted(() => {
     "/model/scene.gltf",
 
     function (gltf) {
+      gltf.scene.scale.setScalar(4);
+      gltf.scene.position.y = -3;
+      gltf.scene.position.z = -1;
+
       scene.add(gltf.scene);
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        gltf.scene.rotation.y += 0.03;
+      }
+
+      animate();
     },
 
     undefined,
@@ -40,13 +53,13 @@ onMounted(() => {
     }
   );
 
-  const pointLight = new THREE.PointLight(0xffffff, 100, 100);
+  const pointLight = new THREE.PointLight(0xffffff, 10, 100);
   const ambientLight = new THREE.AmbientLight(0xffffff);
   pointLight.position.set(0, 3, 2);
   scene.add(pointLight, ambientLight);
 
-  const pointLightHelper = new THREE.PointLightHelper(pointLight);
-  scene.add(pointLightHelper);
+  // const pointLightHelper = new THREE.PointLightHelper(pointLight);
+  // scene.add(pointLightHelper);
 
   const controls = new OrbitControls(camera, renderer.domElement);
 
