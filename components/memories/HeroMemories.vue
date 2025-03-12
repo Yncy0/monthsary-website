@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Popcat from "../3d/Popcat.vue";
+</script>
 
 <template>
   <div>
@@ -16,6 +18,7 @@
           repellendus omnis!
         </p>
       </div>
+      <Popcat />
     </div>
   </div>
 </template>
