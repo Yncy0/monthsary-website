@@ -32,8 +32,7 @@ onMounted(() => {
 
     function (gltf) {
       gltf.scene.scale.setScalar(4);
-      gltf.scene.position.y = -3;
-      gltf.scene.position.z = -1;
+      gltf.scene.position.y = -3
 
       scene.add(gltf.scene);
 
@@ -55,7 +54,7 @@ onMounted(() => {
 
   const pointLight = new THREE.PointLight(0xffffff, 10, 100);
   const ambientLight = new THREE.AmbientLight(0xffffff);
-  pointLight.position.set(0, 3, 2);
+  pointLight.position.set(0, 3, 3);
   scene.add(pointLight, ambientLight);
 
   // const pointLightHelper = new THREE.PointLightHelper(pointLight);
