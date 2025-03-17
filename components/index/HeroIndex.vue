@@ -1,6 +1,6 @@
 <script setup>
 import Cube from "../3d/Cube.vue";
-import Model from "../3d/Model.vue";
+import Bananacat from "../3d/Bananacat.vue";
 </script>
 
 <template>
@@ -30,10 +30,6 @@ import Model from "../3d/Model.vue";
         :block="false"
       /> -->
     </div>
-
-    <Cube />
-    <!-- <ClientOnly>
-      <Model />
-    </ClientOnly> -->
+    <Bananacat />
   </section>
 </template>

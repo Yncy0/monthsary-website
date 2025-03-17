@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { Lazy3dBananacat } from "#components";
+</script>
 
 <template>
   <div>
@@ -16,6 +18,7 @@
           repellendus omnis!
         </p>
       </div>
+      <Lazy3dBananacat />
     </div>
   </div>
 </template>
