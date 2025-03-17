@@ -1,5 +1,5 @@
 <script setup>
-import Popcat from "../3d/Popcat.vue";
+import { Lazy3dBananacat } from "#components";
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import Popcat from "../3d/Popcat.vue";
           repellendus omnis!
         </p>
       </div>
-      <Popcat />
+      <Lazy3dBananacat />
     </div>
   </div>
 </template>
