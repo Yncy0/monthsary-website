@@ -31,8 +31,8 @@ onMounted(() => {
     "/bananacat/scene.gltf",
 
     function (gltf) {
-      gltf.scene.scale.setScalar(4);
-      gltf.scene.position.y = -3
+      gltf.scene.scale.setScalar(3.7);
+      gltf.scene.position.y = -3;
 
       scene.add(gltf.scene);
 
