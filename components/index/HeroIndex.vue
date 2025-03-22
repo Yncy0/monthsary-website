@@ -1,6 +1,9 @@
 <script setup>
 import Cube from "../3d/Cube.vue";
 import Bananacat from "../3d/Bananacat.vue";
+import ThreeCanvas from "../three/ThreeCanvas.vue";
+import ThreePerspectiveCamera from "../three/ThreePerspectiveCamera.vue";
+import ThreeGLTFLoader from "../three/ThreeGLTFLoader.vue";
 </script>
 
 <template>
@@ -30,6 +33,12 @@ import Bananacat from "../3d/Bananacat.vue";
         :block="false"
       /> -->
     </div>
-    <Bananacat />
+    <!-- <Bananacat /> -->
+    <ClientOnly>
+      <ThreeCanvas alpha :size="[250, 250]">
+        <ThreePerspectiveCamera :fov="75" aspect :near="0.1" :far="100" />
+        <ThreeGLTFLoader gltf="/bananacat/scene.gltf" />
+      </ThreeCanvas>
+    </ClientOnly>
   </section>
 </template>

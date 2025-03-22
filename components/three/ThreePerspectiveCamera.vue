@@ -3,7 +3,10 @@ import * as THREE from "three";
 
 const props = defineProps({
   fov: Number,
-  aspect: Number,
+  aspect: {
+    type: Number,
+    default: () => window.innerWidth / window.innerHeight,
+  },
   near: Number,
   far: Number,
   position: {

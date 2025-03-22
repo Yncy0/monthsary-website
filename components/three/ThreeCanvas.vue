@@ -9,14 +9,16 @@ const props = defineProps({
   alpha: Boolean,
 });
 
-const canvas = document.querySelector("#bg");
+onMounted(() => {
+  const canvas = document.querySelector("#bg");
 
-const renderer = new THREE.WebGLRenderer({
-  canvas: canvas,
-  alpha: props.alpha,
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    alpha: props.alpha,
+  });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(props.size.at(0), props.size.at(1));
 });
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(props.size.at(0), props.size.at(1));
 </script>
 
 <template>
