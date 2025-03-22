@@ -29,7 +29,6 @@ onMounted(() => {
 
   loader.load(
     "/bananacat/scene.gltf",
-    // "/humanpoly.glb",
 
     function (gltf) {
       gltf.scene.scale.setScalar(3.7);
@@ -37,17 +36,8 @@ onMounted(() => {
 
       scene.add(gltf.scene);
 
-      // const mixer = new THREE.AnimationMixer(gltf.scene);
-      // const clips = gltf.animations;
-
-      // const clip = THREE.AnimationClip.findByName(clips, "gangnam_dance");
-      // const action = mixer.clipAction(clip);
-      // action.play();
-
-      const clock = new THREE.Clock();
       function animate() {
         requestAnimationFrame(animate);
-        // mixer.update(clock.getDelta());
 
         gltf.scene.rotation.y += 0.03;
       }
@@ -66,9 +56,6 @@ onMounted(() => {
   const ambientLight = new THREE.AmbientLight(0xffffff);
   pointLight.position.set(0, 3, 3);
   scene.add(pointLight, ambientLight);
-
-  // const pointLightHelper = new THREE.PointLightHelper(pointLight);
-  // scene.add(pointLightHelper);
 
   const controls = new OrbitControls(camera, renderer.domElement);
 
