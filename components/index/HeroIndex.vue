@@ -1,5 +1,6 @@
 <script setup>
 import Bananacat from "../3d/Bananacat.vue";
+import { ThreeCanvas, ThreeGLTFLoader, ThreePerspectiveCamera } from "../three";
 </script>
 
 <template>
@@ -29,6 +30,17 @@ import Bananacat from "../3d/Bananacat.vue";
         :block="false"
       /> -->
     </div>
-    <Bananacat />
+    <!-- <Bananacat /> -->
+    <ClientOnly>
+      <ThreeCanvas :size="[650, 500]">
+        <ThreePerspectiveCamera
+          :fov="75"
+          :near="0.1"
+          :far="1000"
+          :position="[0, 0, 5]"
+        />
+        <ThreeGLTFLoader url="/bananacat/scene.gltf" />
+      </ThreeCanvas>
+    </ClientOnly>
   </section>
 </template>

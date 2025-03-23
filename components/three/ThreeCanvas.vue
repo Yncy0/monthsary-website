@@ -19,11 +19,11 @@ onMounted(() => {
   const scene = new Scene();
 
   const renderer = new WebGLRenderer({
-    canvas: document.querySelector("#id"),
+    canvas: document.querySelector("#bg"),
     alpha: props.alpha,
   });
 
-  renderer.setPixelRation(props.pixelRatio);
+  renderer.setPixelRatio(props.pixelRatio);
 
   //Passing index of array props.size
   //WHERE first index is width, and second index is height

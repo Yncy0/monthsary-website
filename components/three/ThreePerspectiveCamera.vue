@@ -9,10 +9,7 @@ const props = defineProps({
   },
   near: Number,
   far: Number,
-  lookAt: {
-    type: Array,
-    default: () => [0, 0, 0], //[x: Number, y: Number: z: Number]
-  },
+
   position: {
     type: Array,
     default: () => [0, 0, 0], //[x: Number, y: Number: z: Number]
@@ -33,8 +30,6 @@ onMounted(() => {
     props.position.at(1),
     props.position.at(2)
   );
-
-  camera.lookAt(props.lookAt(0), props.lookAt(1), props.lookAt(2));
 });
 </script>
 
