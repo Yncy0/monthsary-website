@@ -25,26 +25,120 @@ onMounted(() => {
 
   const loader = new GLTFLoader();
 
+  // animation name: 'Armature|mixamo.com|Layer0'
+  // FIXME: TOO MUCH SPAGHETTI ON THIS ONE!!!!!!
   loader.load("/nyanya/gangnam.glb", function (gltf) {
     scene.add(gltf.scene);
+
+    const mixer = new THREE.AnimationMixer(gltf.scene);
+    const clips = gltf.animations;
+
+    const clock = new THREE.Clock();
+
+    function update() {
+      mixer.update(clock.getDelta());
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      update();
+    }
+
+    animate();
+
+    const clip = THREE.AnimationClip.findByName(
+      clips,
+      "Armature|mixamo.com|Layer0"
+    );
+    const action = mixer.clipAction(clip);
+    action.play();
   });
 
-  loader.load("/nyanya/capoiera.glb", function (gltf) {
+  loader.load("/nyanya/capoeira.glb", function (gltf) {
     scene.add(gltf.scene);
 
     gltf.scene.position.set(4, 0, 0);
+
+    const mixer = new THREE.AnimationMixer(gltf.scene);
+    const clips = gltf.animations;
+
+    const clock = new THREE.Clock();
+
+    function update() {
+      mixer.update(clock.getDelta());
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      update();
+    }
+
+    animate();
+
+    const clip = THREE.AnimationClip.findByName(
+      clips,
+      "Armature|mixamo.com|Layer0"
+    );
+    const action = mixer.clipAction(clip);
+    action.play();
   });
 
   loader.load("/nyanya/hiphopdance.glb", function (gltf) {
     scene.add(gltf.scene);
 
     gltf.scene.position.set(-4, 0, 0);
+
+    const mixer = new THREE.AnimationMixer(gltf.scene);
+    const clips = gltf.animations;
+
+    const clock = new THREE.Clock();
+
+    function update() {
+      mixer.update(clock.getDelta());
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      update();
+    }
+
+    animate();
+
+    const clip = THREE.AnimationClip.findByName(
+      clips,
+      "Armature|mixamo.com|Layer0"
+    );
+    const action = mixer.clipAction(clip);
+    action.play();
   });
 
   loader.load("/nyanya/twerk.glb", function (gltf) {
     scene.add(gltf.scene);
 
     gltf.scene.position.set(-3, -2, 0);
+
+    const mixer = new THREE.AnimationMixer(gltf.scene);
+    const clips = gltf.animations;
+
+    const clock = new THREE.Clock();
+
+    function update() {
+      mixer.update(clock.getDelta());
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      update();
+    }
+
+    animate();
+
+    const clip = THREE.AnimationClip.findByName(
+      clips,
+      "Armature|mixamo.com|Layer0"
+    );
+    const action = mixer.clipAction(clip);
+    action.play();
   });
 
   function animate() {
