@@ -1,5 +1,4 @@
 <script setup>
-import Cube from "../3d/Cube.vue";
 import Bananacat from "../3d/Bananacat.vue";
 </script>
 

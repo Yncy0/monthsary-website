@@ -1,5 +1,5 @@
 <script setup>
-import { Lazy3dBananacat } from "#components";
+import Bananacat from "../3d/Bananacat.vue";
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import { Lazy3dBananacat } from "#components";
           repellendus omnis!
         </p>
       </div>
-      <Lazy3dBananacat />
+      <Bananacat />
     </div>
   </div>
 </template>

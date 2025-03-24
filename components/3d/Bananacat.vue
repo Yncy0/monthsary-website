@@ -1,38 +1,44 @@
-<script setup>
+<script setup lang="ts">
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+
+import useThreePerspectiveCamera from "~/composables/three/useThreeCamera";
+import {
+  useThreeAmbientLight,
+  useThreePointLight,
+} from "~/composables/three/useThreeLight";
+import useThreeRender from "~/composables/three/useThreeRenderer";
 
 onMounted(() => {
   const scene = new THREE.Scene();
 
-  const camera = new THREE.PerspectiveCamera(
+  const camera = useThreePerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
     0.1,
-    1000
+    1000,
+    [0, 0, 5]
   );
-  camera.position.z = 5;
 
-  scene.add(camera);
+  const canvas = document.querySelector("#bg") as HTMLCanvasElement;
 
-  const canvas = document.querySelector("#bg");
+  const renderer = useThreeRender(undefined, canvas, undefined, [680, 500]);
 
-  const renderer = new THREE.WebGLRenderer({
-    canvas: canvas,
-    alpha: true,
-  });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(650, 500);
+  const pointLight = useThreePointLight(0xffffff, 10, 100, [0, 3, 3]);
+  const ambientLight = useThreeAmbientLight(0xffffff);
+
+  scene.add(pointLight, ambientLight);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
 
   const loader = new GLTFLoader();
-
   loader.load(
     "/bananacat/scene.gltf",
 
     function (gltf) {
-      gltf.scene.scale.setScalar(4);
-      gltf.scene.position.y = -3
+      gltf.scene.scale.setScalar(3.7);
+      gltf.scene.position.y = -3;
 
       scene.add(gltf.scene);
 
@@ -51,16 +57,6 @@ onMounted(() => {
       console.error(error);
     }
   );
-
-  const pointLight = new THREE.PointLight(0xffffff, 10, 100);
-  const ambientLight = new THREE.AmbientLight(0xffffff);
-  pointLight.position.set(0, 3, 3);
-  scene.add(pointLight, ambientLight);
-
-  // const pointLightHelper = new THREE.PointLightHelper(pointLight);
-  // scene.add(pointLightHelper);
-
-  const controls = new OrbitControls(camera, renderer.domElement);
 
   function animate() {
     requestAnimationFrame(animate);
