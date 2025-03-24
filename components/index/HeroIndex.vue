@@ -1,5 +1,6 @@
 <script setup>
 import Bananacat from "../3d/Bananacat.vue";
+import NyaNyaGang from "../3d/NyaNyaGang.vue";
 </script>
 
 <template>
@@ -29,6 +30,7 @@ import Bananacat from "../3d/Bananacat.vue";
         :block="false"
       /> -->
     </div>
-    <Bananacat />
+    <!-- <Bananacat /> -->
+    <NyaNyaGang />
   </section>
 </template>
