@@ -1,5 +1,5 @@
 <script setup>
-import Bananacat from "../3d/Bananacat.vue";
+import Bananacat from "../3D/Bananacat.vue";
 </script>
 
 <template>
