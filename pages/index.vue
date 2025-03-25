@@ -8,7 +8,6 @@ import RoadmapIndex from "~/components/index/RoadmapIndex.vue";
   <Transition :css="false">
     <div class="flex flex-col min-w-full justify-center items-center">
       <HeroIndex />
-      <USeparator />
 
       <MemoriesIndex />
       <USeparator />

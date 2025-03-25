@@ -13,13 +13,13 @@ import {
 onMounted(() => {
   const scene = new THREE.Scene();
 
-  const camera = useThreePerspectiveCamera(75, undefined, 0.1, 100, [0, 2, 5]);
+  const camera = useThreePerspectiveCamera(80, undefined, 0.1, 100, [0, 2, 5]);
 
   const canvas = document.querySelector("#bg") as HTMLCanvasElement;
-  const renderer = useThreeRender(false, canvas, undefined, [650, 500]);
+  const renderer = useThreeRender(undefined, canvas, undefined, [750, 500]);
 
   const ambientLight = useThreeAmbientLight(0xffffff);
-  const pointLight = useThreePointLight(0xffffff, 10, 100, [3, 3, 3]);
+  const pointLight = useThreePointLight(0xffffff, 100, 100, [0, 3, 10]);
 
   scene.add(camera, ambientLight, pointLight);
 
@@ -57,7 +57,7 @@ onMounted(() => {
   loader.load("/nyanya/capoeira.glb", function (gltf) {
     scene.add(gltf.scene);
 
-    gltf.scene.position.set(4, 0, 0);
+    gltf.scene.position.set(5, -2.5, -3);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;
@@ -86,7 +86,7 @@ onMounted(() => {
   loader.load("/nyanya/hiphopdance.glb", function (gltf) {
     scene.add(gltf.scene);
 
-    gltf.scene.position.set(-4, 0, 0);
+    gltf.scene.position.set(-7, 3, -1.5);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;
@@ -115,7 +115,8 @@ onMounted(() => {
   loader.load("/nyanya/twerk.glb", function (gltf) {
     scene.add(gltf.scene);
 
-    gltf.scene.position.set(-3, -2, 0);
+    gltf.scene.position.set(-5, -2.5, -3);
+    gltf.scene.rotation.set(0, 180, 0);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;
