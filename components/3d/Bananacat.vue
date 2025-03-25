@@ -4,11 +4,11 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 import useThreePerspectiveCamera from "~/composables/three/useThreeCamera";
+import useThreeRender from "~/composables/three/useThreeRenderer";
 import {
   useThreeAmbientLight,
   useThreePointLight,
 } from "~/composables/three/useThreeLight";
-import useThreeRender from "~/composables/three/useThreeRenderer";
 
 onMounted(() => {
   const scene = new THREE.Scene();
@@ -22,7 +22,6 @@ onMounted(() => {
   );
 
   const canvas = document.querySelector("#bg") as HTMLCanvasElement;
-
   const renderer = useThreeRender(undefined, canvas, undefined, [680, 500]);
 
   const pointLight = useThreePointLight(0xffffff, 10, 100, [0, 3, 3]);
