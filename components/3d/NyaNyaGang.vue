@@ -18,10 +18,10 @@ onMounted(() => {
   const canvas = document.querySelector("#bg") as HTMLCanvasElement;
   const renderer = useThreeRender(undefined, canvas, undefined, [750, 500]);
 
-  const ambientLight = useThreeAmbientLight(0xffffff);
-  const pointLight = useThreePointLight(0xffffff, 100, 100, [0, 3, 10]);
+  const ambientLight = useThreeAmbientLight(undefined, 4.5);
+  const pointLight = useThreePointLight(0xffffff, 75, 100, [6, 3, 6]);
 
-  scene.add(camera, ambientLight, pointLight);
+  scene.add(camera, pointLight, ambientLight);
 
   const loader = new GLTFLoader();
 
