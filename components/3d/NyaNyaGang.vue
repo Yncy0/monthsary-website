@@ -18,8 +18,8 @@ onMounted(() => {
   const canvas = document.querySelector("#bg") as HTMLCanvasElement;
   const renderer = useThreeRender(undefined, canvas, undefined, [750, 500]);
 
-  const ambientLight = useThreeAmbientLight(undefined, 4.5);
-  const pointLight = useThreePointLight(0xffffff, 75, 100, [6, 3, 6]);
+  const ambientLight = useThreeAmbientLight(undefined, 3.5);
+  const pointLight = useThreePointLight(0xffffff, 50, 100, [-3, 3, 6]);
 
   scene.add(camera, pointLight, ambientLight);
 
@@ -87,6 +87,35 @@ onMounted(() => {
     scene.add(gltf.scene);
 
     gltf.scene.position.set(-7, 3, -1.5);
+
+    const mixer = new THREE.AnimationMixer(gltf.scene);
+    const clips = gltf.animations;
+
+    const clock = new THREE.Clock();
+
+    function update() {
+      mixer.update(clock.getDelta());
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      update();
+    }
+
+    animate();
+
+    const clip = THREE.AnimationClip.findByName(
+      clips,
+      "Armature|mixamo.com|Layer0"
+    );
+    const action = mixer.clipAction(clip);
+    action.play();
+  });
+
+  loader.load("/nyanya/hiphopdance1.glb", function (gltf) {
+    scene.add(gltf.scene);
+
+    gltf.scene.position.set(6.7, 2.5, -2);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;
