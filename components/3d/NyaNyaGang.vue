@@ -20,8 +20,8 @@ onMounted(() => {
   const renderer = useThreeRender(undefined, canvas, undefined, [750, 500]);
 
   const ambientLight = useThreeAmbientLight(0xffffff, 3);
-  const pointLightR = useThreePointLight(0xffffff, 500, 100, [6, 10, 10]);
-  const pointLightL = useThreePointLight(0xffffff, 500, 100, [-6, 10, 10]);
+  const pointLightR = useThreePointLight(0xffffff, 500, 100, [5, 10, 10]);
+  const pointLightL = useThreePointLight(0xffffff, 500, 100, [-5, 10, 10]);
 
   scene.add(camera, pointLightR, pointLightL);
 
