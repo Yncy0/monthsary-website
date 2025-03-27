@@ -1,11 +1,22 @@
-import { AmbientLight, PointLight, Scene } from "three";
+import { AmbientLight, DirectionalLight, PointLight } from "three";
 import * as THREE from "three";
 
 function useThreeAmbientLight(
-  rgb: THREE.ColorRepresentation = 0xffffff,
+  rgb: THREE.ColorRepresentation,
   intensity: number = 1
 ) {
   const light = new AmbientLight(rgb, intensity);
+
+  return light;
+}
+
+function useThreeDirectionalLight(
+  rgb: THREE.ColorRepresentation,
+  intensity: number,
+  position: number[] = [0, 0, 0]
+) {
+  const light = new DirectionalLight(rgb, intensity);
+  light.position.set(position[0], position[1], position[2]);
 
   return light;
 }
@@ -23,4 +34,4 @@ function useThreePointLight(
   return light;
 }
 
-export { useThreeAmbientLight, useThreePointLight };
+export { useThreeAmbientLight, useThreeDirectionalLight, useThreePointLight };
