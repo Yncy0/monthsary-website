@@ -7,6 +7,7 @@ import useThreePerspectiveCamera from "~/composables/three/useThreeCamera";
 import useThreeRender from "~/composables/three/useThreeRenderer";
 import {
   useThreeAmbientLight,
+  useThreeDirectionalLight,
   useThreePointLight,
 } from "~/composables/three/useThreeLight";
 
@@ -18,10 +19,11 @@ onMounted(() => {
   const canvas = document.querySelector("#bg") as HTMLCanvasElement;
   const renderer = useThreeRender(undefined, canvas, undefined, [750, 500]);
 
-  const ambientLight = useThreeAmbientLight(undefined, 3);
-  const pointLight = useThreePointLight(0xffffff, 750, 100, [0, 10, 10]);
+  const ambientLight = useThreeAmbientLight(0xffffff, 3);
+  const pointLightR = useThreePointLight(0xffffff, 500, 100, [6, 10, 10]);
+  const pointLightL = useThreePointLight(0xffffff, 500, 100, [-6, 10, 10]);
 
-  scene.add(camera, pointLight);
+  scene.add(camera, pointLightR, pointLightL);
 
   const loader = new GLTFLoader();
 
