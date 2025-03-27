@@ -1,8 +1,11 @@
 import { AmbientLight, PointLight, Scene } from "three";
 import * as THREE from "three";
 
-function useThreeAmbientLight(rgb: THREE.ColorRepresentation) {
-  const light = new AmbientLight(rgb);
+function useThreeAmbientLight(
+  rgb: THREE.ColorRepresentation = 0xffffff,
+  intensity: number = 1
+) {
+  const light = new AmbientLight(rgb, intensity);
 
   return light;
 }

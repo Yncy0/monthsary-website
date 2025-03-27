@@ -1,7 +1,7 @@
 <script setup>
-import HeroMemories from "~/components/memories/HeroMemories.vue";
+import MemoriesHero from "~/components/memories/MemoriesHero.vue";
 </script>
 
 <template>
-  <HeroMemories />
+  <MemoriesHero />
 </template>

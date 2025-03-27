@@ -18,16 +18,16 @@ onMounted(() => {
   const canvas = document.querySelector("#bg") as HTMLCanvasElement;
   const renderer = useThreeRender(undefined, canvas, undefined, [750, 500]);
 
-  const ambientLight = useThreeAmbientLight(0xffffff);
-  const pointLight = useThreePointLight(0xffffff, 100, 100, [0, 3, 10]);
+  const ambientLight = useThreeAmbientLight(undefined, 3);
+  const pointLight = useThreePointLight(0xffffff, 750, 100, [0, 10, 10]);
 
-  scene.add(camera, ambientLight, pointLight);
+  scene.add(camera, pointLight);
 
   const loader = new GLTFLoader();
 
   // animation name: 'Armature|mixamo.com|Layer0'
   // FIXME: TOO MUCH SPAGHETTI ON THIS ONE!!!!!!
-  loader.load("/nyanya/gangnam.glb", function (gltf) {
+  loader.load("/nyanya/actionpose.glb", function (gltf) {
     scene.add(gltf.scene);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
@@ -87,6 +87,35 @@ onMounted(() => {
     scene.add(gltf.scene);
 
     gltf.scene.position.set(-7, 3, -1.5);
+
+    const mixer = new THREE.AnimationMixer(gltf.scene);
+    const clips = gltf.animations;
+
+    const clock = new THREE.Clock();
+
+    function update() {
+      mixer.update(clock.getDelta());
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      update();
+    }
+
+    animate();
+
+    const clip = THREE.AnimationClip.findByName(
+      clips,
+      "Armature|mixamo.com|Layer0"
+    );
+    const action = mixer.clipAction(clip);
+    action.play();
+  });
+
+  loader.load("/nyanya/hiphopdance1.glb", function (gltf) {
+    scene.add(gltf.scene);
+
+    gltf.scene.position.set(6.7, 2.5, -2);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;

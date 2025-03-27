@@ -1,11 +1,11 @@
 <script setup>
-import NyaNyaGang from "../3d/NyaNyaGang.vue";
+import NyaNyaGang from "../3D/NyaNyaGang.vue";
 </script>
 
 <template>
   <section
     id="hero"
-    class="flex flex-col items-center justify-between min-w-full h-[720px] p-9 mb-44"
+    class="flex flex-col items-center min-w-full h-[720px] p-9 mb-44"
   >
     <h1
       class="text-[6rem] text-transparent bg-linear-to-l from-violet-700 to-green-500 bg-clip-text font-bold text-start dark:drop-shadow-glow-pink-900"
