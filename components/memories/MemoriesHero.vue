@@ -1,10 +1,10 @@
 <script setup>
-import Bananacat from "../3D/Bananacat.vue";
 import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
 </script>
 
 <template>
-  <div>
+  <section>
+    <NyaNyaWizard />
     <div class="flex flex-row">
       <div>
         <h1
@@ -19,7 +19,6 @@ import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
           repellendus omnis!
         </p>
       </div>
-      <NyaNyaWizard />
     </div>
-  </div>
+  </section>
 </template>

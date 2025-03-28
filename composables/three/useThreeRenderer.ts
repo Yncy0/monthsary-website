@@ -1,4 +1,4 @@
-import { WebGLRenderer, Scene, PerspectiveCamera } from "three";
+import { WebGLRenderer } from "three";
 
 function useThreeRender(
   alpha: boolean = true,
@@ -13,6 +13,8 @@ function useThreeRender(
 
   renderer.setPixelRatio(pixelRatio);
   renderer.setSize(size[0], size[1]);
+
+  // document.body.appendChild(renderer.domElement);
 
   return renderer;
 }

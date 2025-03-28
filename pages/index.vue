@@ -8,13 +8,13 @@ import {
 
 <template>
   <Transition :css="false">
-    <div class="flex flex-col min-w-full justify-center items-center">
+    <main class="flex flex-col min-w-full justify-center items-center">
       <IndexHero />
 
       <IndexSectionMemories />
       <USeparator />
 
       <IndexSectionRoadmap />
-    </div>
+    </main>
   </Transition>
 </template>

@@ -16,7 +16,7 @@ onMounted(() => {
 
   const camera = useThreePerspectiveCamera(80, undefined, 0.1, 100, [0, 2, 5]);
 
-  const canvas = document.querySelector("#bg") as HTMLCanvasElement;
+  const canvas = document.querySelector("#canvas") as HTMLCanvasElement;
   const renderer = useThreeRender(undefined, canvas, undefined, [750, 500]);
 
   const ambientLight = useThreeAmbientLight(0xffffff, 3);
@@ -184,5 +184,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas id="bg" />
+  <canvas id="canvas" />
 </template>
