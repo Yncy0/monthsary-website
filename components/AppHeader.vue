@@ -69,14 +69,14 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
         content-orientation="vertical"
         class="gap-2"
       />
-      <ClientOnly>
+      <!-- <ClientOnly>
         <UButton
           :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
           @click="toggleDark()"
           class="bg-transparent dark:text-white text-black hover:bg-transparent"
           :data-allow-mismatch="true"
         />
-      </ClientOnly>
+      </ClientOnly> -->
     </div>
     <USeparator />
   </header>
