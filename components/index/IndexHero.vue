@@ -5,8 +5,9 @@ import NyaNyaGang from "../3D/NyaNyaGang.vue";
 <template>
   <section
     id="hero"
-    class="flex flex-col items-center min-w-full h-[720px] p-9 mb-44"
+    class="flex flex-col items-center justify-center min-w-full h-[720px] p-9 mb-44"
   >
+    <NyaNyaGang />
     <h1
       class="text-[6rem] text-transparent bg-linear-to-l from-violet-700 to-green-500 bg-clip-text font-bold text-start dark:drop-shadow-glow-pink-900"
     >
@@ -27,7 +28,5 @@ import NyaNyaGang from "../3D/NyaNyaGang.vue";
       class="px-4 py-2 shadow-2xl text-white bg-pink-500 hover:bg-pink-600"
       :block="false"
     />
-
-    <NyaNyaGang />
   </section>
 </template>

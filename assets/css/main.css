@@ -9,6 +9,12 @@
   --drop-shadow-glow-pink-1000: 0px 0px 39px rgba(255, 0, 123, 1);
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 input,
 button,
 textarea,
@@ -23,3 +29,7 @@ div {
 img {
   object-fit: cover;
 }
+
+/* main {
+  position: absolute;
+} */

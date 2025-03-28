@@ -3,5 +3,7 @@ import MemoriesHero from "~/components/memories/MemoriesHero.vue";
 </script>
 
 <template>
-  <MemoriesHero />
+  <main>
+    <MemoriesHero />
+  </main>
 </template>
