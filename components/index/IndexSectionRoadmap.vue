@@ -12,7 +12,7 @@ import HeadingGlow from "../headings/HeadingGlow.vue";
   >
     <HeadingGlow :level="2" text="Roadmap" />
     <p>Lists of accomplished goals</p>
-    <div class="p-20 w-full flex flex-col">
+    <div class="px-20 pt-20 w-full flex flex-col">
       <RoadmapStack
         :isReversed="true"
         imgSource="/img/photobooth1.jpeg"
@@ -61,5 +61,11 @@ import HeadingGlow from "../headings/HeadingGlow.vue";
         body="One of the cutest moments in our relationship goals. From cutesy clays to something SPICY! OoooOOooo... decisions decision..."
       />
     </div>
+    <UButton
+      label="See More..."
+      trailing-icon="i-lucide-arrow-right"
+      class="bg-pink-500 text-white"
+      :block="false"
+    />
   </section>
 </template>

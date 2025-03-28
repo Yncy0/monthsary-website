@@ -17,6 +17,7 @@ import HeadingGlow from "../headings/HeadingGlow.vue";
       <p>
         Here lies our precious memories that we did together, from the beginning
         until now.
+        <span> <a class="text-pink-500" href="/memories">See more...</a></span>
       </p>
     </div>
     <div class="w-[1000px]">
