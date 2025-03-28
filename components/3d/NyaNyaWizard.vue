@@ -12,7 +12,7 @@ import useThreeRender from "~/composables/three/useThreeRenderer";
 onMounted(() => {
   const scene = new THREE.Scene();
 
-  const camera = useThreePerspectiveCamera(80, undefined, 0.1, 100, [0, 0, 5]);
+  const camera = useThreePerspectiveCamera(100, undefined, 0.1, 100, [0, 0, 5]);
 
   const canvas = document.querySelector("#canvas") as HTMLCanvasElement;
   const renderer = useThreeRender(true, canvas, undefined, [
@@ -34,7 +34,7 @@ onMounted(() => {
     function (gltf) {
       scene.add(gltf.scene);
 
-      gltf.scene.position.set(0, -2, 0);
+      gltf.scene.position.set(7, 2, -2);
 
       function animate() {
         requestAnimationFrame(animate);
