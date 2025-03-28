@@ -19,8 +19,10 @@ onMounted(() => {
     window.innerWidth / window.innerHeight,
     0.1,
     100,
-    [0, 2, 5]
+    [0, 0, 5]
   );
+
+  camera.lookAt(new THREE.Vector3(0, 0, 0));
 
   const canvas = document.querySelector("#canvas") as HTMLCanvasElement;
   const renderer = useThreeRender(undefined, canvas, undefined, [
@@ -29,8 +31,8 @@ onMounted(() => {
   ]);
 
   const ambientLight = useThreeAmbientLight(0xffffff, 2);
-  const pointLightR = useThreePointLight(0xffffff, 100, 100, [5, 10, 10]);
-  const pointLightL = useThreePointLight(0xffffff, 100, 100, [-5, 10, 10]);
+  const pointLightR = useThreePointLight(0xffffff, 200, 100, [5, 10, 10]);
+  const pointLightL = useThreePointLight(0xffffff, 200, 100, [-5, 10, 10]);
 
   scene.add(camera, pointLightR, pointLightL, ambientLight);
 
@@ -41,7 +43,7 @@ onMounted(() => {
   loader.load("/nyanya/actionpose.glb", function (gltf) {
     scene.add(gltf.scene);
 
-    gltf.scene.position.set(0, 4, -9);
+    gltf.scene.position.set(0, 3, -9);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;
@@ -70,7 +72,7 @@ onMounted(() => {
   loader.load("/nyanya/capoeira.glb", function (gltf) {
     scene.add(gltf.scene);
 
-    gltf.scene.position.set(-10, 3.5, -9);
+    gltf.scene.position.set(-10, 2.5, -9);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;
@@ -99,7 +101,7 @@ onMounted(() => {
   loader.load("/nyanya/hiphopdance.glb", function (gltf) {
     scene.add(gltf.scene);
 
-    gltf.scene.position.set(10, -5.5, -9);
+    gltf.scene.position.set(10, -7.5, -9);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;
@@ -128,7 +130,7 @@ onMounted(() => {
   loader.load("/nyanya/hiphopdance1.glb", function (gltf) {
     scene.add(gltf.scene);
 
-    gltf.scene.position.set(-8, -5.5, -9);
+    gltf.scene.position.set(-8, -7.5, -9);
 
     const mixer = new THREE.AnimationMixer(gltf.scene);
     const clips = gltf.animations;
@@ -157,7 +159,7 @@ onMounted(() => {
   loader.load("/nyanya/twerk.glb", function (gltf) {
     scene.add(gltf.scene);
 
-    gltf.scene.position.set(10, 3.5, -9);
+    gltf.scene.position.set(10, 2.5, -9);
 
     gltf.scene.rotation.set(0, 185, 0);
 
@@ -192,6 +194,17 @@ onMounted(() => {
   }
 
   animate();
+
+  //THANK YOU Fireship
+  function moveCamera() {
+    const t = document.body.getBoundingClientRect().top;
+
+    // camera.position.z = t * -0.2;
+    // camera.position.x = t * -0.002;
+    camera.position.y = t * 0.017;
+  }
+
+  document.body.onscroll = moveCamera;
 });
 </script>
 
