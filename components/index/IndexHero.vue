@@ -25,7 +25,7 @@ import NyaNyaGang from "../3D/NyaNyaGang.vue";
       label="Let's Get Started"
       size="sm"
       trailing-icon="i-lucide-arrow-right"
-      class="px-4 py-2 shadow-2xl text-white bg-pink-500 hover:bg-pink-600"
+      class="px-4 py-2 shadow-2xl text-white"
       :block="false"
     />
   </section>
