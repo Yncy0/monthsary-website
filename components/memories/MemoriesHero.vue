@@ -1,5 +1,6 @@
 <script setup>
 import Bananacat from "../3D/Bananacat.vue";
+import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import Bananacat from "../3D/Bananacat.vue";
           repellendus omnis!
         </p>
       </div>
-      <Bananacat />
+      <NyaNyaWizard />
     </div>
   </div>
 </template>
