@@ -12,13 +12,8 @@ import useThreeRender from "~/composables/three/useThreeRenderer";
 onMounted(() => {
   const scene = new THREE.Scene();
 
-  const camera = useThreePerspectiveCamera(
-    100,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    100,
-    [0, 0, 5]
-  );
+  const camera = useThreePerspectiveCamera(100, undefined, 0.1, 100, [0, 0, 5]);
+  camera.lookAt(0, 0, 0);
 
   const canvas = document.querySelector("#canvas") as HTMLCanvasElement;
   const renderer = useThreeRender(true, canvas, undefined, [
@@ -26,13 +21,13 @@ onMounted(() => {
     window.innerHeight,
   ]);
 
-  const ambientLight = useThreeAmbientLight(0xffffff, 2);
   const pointLight = useThreePointLight(0xffffff, 100, 100, [0, 0, 10]);
 
-  scene.add(camera, ambientLight, pointLight);
+  const ambientLight = useThreeAmbientLight(0xffffff, 2);
+
+  scene.add(camera, pointLight, ambientLight);
 
   const loader = new GLTFLoader();
-
   loader.load(
     "/nyanya/hammering.glb",
 
@@ -42,17 +37,22 @@ onMounted(() => {
       const mixer = new THREE.AnimationMixer(gltf.scene);
       const clips = gltf.animations;
 
+      gltf.scene.scale.setScalar(0.7);
+      gltf.scene.position.set(-5, -2.5, -1);
+      gltf.scene.rotateY(45.5);
+
       const clock = new THREE.Clock();
+
       function update() {
         mixer.update(clock.getDelta());
       }
 
       function animate() {
         requestAnimationFrame(animate);
-        update();
+        update;
       }
 
-      animate;
+      animate();
 
       const clip = THREE.AnimationClip.findByName(
         clips,
@@ -75,7 +75,7 @@ onMounted(() => {
     renderer.render(scene, camera);
   }
 
-  animate;
+  animate();
 });
 </script>
 
