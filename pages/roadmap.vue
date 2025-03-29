@@ -1,3 +1,9 @@
+<script lang="ts">
+import { WIP } from "#components";
+</script>
+
 <template>
-  <h1>Roadmap</h1>
+  <main>
+    <WIP />
+  </main>
 </template>
