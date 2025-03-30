@@ -64,8 +64,9 @@ import HeadingGlow from "../headings/HeadingGlow.vue";
     <UButton
       label="See More..."
       trailing-icon="i-lucide-arrow-right"
-      class="bg-pink-500 text-white"
+      class="text-white"
       :block="false"
+      @click="navigateTo('/roadmap')"
     />
   </section>
 </template>

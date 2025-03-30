@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/image",
     "@nuxthub/core",
+    "@tresjs/nuxt",
     // "@nuxtjs/tailwindcss",
   ],
 

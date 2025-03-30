@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { useGLTF } from "@tresjs/cientos";
 
-const { scene: model } = await useGLTF("/nyanya/nyanya1.glb", {
+const { scene: model } = await useGLTF("/nyanya/worker.glb", {
   draco: true,
 });
-const { onBeforeRender } = useLoop();
 
-model.position.set(5, 1, -8);
+model.position.set(0, 2.5, -6);
+
+const { onBeforeRender } = useLoop();
 
 onBeforeRender(() => {
   if (model) {

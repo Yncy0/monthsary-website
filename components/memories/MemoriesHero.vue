@@ -4,7 +4,14 @@ import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
 
 <template>
   <section>
-    <NyaNyaWizard />
+    <TresCanvas alpha window-size>
+      <TresPerspectiveCamera :position="[0, 0, 5]" />
+      <TresAmbientLight :intensity="2" />
+      <TresPointLight :intensity="250" :position="[0, 0, 10]" />
+      <Suspense>
+        <NyaNyaWizard />
+      </Suspense>
+    </TresCanvas>
     <div class="w-1/2">
       <h1
         class="text-[5rem] text-transparent bg-clip-text bg-linear-to-tr from-indigo-500 to-pink-500 font-bold"
