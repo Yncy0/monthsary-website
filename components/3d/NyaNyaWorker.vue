@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import { LoopOnce } from "three";
-import { useAnimations, useGLTF } from "@tresjs/cientos";
+import { useGLTF } from "@tresjs/cientos";
 
-const { scene: model, animations } = await useGLTF("/nyanya/hammering.glb", {
+const { scene: model } = await useGLTF("/nyanya/worker.glb", {
   draco: true,
 });
 
-model.position.set(0, -2.7, -6);
+model.position.set(0, 2.5, -6);
 
-// const actions = useAnimations(animations, model);
-// const currentAction = ref(actions["Armature|Armature|Smash"]);
+const { onBeforeRender } = useLoop();
 
-// currentAction.value.loop = LoopOnce;
-// currentAction.value.play();
+onBeforeRender(() => {
+  if (model) {
+    model.rotation.x += 0.01;
+    model.rotation.y += 0.01;
+    model.rotation.z += 0.01;
+  }
+});
 </script>
 
 <template>

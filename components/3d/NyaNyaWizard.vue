@@ -8,7 +8,7 @@ const { onBeforeRender } = useLoop();
 
 model.position.set(5, 1, -8);
 
-onBeforeRender(({ delta, elapsed }) => {
+onBeforeRender(() => {
   if (model) {
     model.rotation.x += 0.01;
     model.rotation.y += 0.01;
