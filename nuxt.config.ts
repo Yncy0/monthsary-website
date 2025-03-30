@@ -16,9 +16,11 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/image",
     "@nuxthub/core",
+    "@nuxtjs/supabase",
     "@tresjs/nuxt",
-    // "@nuxtjs/tailwindcss",
   ],
+
+  supabase: { redirect: false },
 
   css: ["~/assets/css/main.css"],
 

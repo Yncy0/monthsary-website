@@ -1,5 +1,14 @@
 <script setup>
 import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
+import { useGetImage } from "~/content/useGetImage";
+
+const imageUrl = ref();
+
+onMounted(async () => {
+  const result = await useGetImage()
+  imageUrl.value = result.publicUrl
+})
+
 </script>
 
 <template>
@@ -19,11 +28,10 @@ import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
         Memories
       </h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        ipsam, quisquam et quod dicta odit porro, facere maxime dignissimos ad
-        facilis laudantium quas sapiente autem nemo cumque voluptatibus
-        repellendus omnis!
+        This page cotains images from our 520px camera. But this silly cat has a
+        habit to not complete his sorcery on inserting images.
       </p>
     </div>
+    <img v-if="imageUrl" :src="imageUrl" />
   </section>
 </template>
