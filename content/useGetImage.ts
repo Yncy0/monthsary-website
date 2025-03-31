@@ -1,36 +1,16 @@
 export async function useGetImage() {
   const supabase = useSupabaseClient();
 
-  const { data } = await supabase.storage
-    .from("images")
-    .getPublicUrl("photobooth/image.jpg");
+  const { data } = await supabase.storage.from("images").list("photobooth");
 
-    console.log("Im fetching")
+  const images = data?.map((files) => {
+    const { data: publicUrl } = supabase.storage
+      .from("images")
+      .getPublicUrl(`photobooth/${files.name}`);
+    return publicUrl;
+  });
 
-  return data;
+  console.log("FETCHING");
+
+  return images;
 }
-
-/* 
-  export async function useGetImages() {
-  const supabase = useSupabaseClient();
-
-  try {
-    const { data, error } = await supabase.storage.from("images").list("photobooth");
-    if (error) {
-      throw new Error(error.message);
-    }
-
-    // Generate public URLs for all files in the folder
-    const images = data.map((file) => {
-      const { publicUrl } = supabase.storage.from("images").getPublicUrl(`photobooth/${file.name}`);
-      return publicUrl;
-    });
-
-    console.log("Fetching all images");
-    return images; // Returns an array of public URLs
-  } catch (err) {
-    console.error("Error fetching images:", err.message);
-    return [];
-  }
-}
-*/

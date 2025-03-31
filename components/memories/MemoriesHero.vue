@@ -2,13 +2,12 @@
 import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
 import { useGetImage } from "~/content/useGetImage";
 
-const imageUrl = ref();
+const imageUrls = ref([]);
 
 onMounted(async () => {
-  const result = await useGetImage()
-  imageUrl.value = result.publicUrl
-})
-
+  imageUrls.value = useGetImage();
+  console.log(imageUrls.value);
+});
 </script>
 
 <template>
@@ -32,6 +31,13 @@ onMounted(async () => {
         habit to not complete his sorcery on inserting images.
       </p>
     </div>
-    <img v-if="imageUrl" :src="imageUrl" />
+    <div v-if="imageUrls.length != 0">
+      <img
+        v-for="(url, index) in imageUrls"
+        :key="index"
+        :src="url"
+        class="w-3xs h-3xs"
+      />
+    </div>
   </section>
 </template>
