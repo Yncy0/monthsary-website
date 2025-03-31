@@ -6,11 +6,14 @@ export async function useGetImage() {
   const images = data?.map((files) => {
     const { data: publicUrl } = supabase.storage
       .from("images")
-      .getPublicUrl(`photobooth/${files.name}`);
+      .getPublicUrl(`photobooth/${files.name}`, {
+        transform: {
+          width: 500,
+          height: 600,
+        },
+      });
     return publicUrl;
   });
-
-  console.log("FETCHING");
 
   return images;
 }

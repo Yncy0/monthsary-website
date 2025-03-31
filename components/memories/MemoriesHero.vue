@@ -5,8 +5,8 @@ import { useGetImage } from "~/content/useGetImage";
 const imageUrls = ref([]);
 
 onMounted(async () => {
-  imageUrls.value = useGetImage();
-  console.log(imageUrls.value);
+  const results = await useGetImage();
+  imageUrls.value = results;
 });
 </script>
 
@@ -31,13 +31,12 @@ onMounted(async () => {
         habit to not complete his sorcery on inserting images.
       </p>
     </div>
-    <div v-if="imageUrls.length != 0">
-      <img
-        v-for="(url, index) in imageUrls"
-        :key="index"
-        :src="url"
-        class="w-3xs h-3xs"
-      />
-    </div>
+
+    <ul>
+      <li v-for="image in imageUrls" :key="image.name">
+        <img :src="image.publicUrl" :alt="image.name" />
+        <p>{{ image.name }}</p>
+      </li>
+    </ul>
   </section>
 </template>
