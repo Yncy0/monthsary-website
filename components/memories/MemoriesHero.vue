@@ -1,17 +1,10 @@
 <script setup>
 import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
-import { useGetImage } from "~/content/useGetImage";
-
-const imageUrls = ref([]);
-
-onMounted(async () => {
-  const results = await useGetImage();
-  imageUrls.value = results;
-});
+import ImageBucket from "~/components/ImageBucket.vue";
 </script>
 
 <template>
-  <section>
+  <section class="flex flex-col flex-wrap gap-64">
     <TresCanvas alpha window-size>
       <TresPerspectiveCamera :position="[0, 0, 5]" />
       <TresAmbientLight :intensity="2" />
@@ -32,11 +25,15 @@ onMounted(async () => {
       </p>
     </div>
 
-    <ul>
-      <li v-for="image in imageUrls" :key="image.name">
-        <img :src="image.publicUrl" :alt="image.name" />
-        <p>{{ image.name }}</p>
-      </li>
-    </ul>
+    <div class="flex flex-col gap-2">
+      <ImageBucket bucket="images" folder="photobooth" />
+      <ImageBucket bucket="images" folder="skyranch" />
+      <ImageBucket bucket="images" folder="03-30-25" />
+      <ImageBucket bucket="images" folder="03-30-25-ex" />
+      <ImageBucket bucket="images" folder="02-21-25" />
+      <ImageBucket bucket="images" folder="02-12-25" />
+      <ImageBucket bucket="images" folder="1st-moa" />
+      <ImageBucket bucket="images" folder="ice-skate" />
+    </div>
   </section>
 </template>

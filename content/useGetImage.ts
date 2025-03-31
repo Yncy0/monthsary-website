@@ -1,17 +1,12 @@
-export async function useGetImage() {
+export async function useGetImage(bucketName: string, folderName: string) {
   const supabase = useSupabaseClient();
 
-  const { data } = await supabase.storage.from("images").list("photobooth");
+  const { data } = await supabase.storage.from(bucketName).list(folderName);
 
   const images = data?.map((files) => {
     const { data: publicUrl } = supabase.storage
       .from("images")
-      .getPublicUrl(`photobooth/${files.name}`, {
-        transform: {
-          width: 500,
-          height: 600,
-        },
-      });
+      .getPublicUrl(`${folderName}/${files.name}`);
     return publicUrl;
   });
 
