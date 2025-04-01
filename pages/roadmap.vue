@@ -1,6 +1,4 @@
-<script lang="ts">
-import { WIP } from "#components";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <main>
