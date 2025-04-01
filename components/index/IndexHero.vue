@@ -11,7 +11,7 @@ import NyaNyaGang from "../3D/NyaNyaGang.vue";
     <h1
       class="text-[6rem] text-transparent bg-linear-to-l from-violet-700 to-green-500 bg-clip-text font-bold text-start dark:drop-shadow-glow-pink-900"
     >
-      Happy 3rd
+      Happy 4th
       <span
         class="bg-linear-to-l from-violet-800 to-pink-500 text-transparent bg-clip-text dark:drop-shadow-glow-pink-300"
       >
