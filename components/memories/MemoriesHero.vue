@@ -4,10 +4,11 @@ import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
 
 <template>
   <section>
-    <TresCanvas alpha window-size>
+    <TresCanvas ref="cameraRef" alpha window-size>
       <TresPerspectiveCamera :position="[0, 0, 5]" />
       <TresAmbientLight :intensity="2" />
       <TresPointLight :intensity="250" :position="[0, 0, 10]" />
+      <ScrollControls :htmlScroll="true" :smooth-scroll="0.1" />
       <Suspense>
         <NyaNyaWizard />
       </Suspense>
@@ -19,10 +20,8 @@ import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
         Memories
       </h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        ipsam, quisquam et quod dicta odit porro, facere maxime dignissimos ad
-        facilis laudantium quas sapiente autem nemo cumque voluptatibus
-        repellendus omnis!
+        This page cotains images from our 520px camera. But this silly cat has a
+        habit to not complete his sorcery on inserting images.
       </p>
     </div>
   </section>
