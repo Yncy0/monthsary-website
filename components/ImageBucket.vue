@@ -1,17 +1,10 @@
 <script setup>
-import { useGetImage } from "~/content/useGetImage";
-
-const props = defineProps({
-  bucket: String,
-  folder: String,
-  width: Number,
-  height: Number,
-});
+import useFetchImage from "~/content/useFetchImage";
 
 const imageUrls = ref([]);
 
 onMounted(async () => {
-  const results = await useGetImage(props.bucket, props.folder);
+  const results = await useFetchImage();
   imageUrls.value = results;
 });
 </script>
@@ -19,15 +12,12 @@ onMounted(async () => {
 <template>
   <Suspense>
     <ul class="flex flex-row flex-wrap w-full object-cover gap-2">
-      <li v-for="image in imageUrls" :key="image.name">
+      <li v-for="image in imageUrls" :key="image.id">
         <img
-          :src="image.publicUrl"
-          :alt="image.name"
+          :src="image.image_url"
+          alt="It is an image"
           class="w-64 h-96 rounded-md"
-          :width="props.width"
-          :height="props.height"
         />
-        <p>{{ image.name }}</p>
       </li>
     </ul>
   </Suspense>
