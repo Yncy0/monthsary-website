@@ -37,6 +37,7 @@
     "@iconify-json/lucide": "^1.2.33",
     "@vueuse/core": "^13.0.0",
     "@vueuse/nuxt": "^13.0.0",
+    "supabase": "^2.20.5",
     "typescript": "^5.8.2",
     "vue-tsc": "^2.2.8",
     "wrangler": "^4.6.0"
@@ -44,6 +45,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "better-sqlite3",
+      "supabase",
       "workerd"
     ]
   }
