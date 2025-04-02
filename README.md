@@ -1,6 +1,6 @@
 # 💖💖💖 Monthsary Website 💖💖💖
 
-It is just a dedication [website](https://monthsary-web.nuxt.dev/) for my love of my life ❤️💕
+It is just a dedication [website](https://monthsary-web.nuxt.dev/) for the love of my life ❤️💕
 
 ## ⚡This website is powered by [NuxtHub](https://hub.nuxt.com/)⚡
 
