@@ -18,7 +18,14 @@ export default defineNuxtConfig({
     "@nuxthub/core",
     "@nuxtjs/supabase",
     "@tresjs/nuxt",
+    "@nuxt/eslint",
   ],
+
+  eslint: {
+    config: {
+      autoInit: false,
+    },
+  },
 
   supabase: { redirect: false },
 

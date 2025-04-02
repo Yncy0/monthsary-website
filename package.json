@@ -8,10 +8,13 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/content": "3.4.0",
+    "@nuxt/eslint": "1.3.0",
     "@nuxt/fonts": "^0.11.0",
     "@nuxt/image": "1.10.0",
     "@nuxt/ui": "^3.0.2",
@@ -24,6 +27,7 @@
     "@tresjs/nuxt": "^3.0.8",
     "@tresjs/post-processing": "^2.3.1",
     "@types/three": "^0.175.0",
+    "eslint": "^9.0.0",
     "global": "^4.4.0",
     "nuxt": "^3.16.1",
     "pnpm": "^10.7.0",
