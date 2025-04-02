@@ -21,6 +21,12 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
   ],
 
+  eslint: {
+    config: {
+      autoInit: false,
+    },
+  },
+
   supabase: { redirect: false },
 
   css: ["~/assets/css/main.css"],
