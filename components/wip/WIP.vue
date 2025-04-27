@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NyaNyaWorker from "~/components/3D/NyaNyaWorker.vue";
+import NyaNyaWorker from "~/components/3d/NyaNyaWorker.vue";
 </script>
 
 <template>

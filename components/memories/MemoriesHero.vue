@@ -1,5 +1,5 @@
 <script setup>
-import NyaNyaWizard from "../3D/NyaNyaWizard.vue";
+import NyaNyaWizard from "~/components/3d/NyaNyaWizard.vue";
 </script>
 
 <template>
