@@ -1,5 +1,5 @@
 <script setup>
-import NyaNyaGang from "../3D/NyaNyaGang.vue";
+import NyaNyaGang from "~/components/3d/NyaNyaGang.vue";
 </script>
 
 <template>
