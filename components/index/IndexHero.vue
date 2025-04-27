@@ -21,12 +21,6 @@ import NyaNyaGang from "~/components/3d/NyaNyaGang.vue";
     <p class="pb-6 text-2xl">
       I hope you are doing well my love! May our relationship lasts forever.
     </p>
-    <UButton
-      label="Let's Get Started"
-      size="sm"
-      trailing-icon="i-lucide-arrow-right"
-      class="px-4 py-2 shadow-2xl text-white"
-      :block="false"
-    />
+    <ModalAsk />
   </section>
 </template>
