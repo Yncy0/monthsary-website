@@ -50,8 +50,6 @@ function scrollTo(s: any) {
     const element = document.querySelector(s);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.error("No element has been found");
     }
   });
 }
@@ -77,6 +75,7 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
           :data-allow-mismatch="true"
         />
       </ClientOnly> -->
+      <UButton label="Login" to="/login" />
     </div>
     <USeparator />
   </header>

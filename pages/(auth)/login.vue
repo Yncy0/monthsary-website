@@ -32,5 +32,6 @@ async function signInWithOtp() {
       />
     </UFormField>
     <UButton type="submit" label="Login" />
+    <UButton label="Back" variant="ghost" to="/" />
   </form>
 </template>
