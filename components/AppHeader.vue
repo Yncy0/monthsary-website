@@ -3,6 +3,9 @@ For more infor: visit https://ui3.nuxt.dev/getting-started -->
 
 <script setup lang="ts">
 //TODO: Might use it later once routes has been established
+
+const user = useSupabaseUser();
+
 const items = ref([
   {
     label: "Home",
@@ -44,6 +47,20 @@ const items = ref([
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 
+const isButtonShown = ref(false);
+
+watch(
+  user,
+  () => {
+    if (!user.value) {
+      isButtonShown.value = true;
+    } else {
+      isButtonShown.value = false;
+    }
+  },
+  { immediate: true },
+);
+
 //TODO: Refactor on a seperate file
 function scrollTo(s: any) {
   nextTick(() => {
@@ -75,7 +92,10 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
           :data-allow-mismatch="true"
         />
       </ClientOnly> -->
-      <UButton label="Login" to="/login" />
+      <HeaderPopover />
+
+      <UButton v-if="!user.value" label="Login" variant="subtle" to="/login" />
+      <UButton v-else label="Logout" variant="subtle" />
     </div>
     <USeparator />
   </header>
