@@ -1,5 +1,7 @@
 <script setup>
 import NyaNyaGang from "~/components/3d/NyaNyaGang.vue";
+
+const user = useSupabaseUser();
 </script>
 
 <template>
@@ -11,15 +13,19 @@ import NyaNyaGang from "~/components/3d/NyaNyaGang.vue";
     <h1
       class="text-[6rem] text-transparent bg-linear-to-l from-violet-700 to-green-500 bg-clip-text font-bold text-start dark:drop-shadow-glow-pink-900"
     >
-      Happy 4th
+      Happy 5th
       <span
         class="bg-linear-to-l from-violet-800 to-pink-500 text-transparent bg-clip-text dark:drop-shadow-glow-pink-300"
       >
         Monthsary!
       </span>
     </h1>
-    <p class="pb-6 text-2xl">
+    <p v-if="user.value" class="pb-6 text-2xl">
       I hope you are doing well my love! May our relationship lasts forever.
+    </p>
+    <p v-else>
+      It seems that you are not login yet, feel free to scroll anon or login to
+      your account
     </p>
     <ModalAsk />
   </section>

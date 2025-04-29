@@ -3,6 +3,9 @@ For more infor: visit https://ui3.nuxt.dev/getting-started -->
 
 <script setup lang="ts">
 //TODO: Might use it later once routes has been established
+
+const user = useSupabaseUser();
+
 const items = ref([
   {
     label: "Home",
@@ -41,8 +44,22 @@ const items = ref([
 ]);
 
 //useToggle() is a VueUse functionality, visit: https://vueuse.org/shared/useToggle/#usetoggle
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
+//const isDark = useDark();
+//const toggleDark = useToggle(isDark);
+
+const isButtonShown = ref(false);
+
+watch(
+  user,
+  () => {
+    if (!user.value) {
+      isButtonShown.value = true;
+    } else {
+      isButtonShown.value = false;
+    }
+  },
+  { immediate: true },
+);
 
 //TODO: Refactor on a seperate file
 function scrollTo(s: any) {
@@ -50,8 +67,6 @@ function scrollTo(s: any) {
     const element = document.querySelector(s);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.error("No element has been found");
     }
   });
 }
@@ -77,6 +92,9 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
           :data-allow-mismatch="true"
         />
       </ClientOnly> -->
+
+      <UButton v-if="!user.value" label="Login" variant="subtle" to="/login" />
+      <HeaderPopover v-else />
     </div>
     <USeparator />
   </header>
