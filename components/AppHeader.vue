@@ -44,8 +44,8 @@ const items = ref([
 ]);
 
 //useToggle() is a VueUse functionality, visit: https://vueuse.org/shared/useToggle/#usetoggle
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
+//const isDark = useDark();
+//const toggleDark = useToggle(isDark);
 
 const isButtonShown = ref(false);
 
@@ -92,10 +92,9 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
           :data-allow-mismatch="true"
         />
       </ClientOnly> -->
-      <HeaderPopover />
 
       <UButton v-if="!user.value" label="Login" variant="subtle" to="/login" />
-      <UButton v-else label="Logout" variant="subtle" />
+      <HeaderPopover v-else />
     </div>
     <USeparator />
   </header>

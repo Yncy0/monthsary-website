@@ -1,17 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const user = useSupabaseUser();
+</script>
 
 <template>
   <UModal title="Let me ask you some questions">
     <UButton
+      v-if="user.value"
       label="Let's Get Started"
       size="sm"
       trailing-icon="i-lucide-arrow-right"
-      class="px-4 py-2 shadow-2xl text-white"
+      class="px-4 py-2 shadow-2xl"
       :block="false"
     />
 
     <template #body>
-      <form class="flex flex-col gap-3">
+      <form v-if="user.value" class="flex flex-col gap-3">
         <UFormField label="How's your day?">
           <UInput placeholder="Answer Please" class="w-full" />
         </UFormField>
@@ -32,6 +35,14 @@
         </UFormField>
 
         <UButton label="Submit" class="w-1/3 mt-3" />
+      </form>
+
+      <form v-else>
+        <UFormField>
+          <UInput placeholder="johndoe@email.anon" />
+        </UFormField>
+
+        <UButton label="Login" />
       </form>
     </template>
   </UModal>
