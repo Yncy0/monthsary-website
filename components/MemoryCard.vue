@@ -1,9 +1,9 @@
-<script setup>
-const props = defineProps({
-  imgSrc: String,
-  header: String,
-  description: String,
-});
+<script setup lang="ts">
+const props = defineProps<{
+  imgSrc: string;
+  header: string;
+  description: string;
+}>();
 </script>
 
 <template>
