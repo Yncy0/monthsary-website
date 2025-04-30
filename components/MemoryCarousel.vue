@@ -1,5 +1,5 @@
 <script setup>
-const items = ref(getMockMemories());
+const items = getMockMemories();
 </script>
 
 <!--Carousel Template, for more infor visit: https://ui3.nuxt.dev/components/carousel-->

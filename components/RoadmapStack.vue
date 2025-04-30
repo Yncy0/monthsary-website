@@ -18,12 +18,12 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
     :style="{ flexDirection: flexDir }"
   >
     <div class="flex-1 flex items-center size-[520px]">
-      <NuxtImg
+      <img
         v-if="props.imgSource"
         :src="props.imgSource"
         class="size-[360px] rounded-lg"
       />
-      <NuxtImg
+      <img
         v-else
         src="/assets/images/gif/quest cat.gif"
         class="size-[360px] rounded-lg flex-1"
