@@ -1,16 +1,16 @@
-<script setup>
-const props = defineProps({
-  imgSrc: String,
-  header: String,
-  description: String,
-});
+<script setup lang="ts">
+const props = defineProps<{
+  imgSrc: string;
+  header: string;
+  description: string;
+}>();
 </script>
 
 <template>
   <UCard class="m-1 h-[560px]">
     <template #header>
       <div class="flex flex-col gap-4">
-        <img
+        <NuxtImg
           :src="props.imgSrc"
           class="rounded-lg w-[320px] h-[320px] object-cover"
         />

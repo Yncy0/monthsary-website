@@ -4,7 +4,7 @@ type MockData = {
   header: string;
 };
 
-function useMockData() {
+export function getMockMemories() {
   const data: MockData[] = [
     {
       img: "/img/photobooth.jpg",
@@ -46,5 +46,3 @@ function useMockData() {
 
   return data;
 }
-
-export default useMockData;

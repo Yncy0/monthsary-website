@@ -4,7 +4,7 @@ type MockData = {
   header: string;
 };
 
-function useMockData() {
+export function getMockRoadmap() {
   const data: MockData[] = [
     {
       img: "/img/photobooth.jpg",
@@ -45,5 +45,3 @@ function useMockData() {
   ];
   return data;
 }
-
-export default useMockData;
