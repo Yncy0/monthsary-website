@@ -1,6 +1,4 @@
 <script setup>
-import HGlow from "./HGlow.vue";
-
 const props = defineProps({
   text: String,
   textAlign: String,
@@ -16,7 +14,7 @@ const Tag = `h${props.level}`;
 </script>
 
 <template>
-  <HGlow>
+  <span class="dark:drop-shadow-glow-pink-1000">
     <component
       :is="Tag"
       class="font-bold text-[5rem] text-center text-pink-500 dark:drop-shadow-glow-pink-500"
@@ -24,5 +22,5 @@ const Tag = `h${props.level}`;
     >
       {{ props.text }}
     </component>
-  </HGlow>
+  </span>
 </template>

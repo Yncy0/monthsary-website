@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import NyaNyaWorker from "~/components/3d/NyaNyaWorker.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <section class="flex items-center justify-center h-[600px]">

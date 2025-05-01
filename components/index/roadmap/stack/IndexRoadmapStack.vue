@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import HeadingGlow from "./headings/HeadingGlow.vue";
-
 const props = defineProps<{
   isReversed: boolean;
   imgSource: string;

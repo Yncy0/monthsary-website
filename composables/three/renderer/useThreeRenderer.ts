@@ -1,10 +1,10 @@
 import { WebGLRenderer } from "three";
 
-function useThreeRender(
+export function useThreeRender(
   alpha: boolean = true,
   canvas: HTMLCanvasElement,
   pixelRatio: number = window.devicePixelRatio,
-  size: number[] = [0, 0]
+  size: number[] = [0, 0],
 ) {
   const renderer = new WebGLRenderer({
     canvas: canvas,
@@ -18,5 +18,3 @@ function useThreeRender(
 
   return renderer;
 }
-
-export default useThreeRender;

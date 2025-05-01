@@ -3,14 +3,6 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-import useThreePerspectiveCamera from "~/composables/three/useThreeCamera";
-import useThreeRender from "~/composables/three/useThreeRenderer";
-import {
-  useThreeAmbientLight,
-  useThreeDirectionalLight,
-  useThreePointLight,
-} from "~/composables/three/useThreeLight";
-
 onMounted(() => {
   const scene = new THREE.Scene();
 
@@ -19,7 +11,7 @@ onMounted(() => {
     window.innerWidth / window.innerHeight,
     0.1,
     100,
-    [0, 0, 5]
+    [0, 0, 5],
   );
 
   camera.lookAt(new THREE.Vector3(0, 0, 0));
@@ -63,7 +55,7 @@ onMounted(() => {
 
     const clip = THREE.AnimationClip.findByName(
       clips,
-      "Armature|mixamo.com|Layer0"
+      "Armature|mixamo.com|Layer0",
     );
     const action = mixer.clipAction(clip);
     action.play();
@@ -92,7 +84,7 @@ onMounted(() => {
 
     const clip = THREE.AnimationClip.findByName(
       clips,
-      "Armature|mixamo.com|Layer0"
+      "Armature|mixamo.com|Layer0",
     );
     const action = mixer.clipAction(clip);
     action.play();
@@ -121,7 +113,7 @@ onMounted(() => {
 
     const clip = THREE.AnimationClip.findByName(
       clips,
-      "Armature|mixamo.com|Layer0"
+      "Armature|mixamo.com|Layer0",
     );
     const action = mixer.clipAction(clip);
     action.play();
@@ -150,7 +142,7 @@ onMounted(() => {
 
     const clip = THREE.AnimationClip.findByName(
       clips,
-      "Armature|mixamo.com|Layer0"
+      "Armature|mixamo.com|Layer0",
     );
     const action = mixer.clipAction(clip);
     action.play();
@@ -181,7 +173,7 @@ onMounted(() => {
 
     const clip = THREE.AnimationClip.findByName(
       clips,
-      "Armature|mixamo.com|Layer0"
+      "Armature|mixamo.com|Layer0",
     );
     const action = mixer.clipAction(clip);
     action.play();
@@ -209,5 +201,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas class="fixed top-0 left-0 -z-10" id="canvas" />
+  <canvas id="canvas" class="fixed top-0 left-0 -z-10" />
 </template>

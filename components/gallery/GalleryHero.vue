@@ -1,6 +1,4 @@
-<script setup>
-import NyaNyaWizard from "~/components/3d/NyaNyaWizard.vue";
-</script>
+<script setup></script>
 
 <template>
   <section>
@@ -17,7 +15,7 @@ import NyaNyaWizard from "~/components/3d/NyaNyaWizard.vue";
       <h1
         class="text-[5rem] text-transparent bg-clip-text bg-linear-to-tr from-indigo-500 to-pink-500 font-bold"
       >
-        Memories
+        Gallery
       </h1>
       <p>
         This page cotains images from our 520px camera. But this silly cat has a

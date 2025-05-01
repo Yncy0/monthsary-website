@@ -1,6 +1,4 @@
 <script setup>
-import NyaNyaGang from "~/components/3d/NyaNyaGang.vue";
-
 const user = useSupabaseUser();
 </script>
 
