@@ -2,8 +2,6 @@
 For more infor: visit https://ui3.nuxt.dev/getting-started -->
 
 <script setup lang="ts">
-//TODO: Might use it later once routes has been established
-
 const user = useSupabaseUser();
 
 const items = ref([
@@ -18,10 +16,10 @@ const items = ref([
         onSelect: () => scrollTo("#hero"),
       },
       {
-        label: "Memories",
+        label: "Gallery",
         icon: "i-lucide-brain",
         slot: "components",
-        onSelect: () => scrollTo("#memories"),
+        onSelect: () => scrollTo("#gallery"),
       },
       {
         label: "Roadmap",
@@ -33,8 +31,8 @@ const items = ref([
   },
 
   {
-    label: "Memories",
-    to: "memories",
+    label: "Gallery",
+    to: "gallery",
   },
 
   {
