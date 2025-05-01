@@ -1,10 +1,4 @@
-<script setup>
-import {
-  IndexHero,
-  IndexSectionMemories,
-  IndexSectionRoadmap,
-} from "~/components/index";
-</script>
+<script setup></script>
 
 <template>
   <Transition :css="false">

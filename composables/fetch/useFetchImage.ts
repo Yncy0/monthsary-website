@@ -1,4 +1,4 @@
-async function useFetchImage() {
+export async function useFetchImage() {
   const supabase = useSupabaseClient();
 
   const { data, error } = await supabase.from("images").select("*");
@@ -7,5 +7,3 @@ async function useFetchImage() {
 
   return data;
 }
-
-export default useFetchImage;

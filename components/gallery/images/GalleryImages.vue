@@ -1,6 +1,4 @@
 <script setup>
-import useFetchImage from "~/content/useFetchImage";
-
 const imageUrls = ref([]);
 
 onMounted(async () => {

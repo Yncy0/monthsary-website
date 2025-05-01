@@ -1,11 +1,11 @@
 import { PerspectiveCamera } from "three";
 
-function useThreePerspectiveCamera(
+export function useThreePerspectiveCamera(
   fov: number,
   aspect: number = window.innerWidth / window.innerHeight,
   near: number,
   far: number,
-  position: number[] = [0, 0, 0]
+  position: number[] = [0, 0, 0],
 ) {
   const camera = new PerspectiveCamera(fov, aspect, near, far);
 
@@ -13,5 +13,3 @@ function useThreePerspectiveCamera(
 
   return camera;
 }
-
-export default useThreePerspectiveCamera;
