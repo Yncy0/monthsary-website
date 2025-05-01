@@ -1,6 +1,4 @@
-<script setup>
-import HeadingGlow from "../headings/HeadingGlow.vue";
-</script>
+<script setup></script>
 
 <template>
   <section
@@ -25,7 +23,7 @@ import HeadingGlow from "../headings/HeadingGlow.vue";
       </p>
     </div>
     <div class="w-[1000px]">
-      <MemoryCarousel />
+      <IndexGalleryCarousel />
     </div>
   </section>
 </template>

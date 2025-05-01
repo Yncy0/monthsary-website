@@ -2,7 +2,7 @@
 
 <template>
   <main class="flex flex-col flex-wrap gap-64">
-    <MemoriesHero />
+    <GalleryHero />
     <section class="flex flex-col gap-2">
       <GalleryImages />
     </section>

@@ -12,7 +12,7 @@ const items = getMockMemories();
     :items="items"
     :ui="{ item: 'basis-1/3' }"
   >
-    <MemoryCard
+    <IndexGalleryCard
       :img-src="item.img"
       :description="item.description"
       :header="item.header"

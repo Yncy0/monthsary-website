@@ -92,7 +92,7 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
       </ClientOnly> -->
 
       <UButton v-if="!user.value" label="Login" variant="subtle" to="/login" />
-      <HeaderPopover v-else />
+      <AppHeaderPopover v-else />
     </div>
     <USeparator />
   </header>
