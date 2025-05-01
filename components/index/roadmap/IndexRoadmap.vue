@@ -61,7 +61,6 @@
     <UButton
       label="See More..."
       trailing-icon="i-lucide-arrow-right"
-      class="text-white"
       :block="false"
       @click="navigateTo('/roadmap')"
     />

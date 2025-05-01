@@ -11,7 +11,7 @@
         <NyaNyaWizard />
       </Suspense>
     </TresCanvas>
-    <div class="w-1/2">
+    <div class="w-1/2 px-24 pt-10">
       <h1
         class="text-[5rem] text-transparent bg-clip-text bg-linear-to-tr from-indigo-500 to-pink-500 font-bold"
       >
