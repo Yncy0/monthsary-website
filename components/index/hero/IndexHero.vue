@@ -25,6 +25,6 @@ const user = useSupabaseUser();
       It seems that you are not login yet, feel free to scroll anon or login to
       your account
     </p>
-    <ModalAsk />
+    <IndexHeroModal />
   </section>
 </template>

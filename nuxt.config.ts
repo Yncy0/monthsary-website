@@ -34,10 +34,6 @@ export default defineNuxtConfig({
     },
   ],
 
-  imports: {
-    dirs: ["composables/**", "utils/**"],
-  },
-
   supabase: {
     redirect: true,
     login: "/",
