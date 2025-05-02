@@ -7,7 +7,7 @@
   >
     <HeadingGlow
       :level="2"
-      text="Memories"
+      text="Memories..."
       text-size="5rem"
       text-align="center"
     />

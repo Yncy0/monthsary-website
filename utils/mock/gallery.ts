@@ -4,7 +4,7 @@ type MockData = {
   header: string;
 };
 
-export function getMockMemories() {
+export function getMockGallery() {
   const data: MockData[] = [
     {
       img: "/img/photobooth.jpg",
