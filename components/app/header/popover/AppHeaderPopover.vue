@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const user = useSupabaseUser();
+const supabase = useSupabaseClient();
+
+async function signOut() {
+  const { error } = await supabase.auth.signOut();
+
+  if (error) console.log(error);
+}
 </script>
 
 <template>
@@ -8,27 +14,13 @@ const user = useSupabaseUser();
     <template #content>
       <div class="size-48 m-4 p-2 flex flex-col gap-5">
         <header class="flex flex-row items-center gap-2">
-          <UIcon
-            v-if="!user.value"
-            name="i-lucide-circle-user"
-            class="text-red-600"
-          />
-          <UIcon v-else name="i-lucide-circle-user" />
+          <UIcon name="i-lucide-circle-user" class="text-red-600" />
 
-          <span v-if="!user.value">Hello Anon!</span>
-          <span v-else>Welcome User</span>
+          <span>Welcome User</span>
         </header>
 
-        <div class="body">
-          <p v-if="!user.value">
-            It seems that you scrolling anonymously! If you are the chosen user
-            please login
-          </p>
-        </div>
-
         <div class="footer">
-          <UButton v-if="!user.value" label="Login" to="/login" />
-          <UButton v-else label="Logout" />
+          <UButton label="Logout" @click="signOut()" />
         </div>
       </div>
     </template>

@@ -5,7 +5,7 @@ const user = useSupabaseUser();
 <template>
   <UModal title="Let me ask you some questions">
     <UButton
-      v-if="user.value"
+      v-if="user"
       label="Let's Get Started"
       size="sm"
       trailing-icon="i-lucide-arrow-right"
@@ -14,7 +14,7 @@ const user = useSupabaseUser();
     />
 
     <template #body>
-      <form v-if="user.value" class="flex flex-col gap-3">
+      <form v-if="user" class="flex flex-col gap-3">
         <UFormField label="How's your day?">
           <UInput placeholder="Answer Please" class="w-full" />
         </UFormField>

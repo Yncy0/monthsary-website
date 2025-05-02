@@ -4,15 +4,12 @@ definePageMeta({
 });
 
 const user = useSupabaseUser();
-const redirectInfo = useSupabaseCookieRedirect();
 
 watch(
   user,
   () => {
     if (user.value) {
-      const path = redirectInfo.pluck();
-
-      return navigateTo(path || "/");
+      return navigateTo("/");
     } else {
       return navigateTo("/login");
     }
