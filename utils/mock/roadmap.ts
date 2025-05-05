@@ -1,46 +1,40 @@
 type MockData = {
   img: string;
-  description: string;
   header: string;
+  body: string;
 };
 
 export function getMockRoadmap() {
   const data: MockData[] = [
     {
-      img: "/img/photobooth.jpg",
-      description:
-        "This is the first time we took a picture in a photobooth, and one of the first images in our photobooth collection",
-      header: "November 3, 2024",
+      img: "https://picsum.photos/640/640?random=0",
+      header: "When We First Met",
+      body: "A random introduction at a mutual friend’s BBQ. Just a quick hello—but something lingered in the air.",
     },
     {
-      img: "/img/ice_skate.jpg",
-      description:
-        "The second time we do some ice skating, the payback from our first visit. I still remembered the time we slip off. ",
-      header: "November 3, 2024",
+      img: "https://picsum.photos/640/640?random=1",
+      header: "First Real Hangout",
+      body: "Grabbed pizza after a long walk in the city. No fancy plans—just conversation, comfort, and a hint of something more.",
     },
     {
-      img: "/img/coffee_date.jpg",
-      description:
-        "The first time you invited me to drink coffee with you, such a nice coffee and place.",
-      header: "December 22, 2024",
+      img: "https://picsum.photos/640/640?random=2",
+      header: "The Night We Talked for Hours",
+      body: "What started as a quick chat turned into a 6-hour call. Everything just flowed—like we’d known each other forever.",
     },
     {
-      img: "/img/skyranch.jpeg",
-      description:
-        "The 1st celebration of our monthsary, we try some extreme rides and I hate that Viking ship thing. My first time I received flowers",
-      header: "December 30, 2024",
+      img: "https://picsum.photos/640/640?random=3",
+      header: "Our First Adventure",
+      body: "Tried an amusement park together—screams on the roller coaster, laughter in the rain, and matching souvenir shirts.",
     },
     {
-      img: "/img/clay_date.jpg",
-      description:
-        "One of the dates I feel a strong love, sorry I cannot post the NSFW stuff",
-      header: "February 14, 2025",
+      img: "https://picsum.photos/640/640?random=4",
+      header: "The Move-In Moonlight",
+      body: "Moved in with just a mattress and a coffee machine. Late-night decorating, pizza on the floor, and endless smiles.",
     },
     {
-      img: "/img/ice_cream.jpg",
-      description:
-        "I cleaned my storage in phone and cannot find the origin of us eating ice cream together.",
-      header: "????",
+      img: "https://picsum.photos/640/640?random=5",
+      header: "When We Wrote Our Vows",
+      body: "Sitting side by side, writing down promises that came from the heart. Every word was a memory in the making.",
     },
   ];
   return data;
