@@ -15,7 +15,7 @@ const items = getMockGallery();
     <IndexGalleryCard
       :img-src="item.img"
       :description="item.description"
-      :header="item.header"
+      :header="item.date"
     />
   </UCarousel>
 </template>
