@@ -1,12 +1,12 @@
 import type { Database } from "~/types/database.types";
 
-export async function useFetchImage() {
+export async function useFetchMemories() {
   const supabase = useSupabaseClient<Database>();
 
   const { data, error } = await supabase
-    .from("images")
-    .select("*")
-    .order("id", { ascending: true });
+    .from("memories")
+    .select(` *, images(id, image_url, unique_id)`)
+    .order("date", { ascending: true });
 
   if (error) throw error;
 

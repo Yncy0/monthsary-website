@@ -1,5 +1,20 @@
 <script setup lang="ts">
-const items = getMockGallery();
+const user = useSupabaseUser();
+
+const items = ref([]);
+const isUser = ref(false);
+
+onMounted(async () => {
+  const results = await useFetchMemories();
+
+  if (!user.value) {
+    items.value = getMockGallery();
+    isUser.value = false;
+  } else {
+    items.value = results;
+    isUser.value = true;
+  }
+});
 </script>
 
 <template>
@@ -25,7 +40,7 @@ const items = getMockGallery();
       </p>
     </div>
     <div class="w-[1000px]">
-      <IndexGalleryCarousel :items="items" />
+      <IndexGalleryCarousel :items="items" :is-user="isUser" />
     </div>
   </section>
 </template>
