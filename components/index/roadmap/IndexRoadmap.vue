@@ -36,7 +36,7 @@ onMounted(async () => {
       <IndexRoadmapStack
         v-if="user"
         :is-reversed="evenOrOdd(index)"
-        :img-source="item.image_url"
+        :img-source="item.images.image_url"
         :header="item.header"
         :body="item.body"
       />
