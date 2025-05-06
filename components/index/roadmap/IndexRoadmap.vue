@@ -1,5 +1,17 @@
 <script setup lang="ts">
-const items = getMockRoadmap();
+const user = useSupabaseUser();
+
+const items = ref([]);
+
+onMounted(async () => {
+  const results = await useFetchRoadmap();
+
+  if (!user.value) {
+    items.value = getMockRoadmap();
+  } else {
+    items.value = results;
+  }
+});
 </script>
 
 <template>
@@ -15,8 +27,16 @@ const items = getMockRoadmap();
       class="px-20 pt-20 w-full flex flex-col"
     >
       <IndexRoadmapStack
+        v-if="!user"
         :is-reversed="evenOrOdd(index)"
         :img-source="item.img"
+        :header="item.header"
+        :body="item.body"
+      />
+      <IndexRoadmapStack
+        v-if="user"
+        :is-reversed="evenOrOdd(index)"
+        :img-source="item.image_url"
         :header="item.header"
         :body="item.body"
       />

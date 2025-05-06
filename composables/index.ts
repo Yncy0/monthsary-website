@@ -1,4 +1,5 @@
 export { useFetchImage } from "./fetch/useFetchImage";
+export { useFetchRoadmap } from "./fetch/useFetchRoadmap";
 export { useThreePerspectiveCamera } from "./three/camera/useThreeCamera";
 export {
   useThreeAmbientLight,
