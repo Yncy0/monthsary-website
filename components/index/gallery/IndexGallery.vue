@@ -2,14 +2,17 @@
 const user = useSupabaseUser();
 
 const items = ref([]);
+const isUser = ref(false);
 
 onMounted(async () => {
   const results = await useFetchMemories();
 
   if (!user.value) {
     items.value = getMockGallery();
+    isUser.value = false;
   } else {
     items.value = results;
+    isUser.value = true;
   }
 });
 </script>
@@ -37,7 +40,7 @@ onMounted(async () => {
       </p>
     </div>
     <div class="w-[1000px]">
-      <IndexGalleryCarousel :items="items" :is-user="user" />
+      <IndexGalleryCarousel :items="items" :is-user="isUser" />
     </div>
   </section>
 </template>
