@@ -4,7 +4,6 @@ const props = defineProps<{
   imgSource: string;
   header: string;
   body: string;
-  status: string;
 }>();
 
 const flexDir = ref(props.isReversed ? "row-reverse" : "row");
@@ -16,12 +15,12 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
     :style="{ flexDirection: flexDir }"
   >
     <div class="flex-1 flex items-center size-[520px]">
-      <img
+      <NuxtImg
         v-if="props.imgSource"
         :src="props.imgSource"
         class="size-[360px] rounded-lg"
       />
-      <img
+      <NuxtImg
         v-else
         src="/assets/images/gif/quest cat.gif"
         class="size-[360px] rounded-lg flex-1"

@@ -18,7 +18,7 @@ const user = useSupabaseUser();
         Monthsary!
       </span>
     </h1>
-    <p v-if="user.value" class="pb-6 text-2xl">
+    <p v-if="user" class="pb-6 text-2xl">
       I hope you are doing well my love! May our relationship lasts forever.
     </p>
     <p v-else>

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup lang="ts">
+const items = getMockGallery();
+</script>
 
 <template>
   <section
@@ -7,7 +9,7 @@
   >
     <HeadingGlow
       :level="2"
-      text="Memories"
+      text="Memories..."
       text-size="5rem"
       text-align="center"
     />
@@ -23,7 +25,7 @@
       </p>
     </div>
     <div class="w-[1000px]">
-      <IndexGalleryCarousel />
+      <IndexGalleryCarousel :items="items" />
     </div>
   </section>
 </template>
