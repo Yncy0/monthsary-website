@@ -37,7 +37,7 @@ onMounted(async () => {
       </p>
     </div>
     <div class="w-[1000px]">
-      <IndexGalleryCarousel :items="items" />
+      <IndexGalleryCarousel :items="items" :is-user="user" />
     </div>
   </section>
 </template>
