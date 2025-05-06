@@ -33,6 +33,38 @@ export type Database = {
         }
         Relationships: []
       }
+      memories: {
+        Row: {
+          created_at: string
+          date: string | null
+          description: string | null
+          id: string
+          images_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          date?: string | null
+          description?: string | null
+          id?: string
+          images_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          date?: string | null
+          description?: string | null
+          id?: string
+          images_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "memories_images_id_fkey"
+            columns: ["images_id"]
+            isOneToOne: false
+            referencedRelation: "images"
+            referencedColumns: ["unique_id"]
+          },
+        ]
+      }
       roadmap: {
         Row: {
           body: string | null

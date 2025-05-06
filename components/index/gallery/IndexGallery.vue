@@ -1,5 +1,17 @@
 <script setup lang="ts">
-const items = getMockGallery();
+const user = useSupabaseUser();
+
+const items = ref([]);
+
+onMounted(async () => {
+  const results = await useFetchMemories();
+
+  if (!user.value) {
+    items.value = getMockGallery();
+  } else {
+    items.value = results;
+  }
+});
 </script>
 
 <template>

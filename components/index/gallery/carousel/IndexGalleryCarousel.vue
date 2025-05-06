@@ -15,7 +15,7 @@ const props = defineProps<{
     :ui="{ item: 'basis-1/3' }"
   >
     <IndexGalleryCard
-      :img-src="item.img"
+      :img-src="item.images.image_url"
       :description="item.description"
       :header="item.date"
     />
