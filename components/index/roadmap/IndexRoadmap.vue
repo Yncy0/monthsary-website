@@ -15,7 +15,7 @@ const items = getMockRoadmap();
       class="px-20 pt-20 w-full flex flex-col"
     >
       <IndexRoadmapStack
-        :is-reversed="false"
+        :is-reversed="evenOrOdd(index)"
         :img-source="item.img"
         :header="item.header"
         :body="item.body"

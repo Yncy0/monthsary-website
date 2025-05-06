@@ -1,5 +1,7 @@
-<script setup>
-const items = getMockGallery();
+<script setup lang="ts" generic="T">
+const props = defineProps<{
+  items: T[];
+}>();
 </script>
 
 <!--Carousel Template, for more infor visit: https://ui3.nuxt.dev/components/carousel-->
@@ -9,7 +11,7 @@ const items = getMockGallery();
     loop
     dots
     :autoplay="{ delay: 2500 }"
-    :items="items"
+    :items="props.items"
     :ui="{ item: 'basis-1/3' }"
   >
     <IndexGalleryCard

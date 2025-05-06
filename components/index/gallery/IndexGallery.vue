@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup lang="ts">
+const items = getMockGallery();
+</script>
 
 <template>
   <section
@@ -23,7 +25,7 @@
       </p>
     </div>
     <div class="w-[1000px]">
-      <IndexGalleryCarousel />
+      <IndexGalleryCarousel :items="items" />
     </div>
   </section>
 </template>
