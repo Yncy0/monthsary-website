@@ -1,0 +1,57 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@nuxt/content": "3.4.0",
+    "@nuxt/eslint": "1.3.0",
+    "@nuxt/fonts": "^0.11.2",
+    "@nuxt/image": "1.10.0",
+    "@nuxt/ui": "^3.1.0",
+    "@nuxthub/core": "0.8.22",
+    "@nuxtjs/supabase": "1.5.0",
+    "@supabase/supabase-js": "^2.49.4",
+    "@tailwindcss/vite": "^4.1.5",
+    "@tresjs/cientos": "^4.3.0",
+    "@tresjs/core": "^4.3.3",
+    "@tresjs/nuxt": "^3.0.8",
+    "@tresjs/post-processing": "^2.3.1",
+    "@types/three": "^0.175.0",
+    "dayjs": "^1.11.13",
+    "eslint": "^9.25.1",
+    "global": "^4.4.0",
+    "nuxt": "^3.17.1",
+    "pnpm": "^10.10.0",
+    "tailwindcss": "^4.1.5",
+    "three": "^0.175.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
+  },
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.39",
+    "@vueuse/core": "^13.1.0",
+    "@vueuse/nuxt": "^13.1.0",
+    "supabase": "^2.22.12",
+    "typescript": "^5.8.3",
+    "vue-tsc": "^2.2.10",
+    "wrangler": "^4.13.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "supabase",
+      "workerd"
+    ]
+  }
+}
