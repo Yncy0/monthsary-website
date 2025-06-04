@@ -3,7 +3,6 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const items = ref([]);
-const mock = getMockRoadmap();
 
 const scene = new THREE.Scene();
 
