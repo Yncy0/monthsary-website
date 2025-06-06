@@ -3,78 +3,105 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const items = ref([]);
+const boxes: THREE.Mesh[] = [];
 
 onMounted(() => {
   items.value = getMockRoadmap();
+
   const scene = new THREE.Scene();
 
-  // Mesh
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    100,
+  );
+  camera.position.z = 5;
+
+  const light = new THREE.DirectionalLight(0xffffff, 3);
+  light.position.set(1, 1, 1).normalize();
+  scene.add(camera, light);
+
+  const canvas = document.querySelector("#bg") as HTMLCanvasElement;
+  const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.update();
+
+  const raycast = new THREE.Raycaster();
+  const pointer = new THREE.Vector2();
+
+  window.addEventListener("pointermove", onPointerMove);
+  window.addEventListener("resize", onWindowResize);
+
   function addMesh() {
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshStandardMaterial({ color: 0x0ff000 });
     const box = new THREE.Mesh(geometry, material);
 
     const [x, y, z] = Array(3)
-      .fill()
-      .map(() => THREE.MathUtils.randFloatSpread(20));
+      .fill(0)
+      .map(() => THREE.MathUtils.randFloatSpread(10));
 
     box.position.set(x, y, z);
 
     scene.add(box);
+    boxes.push(box);
   }
-  items.value.forEach(addMesh);
 
+  function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
 
-  // Camera
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000,
-  );
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  }
 
-  camera.position.z = 5;
-
-  // Lighting
-  const light = new THREE.AmbientLight(0xffffff);
-
-  scene.add(camera, light);
-
-  // Canvas
-  const canvas = document.querySelector("#bg") as HTMLCanvasElement;
-  const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-
-    // Orbit Controls
-  const controls = new OrbitControls(camera, renderer.domElement);
-
-  controls.update();
-
-  // Raycast
-  const raycast = new THREE.Raycaster();
-  const pointer = new THREE.Vector2();
-
-  function onPointerMove(event) {
+  function onPointerMove(event: PointerEvent) {
     pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
     pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
   }
 
-  window.addEventListener("pointermove", onPointerMove);
+  let currentIntersect: THREE.Object3D | null = null;
 
   function animate() {
     requestAnimationFrame(animate);
-    renderer.render(scene, camera);
 
     raycast.setFromCamera(pointer, camera);
-
-    const intersects = raycast.intersectObjects(scene.children, false);
-   
+    const intersects = raycast.intersectObjects(boxes, false);
 
     if (intersects.length > 0) {
-      intersects[0].object.material.color.set(0xffffff);
+      const firstHit = intersects[0].object;
+      if (firstHit !== currentIntersect) {
+        if (currentIntersect) {
+          // Reset previous
+          const mat = currentIntersect.material as THREE.MeshStandardMaterial;
+          mat.color.set(0x0ff000);
+          currentIntersect.scale.set(1, 1, 1);
+        }
+
+        // Set new
+        currentIntersect = firstHit;
+        const mat = currentIntersect.material as THREE.MeshStandardMaterial;
+        mat.color.set(0xffffff);
+        currentIntersect.scale.set(1.2, 1.2, 1.2);
+      }
+    } else {
+      if (currentIntersect) {
+        // Clear highlight when nothing is hit
+        const mat = currentIntersect.material as THREE.MeshStandardMaterial;
+        mat.color.set(0x0ff000);
+        currentIntersect.scale.set(1, 1, 1);
+        currentIntersect = null;
+      }
     }
+
+    controls.update();
+    renderer.render(scene, camera);
   }
 
+  items.value.forEach(addMesh);
   animate();
 });
 </script>
