@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main>
-    <WIP />
-  </main>
+  <section>
+    <RoadmapTest />
+  </section>
 </template>
