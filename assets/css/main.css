@@ -6,11 +6,39 @@
 }
 
 @theme {
-  --drop-shadow-glow-pink-300: 0px 0px 39px rgba(255, 0, 123, 0.3);
-  --drop-shadow-glow-pink-400: 0px 0px 39px rgba(255, 0, 123, 0.4);
-  --drop-shadow-glow-pink-500: 0px 0px 39px rgba(255, 0, 123, 0.5);
-  --drop-shadow-glow-pink-900: 0px 0px 39px rgba(255, 0, 123, 0.9);
-  --drop-shadow-glow-pink-1000: 0px 0px 39px rgba(255, 0, 123, 1);
+  --latte-base: hsl(220deg, 23%, 95%);
+  --latte-mantle: hsl(220deg, 22%, 92%);
+  --latte-crust: hsl(220deg, 21%, 89%);
+
+  --latte-primary: hsl(316deg, 73%, 69%);
+  --latte-green: hsl(109deg, 58%, 40%);
+  --latte-yellow: hsl(35deg, 77%, 49%);
+  --latte-sky-blue: hsl(197deg, 97%, 46%);
+  --latte-blue: hsl(220deg, 91%, 54%);
+  --latte-lavender: hsl(231deg, 97%, 72%);
+
+  --mocha-base: hsl(240deg, 21%, 15%);
+  --mocha-mantle: hsl(240deg, 21%, 12%);
+  --mocha-crust: hsl(240deg, 23%, 9%);
+
+  --mocha-primary: hsl(316deg, 72%, 86%);
+  --mocha-green: hsl(115deg, 54%, 76%);
+  --mocha-yellow: hsl(41deg, 86%, 83%);
+  --mocha-sky-blue: hsl(189deg, 71%, 73%);
+  --mocha-blue: hsl(217deg, 92%, 76%);
+  --mocha-lavender: hsl(232deg, 97%, 85%);
+
+  --latte-drop-shadow-pink-300: 0px 0px 39px hsla(316deg, 73%, 69%, 0.3);
+  --latte-drop-shadow-pink-400: 0px 0px 39px hsla(316deg, 73%, 69%, 0.4);
+  --latte-drop-shadow-pink-500: 0px 0px 39px hsla(316deg, 73%, 69%, 0.5);
+  --latte-drop-shadow-pink-900: 0px 0px 39px hsla(316deg, 73%, 69%, 0.9);
+  --latte-drop-shadow-pink-1000: 0px 0px 39px hsla(316deg, 73%, 69%, 1);
+
+  --mocha-drop-shadow-pink-300: 0px 0px 39px hsla(316deg, 72%, 86%, 0.3);
+  --mocha-drop-shadow-pink-400: 0px 0px 39px hsla(316deg, 72%, 86%, 0.4);
+  --mocha-drop-shadow-pink-500: 0px 0px 39px hsla(316deg, 72%, 86%, 0.5);
+  --mocha-drop-shadow-pink-900: 0px 0px 39px hsla(316deg, 72%, 86%, 0.9);
+  --mocha-drop-shadow-pink-1000: 0px 0px 39px hsla(316deg, 72%, 86%, 1);
 }
 
 html,
