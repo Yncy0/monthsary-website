@@ -7,9 +7,9 @@ const user = useSupabaseUser();
     id="hero"
     class="flex flex-col items-center justify-center min-w-full h-[720px] p-9 mb-44"
   >
-    <NyaNyaGang />
+    <!-- <NyaNyaGang /> -->
     <h1
-      class="text-[6rem] text-transparent bg-linear-to-l from-violet-700 to-green-500 bg-clip-text font-bold text-start dark:drop-shadow-glow-pink-900"
+      class="text-[6rem] text-transparent bg-linear-to-l from-violet-700 to-green-500 bg-clip-text font-bold text-start dark:mocha-drop-shadow-pink-900"
     >
       Happy 5th
       <span

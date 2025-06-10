@@ -73,8 +73,8 @@ function scrollTo(s: any) {
 <!--Here lies the design
 It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
 <template>
-  <header class="sticky top-0 z-10 bg-white dark:bg-gray-900">
-    <div class="flex flex-row items-center p-2 gap-4 w-full justify-center">
+  <header class="sticky top-0 z-10 bg-latte-primary dark:bg-mocha-base">
+    <div class="flex flex-row items-center p-2 gap-4 w-full justify-center bg-latte-primary dark:bg-mocha-base">
       <UNavigationMenu
         :items="items"
         orientation="horizontal"

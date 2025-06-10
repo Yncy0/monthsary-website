@@ -9,12 +9,12 @@ const props = defineProps<{
 <template>
   <UCard class="m-1 h-[560px]">
     <template #header>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 latte-base dark:mocha-base">
         <NuxtImg
           :src="props.imgSrc"
           class="rounded-lg w-[320px] h-[320px] object-cover"
         />
-        <h3 class="text-pink-500 text-2xl font-bold">
+        <h3 class="latte-primary text-2xl font-bold">
           {{ props.header }}
         </h3>
       </div>
