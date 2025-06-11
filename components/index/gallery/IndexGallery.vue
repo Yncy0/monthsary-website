@@ -33,7 +33,7 @@ onMounted(async () => {
         Here lies our precious memories that we did together, from the beginning
         until now.
         <span>
-          <NuxtLink class="text-pink-500" href="/gallery"
+          <NuxtLink class="text-latte-primary" href="/gallery"
             >See more...
           </NuxtLink>
         </span>
