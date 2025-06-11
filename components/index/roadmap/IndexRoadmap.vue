@@ -44,6 +44,7 @@ onMounted(async () => {
     <UButton
       label="See More..."
       trailing-icon="i-lucide-arrow-right"
+      variant="subtle"
       :block="false"
       @click="navigateTo('/roadmap')"
     />
