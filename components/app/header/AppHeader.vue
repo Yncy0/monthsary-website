@@ -42,8 +42,8 @@ const items = ref([
 ]);
 
 //useToggle() is a VueUse functionality, visit: https://vueuse.org/shared/useToggle/#usetoggle
-//const isDark = useDark();
-//const toggleDark = useToggle(isDark);
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 
 const isButtonShown = ref(false);
 
@@ -60,9 +60,9 @@ watch(
 );
 
 //TODO: Refactor on a seperate file
-function scrollTo(s: any) {
+function scrollTo(s: string) {
   nextTick(() => {
-    const element = document.querySelector(s);
+    const element = document.querySelector(s) as HTMLElement;
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -70,10 +70,9 @@ function scrollTo(s: any) {
 }
 </script>
 
-<!--Here lies the design
-It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
+<!--It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
 <template>
-  <header class="sticky top-0 z-10 bg-white dark:bg-gray-900">
+  <header class="sticky top-0 z-10 bg-latte-base dark:bg-mocha-base">
     <div class="flex flex-row items-center p-2 gap-4 w-full justify-center">
       <UNavigationMenu
         :items="items"
@@ -82,17 +81,22 @@ It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/c
         content-orientation="vertical"
         class="gap-2"
       />
-      <!-- <ClientOnly>
+
+      <span>
+        <UButton v-if="!user" label="Login" variant="subtle" to="/login" />
+        <UButton v-else label="Logout" variant="subtle" />
+      </span>
+
+      <ClientOnly>
         <UButton
           :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
-          @click="toggleDark()"
-          class="bg-transparent dark:text-white text-black hover:bg-transparent"
+          color="neutral"
+          variant="subtle"
+          class="dark:text-white text-black"
           :data-allow-mismatch="true"
+          @click="toggleDark()"
         />
-      </ClientOnly> -->
-
-      <UButton v-if="!user" label="Login" variant="subtle" to="/login" />
-      <AppHeaderPopover v-else />
+      </ClientOnly>
     </div>
     <USeparator />
   </header>
