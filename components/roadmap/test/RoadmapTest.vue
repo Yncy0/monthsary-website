@@ -3,11 +3,9 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 const items = ref([]);
-const boxes = [];
-
 /*
-NOTE: Let the declaration of the variables be like that
-Might migrate to TypeScript later 
+ NOTE: Let the declaration of the variables be like that
+ Might migrate to TypeScript later 
 */
 
 let renderer;
@@ -63,7 +61,7 @@ function init() {
 
 function addMesh() {
   const geometry = new THREE.BoxGeometry(1, 1, 1);
-  const material = new THREE.MeshStandardMaterial({ color: 0x0ff000 });
+  const material = new THREE.MeshLambertMaterial({ color: 0x0ff000 });
   const box = new THREE.Mesh(geometry, material);
 
   const [x, y, z] = Array(3)
@@ -73,7 +71,6 @@ function addMesh() {
   box.position.set(x, y, z);
 
   scene.add(box);
-  boxes.push(box);
 }
 
 function onWindowResize() {
@@ -84,19 +81,23 @@ function onWindowResize() {
 }
 
 function onPointerMove(event) {
-  pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
-  pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  const rect = renderer.domElement.getBoundingClientRect();
+
+  pointer.x = ((event.clientX - rect.left) / window.innerWidth) * 2 - 1;
+  pointer.y = -((event.clientY - rect.top) / window.innerHeight) * 2 + 1;
 }
 
 function animate() {
   requestAnimationFrame(animate);
 
   controls.update();
+
+  camera.lookAt(scene.position);
   camera.updateMatrixWorld();
 
   raycast.setFromCamera(pointer, camera);
 
-  const intersects = raycast.intersectObjects(boxes, false);
+  const intersects = raycast.intersectObjects(scene.children);
 
   if (intersects.length > 0) {
     if (INTERSECTED != intersects[0].object) {
@@ -120,5 +121,14 @@ function animate() {
 <template>
   <section>
     <canvas id="bg" class="w-full h-full block" />
+
+      <!-- Info Popup -->
+    <div
+      v-if="items"
+      class="absolute top-4 left-4 bg-white bg-opacity-80 p-4 rounded shadow"
+    >
+      <h2 class="text-lg font-bold">{{ items.header }}</h2>
+      <p>{{ items.description }}</p>
+    </div>
   </section>
 </template>
