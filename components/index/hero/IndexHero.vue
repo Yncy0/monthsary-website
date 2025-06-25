@@ -9,13 +9,15 @@ const user = useSupabaseUser();
   >
     <!-- <NyaNyaGang /> -->
     <h1
-      class="text-[6rem] text-transparent heading-gradient bg-clip-text font-bold text-start "
+      class="text-[6rem] text-transparent heading-gradient bg-clip-text font-bold text-center"
     >
       Happy 5th
-      <span
-        class=" text-transparent heading-gradient-span bg-clip-text "
-      >
-        Monthsary!
+      <span class="text-transparent  bg-clip-text">
+        Monthsary
+      </span>
+      <br >
+      <span class="text-transparent heading-gradient-span bg-clip-text">
+        My Pookie!
       </span>
     </h1>
     <p v-if="user" class="pb-6 text-2xl">
@@ -32,15 +34,18 @@ const user = useSupabaseUser();
 <style scoped>
 .heading-gradient {
   background-image: linear-gradient(
-    to left,
-    var(--color-latte-lavender), var(--color-latte-green)
+    to right,
+    var(--color-latte-yellow),
+    var(--color-latte-primary),
+    var(--color-latte-secondary)
   );
 
   .heading-gradient-span {
     background-image: linear-gradient(
       to right,
-      var(--color-latte-primary), var(--color-latte-secondary)
-     );
+      var(--color-latte-primary),
+      var(--color-latte-secondary)
+    );
   }
 }
 </style>
