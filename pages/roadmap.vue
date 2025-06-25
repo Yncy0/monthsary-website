@@ -8,7 +8,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <main class="flex flex-col items-center mt-10">
+  <main class="mt-10">
     <section class="text-center">
       <h1 class="text-6xl text-latte-primary font-bold">Roadmap</h1>
       <p class="text-lg">A roadmap of our milestones and accomplishments as partner</p>
