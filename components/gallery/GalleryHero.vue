@@ -4,8 +4,8 @@
   <section>
     <TresCanvas ref="cameraRef" alpha window-size>
       <TresPerspectiveCamera :position="[0, 0, 5]" />
-      <TresAmbientLight :intensity="2" />
-      <TresPointLight :intensity="250" :position="[0, 0, 10]" />
+      <TresAmbientLight :intensity="1" />
+      <TresPointLight :intensity="100" :position="[0, 5, 0]" />
       <ScrollControls :html-scroll="true" :smooth-scroll="0.1" />
       <Suspense>
         <NyaNyaWizard />
