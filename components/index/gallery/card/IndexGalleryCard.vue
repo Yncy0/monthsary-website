@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <UCard class="m-1 h-[560px] bg-latte-base dark:bg-mocha-base">
+  <UCard class="m-1 h-[560px] bg-mocha-base">
     <template #header>
       <div class="flex flex-col gap-4">
         <NuxtImg
@@ -23,9 +23,5 @@ const props = defineProps<{
     <div>
       <p>{{ props.description }}</p>
     </div>
-
-    <!-- <template #footer>
-      <p>See More!</p>
-    </template> -->
   </UCard>
 </template>

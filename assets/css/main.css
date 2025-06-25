@@ -2,12 +2,8 @@
 @import "@nuxt/ui";
 
 :root {
-  color-scheme: light dark;
-}
-
-:root {
-  --ui-primary: light-dark(var(--color-latte-primary), var(--color-mocha-primary));
-  --ui-secondary: light-dark(var(--color-latte-primary), var(--color-mocha-secondary))
+ --ui-primary: var(--color-latte-primary);
+ --ui-secondary: var(--color-latte-secondary);
 }
 
 @theme {
@@ -23,8 +19,8 @@
   --color-latte-sky-blue: hsl(197deg, 97%, 46%);
   --color-latte-blue: hsl(220deg, 91%, 54%);
   --color-latte-lavender: hsl(231deg, 97%, 72%);
-  --color-mocha-base: hsl(240deg, 21%, 15%);
 
+  --color-mocha-base: hsl(240deg, 21%, 15%);
   --color-mocha-mantle: hsl(240deg, 21%, 12%);
   --color-mocha-crust: hsl(240deg, 23%, 9%);
   --color-mocha-text: hsl(226deg, 64%, 88%);
@@ -54,7 +50,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: light-dark(var(--color-latte-base), var(--color-mocha-base));
 }
 
 h2,
@@ -62,11 +57,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: light-dark(var(--color-latte-primary), var(--color-mocha-primary));
+  color: var(--color-latte-primary);
 }
 
 p {
-  color: light-dark(var(--color-latte-text), var(--color-mocha-text));
+  color: var(--color-mocha-text);
 }
 
 input,

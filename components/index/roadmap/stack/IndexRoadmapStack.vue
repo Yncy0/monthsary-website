@@ -27,7 +27,7 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
       />
     </div>
     <USeparator orientation="vertical" class="h-full" type="solid" size="md">
-      <UIcon name="i-lucide-paw-print" class="text-pink-500 size-5" />
+      <UIcon name="i-lucide-paw-print" class="text-latte-primary size-5" />
     </USeparator>
     <div class="flex flex-col justify-center flex-1 w-[360px]">
       <HeadingGlow

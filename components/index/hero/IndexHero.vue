@@ -9,11 +9,11 @@ const user = useSupabaseUser();
   >
     <!-- <NyaNyaGang /> -->
     <h1
-      class="text-[6rem] text-transparent heading-gradient bg-clip-text font-bold text-start dark:drop-shadow-mocha-pink-900"
+      class="text-[6rem] text-transparent heading-gradient bg-clip-text font-bold text-start "
     >
       Happy 5th
       <span
-        class=" text-transparent heading-gradient-span bg-clip-text dark:drop-shadow-mocha-pink-300"
+        class=" text-transparent heading-gradient-span bg-clip-text "
       >
         Monthsary!
       </span>
@@ -33,16 +33,14 @@ const user = useSupabaseUser();
 .heading-gradient {
   background-image: linear-gradient(
     to left,
-    light-dark(var(--color-latte-lavender), var(--color-mocha-lavender)),
-    light-dark(var(--color-latte-green), var(--color-mocha-green))
+    var(--color-latte-lavender), var(--color-latte-green)
   );
 
   .heading-gradient-span {
     background-image: linear-gradient(
       to right,
-      light-dark(var(--color-latte-primary), var(--color-mocha-primary)),
-      light-dark(var(--color-latte-secondary), var(--color-mocha-secondary))
-    );
+      var(--color-latte-primary), var(--color-latte-secondary)
+     );
   }
 }
 </style>

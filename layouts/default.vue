@@ -1,10 +1,8 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col bg-mocha-base">
     <AppHeader />
-    <main>
-      <slot />
-    </main>
+    <slot />
   </div>
 </template>
