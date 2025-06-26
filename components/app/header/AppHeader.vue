@@ -54,7 +54,7 @@ function scrollTo(s: string) {
 
 <!--It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
 <template>
-  <header class="sticky top-0 z-30 bg-mocha-crust">
+  <header class="sticky top-0 w-full z-30 bg-mocha-crust">
     <div class="flex flex-row items-center p-2 gap-4 w-full justify-center">
       <UNavigationMenu
         :items="items"
