@@ -19,16 +19,27 @@ onMounted(async () => {
       <li v-for="(image, index) in imageUrls" :key="index">
         <NuxtImg
           v-if="!user"
+          v-slot="{ src, isLoaded, imgAttrs }"
           :src="image"
           alt="It is an image"
+          :custom="true"
           class="w-64 h-96 rounded-md"
-        />
+        >
+          <img v-if="isLoaded" v-bind="imgAttrs" :src="src" >
+
+          <USkeleton v-else class="w-64 h-96" />
+        </NuxtImg>
         <NuxtImg
           v-if="user"
           :src="image.image_url"
           alt="It is an image"
+          :custom="true"
           class="w-64 h-96 rounded-md"
-        />
+        >
+          <img v-if="isLoaded" v-bind="imgAttrs" :src="src" >
+
+          <USkeleton v-else class="w-64 h-96" />
+        </NuxtImg>
       </li>
     </ul>
   </Suspense>

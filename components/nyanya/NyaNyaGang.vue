@@ -40,7 +40,7 @@ function init() {
   loadModel("/nyanya/nyanyapuccin_mauve.glb", ...[7, -2, 0]);
   loadModel("/nyanya/nyanyapuccin_pink.glb", ...[0, 4, 0]);
   loadModel("/nyanya/nyanyapuccin_green.glb", ...[-7, -2, 0]);
-  loadModel("/nyanya/nyanyapuccin_yellow.glb", ...[-8, 2, 0]);
+  loadModel("/nyanya/nyanyapuccin_yellow.glb", ...[-9, 2, 0]);
 }
 
 function loadModel(url, ...pos) {
