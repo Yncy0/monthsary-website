@@ -3,15 +3,15 @@
 <template>
   <section>
     <TresCanvas ref="cameraRef" alpha window-size>
-      <TresPerspectiveCamera :position="[0, 0, 5]" />
-      <TresAmbientLight :intensity="1" />
-      <TresPointLight :intensity="100" :position="[0, 5, 0]" />
+      <TresPerspectiveCamera :position="[0, 0, 12]" />
+      <TresAmbientLight :intensity="2" />
+      <TresPointLight :intensity="50" :position="[0, 5, 0]" />
       <ScrollControls :html-scroll="true" :smooth-scroll="0.1" />
       <Suspense>
         <NyaNyaWizard />
       </Suspense>
     </TresCanvas>
-    <section class="w-1/2 px-24 pt-10">
+    <section class="w-1/2 h-screen px-24 flex flex-col justify-center">
       <h1
         class="text-[6rem] text-transparent bg-clip-text heading-gradient font-bold"
       >

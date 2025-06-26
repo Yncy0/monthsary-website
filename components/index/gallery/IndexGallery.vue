@@ -19,7 +19,7 @@ onMounted(async () => {
 
 <template>
   <section
-    id="memories"
+    id="gallery"
     class="flex flex-col min-w-full items-center gap-10 pb-20 pt-10"
   >
     <HeadingGlow

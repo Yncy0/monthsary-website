@@ -36,11 +36,11 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   // call loadModel() manually **cannot loop it due to JSON error
-  loadModel("/nyanya/nyanyapuccin_sapphire.glb", ...[8, 2, 0]);
-  loadModel("/nyanya/nyanyapuccin_mauve.glb", ...[7, -2, 0]);
-  loadModel("/nyanya/nyanyapuccin_pink.glb", ...[0, 4, 0]);
-  loadModel("/nyanya/nyanyapuccin_green.glb", ...[-7, -2, 0]);
-  loadModel("/nyanya/nyanyapuccin_yellow.glb", ...[-9, 2, 0]);
+  loadModel("/nyanya/nyanyapuccin_sapphire.glb", ...[10, 4, 0]);
+  loadModel("/nyanya/nyanyapuccin_mauve.glb", ...[7, 0, 0]);
+  loadModel("/nyanya/nyanyapuccin_pink.glb", ...[0, -3, 0]);
+  loadModel("/nyanya/nyanyapuccin_green.glb", ...[-7, 0, 0]);
+  loadModel("/nyanya/nyanyapuccin_yellow.glb", ...[-10, 4, 0]);
 }
 
 function loadModel(url, ...pos) {

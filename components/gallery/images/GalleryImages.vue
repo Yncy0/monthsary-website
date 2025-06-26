@@ -31,6 +31,7 @@ onMounted(async () => {
         </NuxtImg>
         <NuxtImg
           v-if="user"
+          v-slot="{ src, isLoaded, imgAttrs }"
           :src="image.image_url"
           alt="It is an image"
           :custom="true"
