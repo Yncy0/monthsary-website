@@ -9,7 +9,7 @@ const user = useSupabaseUser();
   >
     <NyaNyaGang /> 
     <h1
-      class="text-[6rem] text-transparent heading-gradient bg-clip-text font-bold text-center"
+      class="text-[6rem] text-transparent heading-gradient bg-clip-text font-bold text-center z-10"
     >
       Happy 5th
       <span class="text-transparent  bg-clip-text">
