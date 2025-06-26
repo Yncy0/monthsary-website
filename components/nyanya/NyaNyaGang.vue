@@ -1,205 +1,90 @@
-<script setup lang="ts">
+<script setup>
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+
+let scene, camera, renderer;
+
+const loader = new GLTFLoader();
 
 onMounted(() => {
-  const scene = new THREE.Scene();
+  init();
+  animate();
 
-  const camera = useThreePerspectiveCamera(
+  document.body.onscroll = moveCamera;
+});
+
+function init() {
+  scene = new THREE.Scene();
+
+  camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
     0.1,
     100,
-    [0, 0, 5],
   );
+  camera.position.set(0, 0, 10);
 
-  camera.lookAt(new THREE.Vector3(0, 0, 0));
+  const light = new THREE.AmbientLight(0xffffff, 2);
+  const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+  dirLight.position.set(0, 5, 0);
 
-  const canvas = document.querySelector("#canvas") as HTMLCanvasElement;
-  const renderer = useThreeRender(undefined, canvas, undefined, [
-    window.innerWidth,
-    window.innerHeight,
-  ]);
+  scene.add(camera, light, dirLight);
 
-  const ambientLight = useThreeAmbientLight(0xffffff, 2);
-  const pointLightR = useThreePointLight(0xffffff, 200, 100, [5, 10, 10]);
-  const pointLightL = useThreePointLight(0xffffff, 200, 100, [-5, 10, 10]);
+  const canvas = document.querySelector("#bg");
+  renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
 
-  scene.add(camera, pointLightR, pointLightL, ambientLight);
+  // call loadModel() manually **cannot loop it due to JSON error
+  loadModel("/nyanya/nyanyapuccin_sapphire.glb", ...[10, 4, 0]);
+  loadModel("/nyanya/nyanyapuccin_mauve.glb", ...[7, 0, 0]);
+  loadModel("/nyanya/nyanyapuccin_pink.glb", ...[0, -3, 0]);
+  loadModel("/nyanya/nyanyapuccin_green.glb", ...[-7, 0, 0]);
+  loadModel("/nyanya/nyanyapuccin_yellow.glb", ...[-10, 4, 0]);
+}
 
-  const loader = new GLTFLoader();
-
-  // animation name: 'Armature|mixamo.com|Layer0'
-  // FIXME: TOO MUCH SPAGHETTI ON THIS ONE!!!!!!
-  loader.load("/nyanya/actionpose.glb", function (gltf) {
+function loadModel(url, ...pos) {
+  loader.load(url, function (gltf) {
     scene.add(gltf.scene);
+    gltf.scene.position.set(pos[0], pos[1], pos[2]);
 
-    gltf.scene.position.set(0, 3, -9);
-
-    const mixer = new THREE.AnimationMixer(gltf.scene);
-    const clips = gltf.animations;
-
-    const clock = new THREE.Clock();
-
-    function update() {
-      mixer.update(clock.getDelta());
-    }
+    const randomize = THREE.MathUtils.randFloat(-0.001, 0.001)
 
     function animate() {
       requestAnimationFrame(animate);
-      update();
-    }
 
+      gltf.scene.rotation.x += randomize;
+      gltf.scene.rotation.y += randomize;
+      gltf.scene.rotation.z += randomize;
+    }
     animate();
-
-    const clip = THREE.AnimationClip.findByName(
-      clips,
-      "Armature|mixamo.com|Layer0",
-    );
-    const action = mixer.clipAction(clip);
-    action.play();
   });
+}
 
-  loader.load("/nyanya/capoeira.glb", function (gltf) {
-    scene.add(gltf.scene);
+// THANK YOU Fireship
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
 
-    gltf.scene.position.set(-10, 2.5, -9);
+  // camera.position.z = t * -0.2;
+  // camera.position.x = t * -0.002;
+  camera.position.y = t * 0.017;
+}
 
-    const mixer = new THREE.AnimationMixer(gltf.scene);
-    const clips = gltf.animations;
+function animate() {
+  requestAnimationFrame(animate);
 
-    const clock = new THREE.Clock();
-
-    function update() {
-      mixer.update(clock.getDelta());
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      update();
-    }
-
-    animate();
-
-    const clip = THREE.AnimationClip.findByName(
-      clips,
-      "Armature|mixamo.com|Layer0",
-    );
-    const action = mixer.clipAction(clip);
-    action.play();
-  });
-
-  loader.load("/nyanya/hiphopdance.glb", function (gltf) {
-    scene.add(gltf.scene);
-
-    gltf.scene.position.set(10, -7.5, -9);
-
-    const mixer = new THREE.AnimationMixer(gltf.scene);
-    const clips = gltf.animations;
-
-    const clock = new THREE.Clock();
-
-    function update() {
-      mixer.update(clock.getDelta());
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      update();
-    }
-
-    animate();
-
-    const clip = THREE.AnimationClip.findByName(
-      clips,
-      "Armature|mixamo.com|Layer0",
-    );
-    const action = mixer.clipAction(clip);
-    action.play();
-  });
-
-  loader.load("/nyanya/hiphopdance1.glb", function (gltf) {
-    scene.add(gltf.scene);
-
-    gltf.scene.position.set(-8, -7.5, -9);
-
-    const mixer = new THREE.AnimationMixer(gltf.scene);
-    const clips = gltf.animations;
-
-    const clock = new THREE.Clock();
-
-    function update() {
-      mixer.update(clock.getDelta());
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      update();
-    }
-
-    animate();
-
-    const clip = THREE.AnimationClip.findByName(
-      clips,
-      "Armature|mixamo.com|Layer0",
-    );
-    const action = mixer.clipAction(clip);
-    action.play();
-  });
-
-  loader.load("/nyanya/twerk.glb", function (gltf) {
-    scene.add(gltf.scene);
-
-    gltf.scene.position.set(10, 2.5, -9);
-
-    gltf.scene.rotation.set(0, 185, 0);
-
-    const mixer = new THREE.AnimationMixer(gltf.scene);
-    const clips = gltf.animations;
-
-    const clock = new THREE.Clock();
-
-    function update() {
-      mixer.update(clock.getDelta());
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      update();
-    }
-
-    animate();
-
-    const clip = THREE.AnimationClip.findByName(
-      clips,
-      "Armature|mixamo.com|Layer0",
-    );
-    const action = mixer.clipAction(clip);
-    action.play();
-  });
-
-  function animate() {
-    requestAnimationFrame(animate);
-
-    renderer.render(scene, camera);
-  }
-
-  animate();
-
-  //THANK YOU Fireship
-  function moveCamera() {
-    const t = document.body.getBoundingClientRect().top;
-
-    // camera.position.z = t * -0.2;
-    // camera.position.x = t * -0.002;
-    camera.position.y = t * 0.017;
-  }
-
-  document.body.onscroll = moveCamera;
-});
+  renderer.render(scene, camera);
+}
 </script>
 
 <template>
-  <canvas id="canvas" class="fixed top-0 left-0 -z-10" />
+  <canvas id="bg" />
 </template>
+
+<style scoped>
+canvas {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+</style>

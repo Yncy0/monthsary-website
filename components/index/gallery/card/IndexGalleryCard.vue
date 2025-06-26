@@ -4,17 +4,25 @@ const props = defineProps<{
   header: string;
   description: string;
 }>();
+
+
 </script>
 
 <template>
-  <UCard class="m-1 h-[560px] bg-latte-base dark:bg-mocha-base">
+  <UCard class="m-1 h-[560px] bg-mocha-base">
     <template #header>
       <div class="flex flex-col gap-4">
         <NuxtImg
+          v-slot="{src, isLoaded, imgAttrs}"
           :src="props.imgSrc"
           class="rounded-lg w-[320px] h-[320px] object-cover"
-        />
-        <h3 class=" text-2xl font-bold">
+          :custom="true"
+        >
+          <img v-if="isLoaded" v-bind="imgAttrs" :src=src>
+
+          <USkeleton v-else class="rounded-lg w-[270] h-[320px]" />
+        </NuxtImg>
+        <h3 class="text-2xl font-bold">
           {{ props.header }}
         </h3>
       </div>
@@ -23,9 +31,5 @@ const props = defineProps<{
     <div>
       <p>{{ props.description }}</p>
     </div>
-
-    <!-- <template #footer>
-      <p>See More!</p>
-    </template> -->
   </UCard>
-</template>
+</template> 

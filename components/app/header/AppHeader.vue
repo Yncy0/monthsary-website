@@ -41,24 +41,6 @@ const items = ref([
   },
 ]);
 
-//useToggle() is a VueUse functionality, visit: https://vueuse.org/shared/useToggle/#usetoggle
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
-
-const isButtonShown = ref(false);
-
-watch(
-  user,
-  () => {
-    if (!user.value) {
-      isButtonShown.value = true;
-    } else {
-      isButtonShown.value = false;
-    }
-  },
-  { immediate: true },
-);
-
 //TODO: Refactor on a seperate file
 function scrollTo(s: string) {
   nextTick(() => {
@@ -72,7 +54,7 @@ function scrollTo(s: string) {
 
 <!--It uses NavigationMenu form NuxtUI, for more infor visit: https://ui3.nuxt.dev/components/navigation-menu-->
 <template>
-  <header class="sticky top-0 z-10 bg-latte-base dark:bg-mocha-base">
+  <header class="fixed top-0 w-full z-30 bg-mocha-crust">
     <div class="flex flex-row items-center p-2 gap-4 w-full justify-center">
       <UNavigationMenu
         :items="items"
@@ -87,16 +69,6 @@ function scrollTo(s: string) {
         <UButton v-else label="Logout" variant="subtle" />
       </span>
 
-      <ClientOnly>
-        <UButton
-          :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
-          color="neutral"
-          variant="subtle"
-          class="dark:text-white text-black"
-          :data-allow-mismatch="true"
-          @click="toggleDark()"
-        />
-      </ClientOnly>
     </div>
     <USeparator />
   </header>

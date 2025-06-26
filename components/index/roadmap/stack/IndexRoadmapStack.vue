@@ -15,19 +15,13 @@ const flexDir = ref(props.isReversed ? "row-reverse" : "row");
     :style="{ flexDirection: flexDir }"
   >
     <div class="flex-1 flex items-center size-[520px]">
-      <NuxtImg
-        v-if="props.imgSource"
-        :src="props.imgSource"
-        class="size-[360px] rounded-lg"
-      />
-      <NuxtImg
-        v-else
-        src="/assets/images/gif/quest cat.gif"
-        class="size-[360px] rounded-lg flex-1"
-      />
+      <NuxtImg v-slot="{src, isLoaded, imgAttrs}" :src="props.imgSource" :custom="true" class="size-[360px] rounded-lg"> 
+         <img v-if="isLoaded" v-bind="imgAttrs" :src=src>
+        <USkeleton v-else class="size-[360px]"/>
+      </NuxtImg>
     </div>
     <USeparator orientation="vertical" class="h-full" type="solid" size="md">
-      <UIcon name="i-lucide-paw-print" class="text-pink-500 size-5" />
+      <UIcon name="i-lucide-paw-print" class="text-latte-primary size-5" />
     </USeparator>
     <div class="flex flex-col justify-center flex-1 w-[360px]">
       <HeadingGlow

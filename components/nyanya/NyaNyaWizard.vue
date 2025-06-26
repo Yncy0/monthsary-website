@@ -1,18 +1,14 @@
 <script setup lang="ts">
 import { useGLTF } from "@tresjs/cientos";
 
-const { scene: model } = await useGLTF("/nyanya/nyanya1.glb", {
-  draco: true,
-});
+const { scene: model } = await useGLTF("/nyanya/orange-wizard.glb");
 const { onBeforeRender } = useLoop();
 
-model.position.set(5, 1, -8);
+model.position.set(5, -2.2, 0);
 
 onBeforeRender(() => {
   if (model) {
-    model.rotation.x += 0.01;
-    model.rotation.y += 0.01;
-    model.rotation.z += 0.01;
+    model.rotation.y += 0.002;
   }
 });
 </script>

@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <main class="flex flex-col min-w-full justify-center items-center">
+  <main>
     <IndexHero />
 
     <IndexGallery />
