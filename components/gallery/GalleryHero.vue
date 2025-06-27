@@ -2,11 +2,12 @@
 
 <template>
   <section>
-    <TresCanvas ref="cameraRef" alpha window-size>
+    <TresCanvas alpha window-size>
       <TresPerspectiveCamera :position="[0, 0, 12]" />
       <TresAmbientLight :intensity="2" />
       <TresPointLight :intensity="50" :position="[0, 5, 0]" />
       <ScrollControls :html-scroll="true" :smooth-scroll="0.1" />
+      <GeneratedStars />
       <Suspense>
         <NyaNyaWizard />
       </Suspense>
@@ -29,7 +30,8 @@
 .heading-gradient {
   background-image: linear-gradient(
     to top,
-      var(--color-latte-secondary), var(--color-latte-lavender)
-    );
+    var(--color-latte-secondary),
+    var(--color-latte-lavender)
+  );
 }
 </style>
