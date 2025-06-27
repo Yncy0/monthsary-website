@@ -8,13 +8,12 @@ const user = useSupabaseUser();
     class="flex flex-col items-center justify-center min-w-full h-[720px] p-9 mb-44"
   >
     <NyaNyaGang /> 
+    
     <h1
       class="text-[6rem] text-transparent heading-gradient bg-clip-text font-bold text-center z-10"
     >
-      Happy 5th
-      <span class="text-transparent  bg-clip-text">
-        Monthsary
-      </span>
+      Happy 6th
+      <span class="text-transparent bg-clip-text"> Monthsary </span>
       <br >
       <span class="text-transparent heading-gradient-span bg-clip-text">
         My Pookie!

@@ -41,6 +41,8 @@ function init() {
   loadModel("/nyanya/nyanyapuccin_pink.glb", ...[0, -3, 0]);
   loadModel("/nyanya/nyanyapuccin_green.glb", ...[-7, 0, 0]);
   loadModel("/nyanya/nyanyapuccin_yellow.glb", ...[-10, 4, 0]);
+
+  generateStars(scene);
 }
 
 function loadModel(url, ...pos) {
@@ -48,7 +50,7 @@ function loadModel(url, ...pos) {
     scene.add(gltf.scene);
     gltf.scene.position.set(pos[0], pos[1], pos[2]);
 
-    const randomize = THREE.MathUtils.randFloat(-0.001, 0.001)
+    const randomize = THREE.MathUtils.randFloat(-0.001, 0.001);
 
     function animate() {
       requestAnimationFrame(animate);
@@ -64,10 +66,7 @@ function loadModel(url, ...pos) {
 // THANK YOU Fireship
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-
-  // camera.position.z = t * -0.2;
-  // camera.position.x = t * -0.002;
-  camera.position.y = t * 0.017;
+    camera.position.y = t * 0.017;
 }
 
 function animate() {
