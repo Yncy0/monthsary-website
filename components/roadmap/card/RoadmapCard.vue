@@ -9,7 +9,7 @@ const props = defineProps<{
 <template>
   <UCard
     variant="solid"
-    class="w-[1200px] bg-mocha-base flex flex-col items-center text-center"
+    class="w-full lg:w-[1200px] bg-mocha-base flex flex-col items-center text-center"
   >
     <NuxtImg
       v-if="props.imgUrl"
@@ -25,6 +25,6 @@ const props = defineProps<{
       <USkeleton v-else class="w-[400px] h-[400px]" alt="skeleton loader"/>
     </NuxtImg>
     <h2 class="text-3xl font-bold">{{ props.headings }}</h2>
-    <p class="text-lg">{{ props.description }}</p>
+    <p class="text-sm lg:text-lg">{{ props.description }}</p>
   </UCard>
 </template>

@@ -45,24 +45,24 @@ function moveCamera() {
 </script>
 
 <template>
-  <section class="mt-32">
+  <main class="mt-32 pb-32">
     <canvas id="bg"/>
-    <section class="text-center">
-      <h1 class="text-6xl text-latte-primary font-bold">Roadmap</h1>
-      <p class="text-lg">
+    <section class="text-center mb-10">
+      <h1 class="text-5xl lg:text-6xl text-latte-primary font-bold">Roadmap</h1>
+      <p class="text-sm lg:text-lg">
         A roadmap of our milestones and accomplishments as partner
       </p>
     </section>
-    <section>
+    <section class="px-4">
       <RoadmapCard
         v-for="(item, index) in items"
         :key="index"
         :headings="item.header"
         :description="item.body"
-        class="mt-10"
+        class="mt-5 lg:mt-10"
       />
     </section>
-  </section>
+  </main>
 </template>
 
 <style scoped>

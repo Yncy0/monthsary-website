@@ -9,23 +9,25 @@ const user = useSupabaseUser();
   >
     <!-- <NyaNyaGang />  -->
     <NyaNyaGang />
-    <h1
-      class="text-5xl lg:text-8xl text-transparent heading-gradient bg-clip-text font-bold text-center z-10"
-    >
-      Happy 6th
-      <span class="text-transparent bg-clip-text"> Monthsary </span>
-      <br >
-      <span class="text-transparent heading-gradient-span bg-clip-text">
-        My Pookie!
-      </span>
-    </h1>
-    <p v-if="user" class="pb-6 px-4 text-sm lg:text-lg text-center">
-      I hope you are doing well my love! May our relationship lasts forever.
-    </p>
-    <p v-else class="pb-6 px-4 text-sm lg:text-lg text-center">
-      It seems that you are not login yet, feel free to scroll anon or login to
-      your account
-    </p>
+    <section class="flex flex-col gap-2">
+      <h1
+        class="text-5xl lg:text-8xl text-transparent heading-gradient bg-clip-text font-bold text-center z-10"
+      >
+        Happy 6th
+        <span class="text-transparent bg-clip-text"> Monthsary </span>
+        <br >
+        <span class="text-transparent heading-gradient-span bg-clip-text">
+          My Pookie!
+        </span>
+      </h1>
+      <p v-if="user" class="pb-6 px-4 text-sm lg:text-lg text-center">
+        I hope you are doing well my love! May our relationship lasts forever.
+      </p>
+      <p v-else class="pb-6 px-4 text-sm lg:text-lg text-center">
+        It seems that you are not login yet, feel free to scroll anon or login
+        to your account
+      </p>
+    </section>
     <IndexHeroModal />
   </section>
 </template>
