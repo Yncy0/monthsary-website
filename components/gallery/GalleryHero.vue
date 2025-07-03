@@ -12,13 +12,13 @@
         <NyaNyaWizard />
       </Suspense>
     </TresCanvas>
-    <section class="w-1/2 h-screen px-24 flex flex-col justify-center">
+    <section class=" lg:w-1/2 h-screen flex flex-col justify-center text-center">
       <h1
         class="text-[6rem] text-transparent bg-clip-text heading-gradient font-bold"
       >
         Gallery
       </h1>
-      <p>
+      <p class="px-5">
         This page cotains images from our 520px camera. But this silly cat has a
         habit to not complete his sorcery on inserting images.
       </p>

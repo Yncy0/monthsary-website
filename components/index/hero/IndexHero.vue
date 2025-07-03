@@ -5,12 +5,12 @@ const user = useSupabaseUser();
 <template>
   <section
     id="hero"
-    class="flex flex-col items-center justify-center min-w-full h-[720px] p-9 mb-44"
+    class="flex flex-col items-center justify-center w-full h-[720px] mb-44"
   >
-    <NyaNyaGang /> 
-    
+    <!-- <NyaNyaGang />  -->
+    <NyaNyaGang />
     <h1
-      class="text-[6rem] text-transparent heading-gradient bg-clip-text font-bold text-center z-10"
+      class="text-5xl lg:text-8xl text-transparent heading-gradient bg-clip-text font-bold text-center z-10"
     >
       Happy 6th
       <span class="text-transparent bg-clip-text"> Monthsary </span>
@@ -19,10 +19,10 @@ const user = useSupabaseUser();
         My Pookie!
       </span>
     </h1>
-    <p v-if="user" class="pb-6 text-2xl">
+    <p v-if="user" class="pb-6 px-4 text-sm lg:text-lg text-center">
       I hope you are doing well my love! May our relationship lasts forever.
     </p>
-    <p v-else>
+    <p v-else class="pb-6 px-4 text-sm lg:text-lg text-center">
       It seems that you are not login yet, feel free to scroll anon or login to
       your account
     </p>

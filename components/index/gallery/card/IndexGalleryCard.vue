@@ -9,18 +9,18 @@ const props = defineProps<{
 </script>
 
 <template>
-  <UCard class="m-1 h-[560px] bg-mocha-base">
+  <UCard class="m-1 lg:h-[560px] bg-mocha-base">
     <template #header>
       <div class="flex flex-col gap-4">
         <NuxtImg
           v-slot="{src, isLoaded, imgAttrs}"
           :src="props.imgSrc"
-          class="rounded-lg w-[320px] h-[320px] object-cover"
+          class="rounded-lg lg:w-[320px] lg:h-[320px] object-cover"
           :custom="true"
         >
           <img v-if="isLoaded" v-bind="imgAttrs" :src=src>
 
-          <USkeleton v-else class="rounded-lg w-[270] h-[320px]" />
+          <USkeleton v-else class="rounded-lg lg:w-[270] lg:h-[320px]" />
         </NuxtImg>
         <h3 class="text-2xl font-bold">
           {{ props.header }}

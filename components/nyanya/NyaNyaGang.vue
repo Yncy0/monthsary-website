@@ -10,6 +10,7 @@ onMounted(() => {
   init();
   animate();
 
+  window.addEventListener("resize", onWindowResize);
   document.body.onscroll = moveCamera;
 });
 
@@ -66,11 +67,19 @@ function loadModel(url, ...pos) {
 // THANK YOU Fireship
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-    camera.position.y = t * 0.017;
+  camera.position.y = t * 0.017;
+}
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 function animate() {
   requestAnimationFrame(animate);
+  camera.updateMatrixWorld();
 
   renderer.render(scene, camera);
 }
@@ -85,5 +94,7 @@ canvas {
   top: 0;
   left: 0;
   position: fixed;
+  width: 100%;
+  height: 100%;
 }
 </style>

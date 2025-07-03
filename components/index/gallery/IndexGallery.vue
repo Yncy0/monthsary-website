@@ -20,16 +20,15 @@ onMounted(async () => {
 <template>
   <section
     id="gallery"
-    class="flex flex-col min-w-full items-center gap-10 pb-20 pt-10"
+    class="flex flex-col w-full h-dvh items-center gap-10 pb-20 pt-10"
   >
     <HeadingGlow
       :level="2"
       text="Memories..."
-      text-size="5rem"
-      text-align="center"
+      class="text-4xl lg:text-7xl"
     />
-    <div>
-      <p>
+    <div class="px-4">
+      <p class="text-sm lg:text-lg">
         Here lies our precious memories that we did together, from the beginning
         until now.
         <span>
@@ -39,7 +38,7 @@ onMounted(async () => {
         </span>
       </p>
     </div>
-    <div class="w-[1000px]">
+    <div class="w-full max-w-screen lg:w-[1000px] px-4">
       <IndexGalleryCarousel :items="items" :is-user="isUser" />
     </div>
   </section>

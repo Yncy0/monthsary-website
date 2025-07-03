@@ -5,7 +5,6 @@
     <IndexHero />
 
     <IndexGallery />
-    <USeparator />
 
     <IndexRoadmap />
   </main>

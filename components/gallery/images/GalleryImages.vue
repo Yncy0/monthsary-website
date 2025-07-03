@@ -15,7 +15,9 @@ onMounted(async () => {
 
 <template>
   <Suspense>
-    <ul class="flex flex-row flex-wrap w-full object-cover gap-2 px-24">
+    <ul
+      class="flex flex-row flex-wrap w-full object-cover gap-5 lg:gap-2 px-6 lg:px-24"
+    >
       <li v-for="(image, index) in imageUrls" :key="index">
         <NuxtImg
           v-if="!user"
@@ -23,11 +25,11 @@ onMounted(async () => {
           :src="image"
           alt="It is an image"
           :custom="true"
-          class="w-64 h-96 rounded-md"
+          class="w-full lg:w-64 h-96 rounded-md"
         >
           <img v-if="isLoaded" v-bind="imgAttrs" :src="src" >
 
-          <USkeleton v-else class="w-64 h-96" />
+          <USkeleton v-else class="w-full lg:w-64 h-96" />
         </NuxtImg>
         <NuxtImg
           v-if="user"
@@ -35,11 +37,11 @@ onMounted(async () => {
           :src="image.image_url"
           alt="It is an image"
           :custom="true"
-          class="w-64 h-96 rounded-md"
+          class="w-full lg:w-64 h-96 rounded-md"
         >
           <img v-if="isLoaded" v-bind="imgAttrs" :src="src" >
 
-          <USkeleton v-else class="w-64 h-96" />
+          <USkeleton v-else class="w-full lg:w-64 h-96" />
         </NuxtImg>
       </li>
     </ul>

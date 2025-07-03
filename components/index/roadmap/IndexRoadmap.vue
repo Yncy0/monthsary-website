@@ -19,12 +19,12 @@ onMounted(async () => {
     id="roadmap"
     class="flex flex-col items-center justify-center py-10 min-w-full"
   >
-    <HeadingGlow :level="2" text="Roadmap" />
-    <p>Lists of accomplished goals</p>
+    <HeadingGlow :level="2" text="Roadmap" class="text-4xl lg:text-7xl" />
+    <p class="text-sm lg:text-lg">Lists of accomplished goals</p>
     <div
       v-for="(item, index) in items"
       :key="index"
-      class="px-20 pt-20 w-full flex flex-col"
+      class="px-6 pt-10 lg:px-20 lg:pt-20 mb-10 w-full flex flex-col"
     >
       <IndexRoadmapStack
         v-if="!user"

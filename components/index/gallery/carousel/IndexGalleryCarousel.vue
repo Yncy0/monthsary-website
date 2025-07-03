@@ -20,7 +20,7 @@ dayjs.extend(timezone);
     dots
     :autoplay="{ delay: 2500 }"
     :items="props.items"
-    :ui="{ item: 'basis-1/3' }"
+    :ui="{ item: 'basis-full sm:basis-1/2 md:basis-1/3' }"
   >
     <IndexGalleryCard
       v-if="props.isUser"
